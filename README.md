@@ -12,7 +12,7 @@ One Good Street is an organisation whose aim is 'to reduce social isolation and 
 Presently the website has typical features such as a Navbar, a home page, about page, library of care things, media and events, contact us, find us on Facebook, sign up and member login page. This site is currently built on WordPress. 
 
 #### Our main task - in connection with the purpose
-After speaking to the client (Matiu Bush), we have been requested to focus on improving the Library of Care Things. The Library of Care Things is a page that connects those who have equipment (for example electric wheelchairs and walking frames) for senior citizens to those who require such equipment. It is a free service offered by One Good Street and all equipment listed is free. Currently, people who want to offer equipment, contact One Good Street and Matiu Bush picks up the equipment and then lists them on the website. This is hard coded and can be time consuming to list a single item onto the site. Matiu informed us he would like for the redesigned website to have the ability for visitors to list donated items themselves. Once items are listed, he also wants the ability to be notified of an item.
+After speaking to the client (Matiu Bush), we have been requested to focus on improving the Library of Care Things. The Library of Care Things is a page that connects those who have equipment (for example electric wheelchairs and walking frames) for senior citizens to those who require such equipment. It is a free service offered by One Good Street and all equipment listed is free. Currently, people who want to offer equipment, contact One Good Street and Matiu Bush picks up the equipment and then lists them on the website. This is hard coded and can be time consuming to list a single item onto the site. Matiu informed us he would like for the redesigned website to have the ability for visitors to list donated items themselves. Once items are listed, he also wants the ability to be notified of an item so he can review it.
 
 As a result, our main task is to make the 'Library of Care Things' dynamic and link it to a database. 
 
@@ -24,7 +24,7 @@ Sources:
 
 #### Visitors
 
-* Visitors can view the Home, About, Library of Care Things, Media and Events, Contact us, Find us on Facebook and Sign up pages. Visitors can also list items on the Library of Care Things.
+* Visitors can view the Home, About, Library of Care Things, Media and Events, Contact us, Find us on Facebook and Sign up pages. 
 
 * Visitors can view the home page to get a quick summary about what the website its about.
 * Visitors can view the about page to understand the purpose and aim of One Good Street.
