@@ -5,11 +5,17 @@ A web app developed by Molly Madden and Michelle Wong
 
 ### Purpose
 
-The purpose of this app is to refactor the website of One Good Street so that it is more accessible to senior citizens and stakeholders of senior citizens, specifically to improve the Library of Care Things to make it similar to a two-way marketplace. 
+The purpose of this app is to refactor the website of One Good Street so that it is more accessible to senior citizens and stakeholders of senior citizens. We have been specifically tasked with improving the Library of Care Things section of the website to make it similar to a two-way marketplace. 
 
+#### About the organisation
 One Good Street is an organisation whose aim is 'to reduce social isolation and loneliness in older residents who live in our neighbourhoods through practical initiatives that everyone can get involved in.' There is currently a website that can be found [here](https://onegoodstreet.com.au/). It is run by Matiu Bush.
 
 Presently the website has typical features such as a Navbar, a home page, about page, library of care things, media and events, contact us, find us on Facebook, sign up and member login page. This site is currently built on WordPress. 
+
+This is how the Library of Care Things currently looks.
+![](docs/libraryofcarethings1.png)
+![](docs/libraryofcarethings2.png)
+
 
 #### Our main task - in connection with the purpose
 After speaking to the client (Matiu Bush), we have been requested to focus on improving the Library of Care Things. The Library of Care Things is a page that connects those who have equipment (for example electric wheelchairs and walking frames) for senior citizens to those who require such equipment. It is a free service offered by One Good Street and all equipment listed is free. Currently, people who want to offer equipment, contact One Good Street and Matiu Bush picks up the equipment and then lists them on the website. This is hard coded and can be time consuming to list a single item onto the site. Matiu informed us he would like for the redesigned website to have the ability for visitors to list donated items themselves. Once items are listed, he also wants the ability to be notified of an item so he can review it.
@@ -131,8 +137,12 @@ Sources
 ### Trello
 Trello was used to keep track of our project by listing the tasks we needed to do, the tasks we are working on, the tasks we have completed and other requirements for the assignment. Please see the screenshots of our trello board below. 
 
+Trello 15-1-20
+![](docs/Trello-15-1-20.png)
 
 Trello 14-1-20
 ![](docs/Trello-14-1-20.png)
+
+
 
 [Trello Board link](https://trello.com/b/xNTst2Dp/real-world-app)
