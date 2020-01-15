@@ -22,7 +22,7 @@ After speaking to the client (Matiu Bush), we have been requested to focus on im
 
 As a result, our main task is to make the 'Library of Care Things' dynamic and link it to a database. 
 
-There are also several issues around components being placed in a way that blocks text, and buttons lacking a label.
+There are also several issues around components being placed in a way that blocks text, and buttons lacking labels.
 
 ![](docs/Arrow.png)
 ![](docs/Button.png)
