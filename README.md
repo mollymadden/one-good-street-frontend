@@ -28,26 +28,27 @@ Sources:
 
 ### Functionality / features 
 
-#### Visitors
+#### Normal users 
+Normal users encompasses non admin users (which will be discussed below). They encompass people who may just visit the site as well as those who may be a more active participant.
 
-* Visitors can view the Home, About, Library of Care Things, Media and Events, Contact us, Find us on Facebook and Sign up pages. 
+##### Normal users viewing ability
+* Normal users can view the Home, About, Library of Care Things, Media and Events, Contact us, Find us on Facebook and Sign up pages. 
+* Normal users can view the home page to get a quick summary about what the website its about.
+* Normal users can view the about page to understand the purpose and aim of One Good Street.
 
-* Visitors can view the home page to get a quick summary about what the website its about.
-* Visitors can view the about page to understand the purpose and aim of One Good Street.
-* Visitors can use the contact us form to get involved or find out more about One Good Street initiatives.
-* Visitors can sign up in order to offer help.
+##### Normal users - more active role
+* Normal users can use the contact us form to get involved or find out more about One Good Street initiatives.
+* Normal users can sign up in order to offer help.
 
-* Visitors can view all the listings on the 'Library of Care Things' and request an item by emailing the person who listed or Matiu.
-* Visitors can search listings by title, location and category.
-* Visitors can request items by using the contact details connected to the listed item. 
+* Normal users can view all the listings on the 'Library of Care Things' and request an item by emailing the person who listed or Matiu.
+* Normal users can search listings by title, location and category.
+* Normal users can request items by using the contact details connected to the listed item. 
 
-#### Donors
-* Donors (those who donate items) have the same functionality as visitors. 
-
-* Donors can list items without signing up. In order to list an item, visitors would need to fill in a form. This form requires visitors to enter a title (string), description (string), category (drop down box), condition (drop down box), location (string) and contact details (string).
+##### Normal users as donors
+* Normal users can list items without signing up. In order to list an item, visitors would need to fill in a form. This form requires visitors to enter a title (string), description (string), category (drop down box), condition (drop down box), location (string) and contact details (string).
 * The form will not be submitted unless all the fields are filled in. Once submitted, the form is saved to the Mongo database.
-* Donors who list items can provide their contact details (in the event someone wishes to contact them about requesting an item) or they can choose to not provide contact details, and in that event, 'One Good Street' would be the point of contact. 
-* In terms of form validations for donors, errors will be displayed if any part of the form is incomplete. 
+* Normal users who list items can provide their contact details (in the event someone wishes to contact them about requesting an item) or they can choose to not provide contact details, and in that event, 'One Good Street' would be the point of contact. 
+* In terms of form validations for normal users, errors will be displayed if any part of the form is incomplete. 
 
 #### Admin
 * In addition to the functions that a visitor has, admin users can view, edit and update all pages and have CRUD functionality for the listings on the Library of Care Things.
@@ -84,7 +85,9 @@ The tech stack used for this app are:
 
 ## R2	Dataflow Diagram	CMP1043-4.2
 
-Link to diagram https://www.lucidchart.com/documents/edit/ece6f7b9-e479-4795-be97-72cf2278d02c/0_0
+Link to diagram Level 0 https://www.lucidchart.com/documents/edit/ece6f7b9-e479-4795-be97-72cf2278d02c/0_0
+
+Link to diagram Level 1 https://www.draw.io/#G1rctgUMfcY5GOdSZ1WwNeayM1_JQZqplB
 
 
 ## R3	Application Architecture Diagram	CMP1043-4.3
@@ -96,31 +99,31 @@ Sources:
 
 ## R4	User Stories	CMP1043-5.1
 
-For our app, there are three main types of users - visitors, users as donors and admin users.
+For our app, there are two main types of users - visitors, normal users and admin users.
 
-### Visitor
-Epic: As a website visitor I want to view the website to determine and understand the purpose of One Good Street and view the listings of items to determine if I want to request or donate an item.
+### Normal user
+Epic: As a normal user I want to view the website to determine and understand the purpose of One Good Street and view the listings of items to determine if I want to request or donate an item.
 
-As a website visitor, I want to view the listings of the product without signing up so I can easily view the title and image of products being donated.
+As a normal user, I want to view the listings of the product without signing up so I can easily view the title and image of products being donated.
 
-As a website visitor, I want to view a detailed list of an individual product so I can ascertain if it is suitable for me.
+As a normal user, I want to view a detailed list of an individual product so I can ascertain if it is suitable for me.
 
-As a website visitor, I want to view contact information of the donor so I can contact him/her if I need to clarify any aspect of the product. 
+As a normal user, I want to view contact information of the donor so I can contact him/her if I need to clarify any aspect of the product. 
 
-As a website visitor, I want to be able to help out if I wish, and this may include contacting One Good Street.
+As a normal user, I want to be able to help out if I wish, and this may include contacting One Good Street.
 
-As a website visitor, I want to have the option to sign up for an account in order to offer help. 
+As a normal user, I want to have the option to sign up for an account in order to offer help. 
 
-### Users as donors
-Epic: As a donor, I want to post a listing for my product so it can be donated. 
+### Normal users as donors
+Epic: As a normal user who wishes to donate, I want to post a listing for my product so it can be donated. 
 
-As a donor, I want to post a listing with a title, description, condition, location and image so the donee can see what they are requesting. 
+As a normal user, I want to post a listing with a title, description, condition, location and image so the donee can see what they are requesting. 
 
-As a donor, I want to post a listing with contact details made publicly available so the donee can contact me if there are any questions. 
+As a normal user, I want to post a listing with contact details made publicly available so the donee can contact me if there are any questions. 
 
-As a donor, I want to have the option of posting a listing without making my contact details publicly available. In this case, One Good Street would be the point of contact.
+As a normal user, I want to have the option of posting a listing without making my contact details publicly available. In this case, One Good Street would be the point of contact.
 
-As a donor, I want the website to only display the detailed description of the product (including title, description, condition, location, image) to people who may be interested in the item.
+As a normal user, I want the website to only display the detailed description of the product (including title, description, condition, location, image) to people who may be interested in the item.
 
 ### Admin users
 Epic: As an admin user, I want to have the ability to oversee listings in the Library of Care Things.
@@ -140,10 +143,14 @@ Sources
 
 ## R5	Wireframes for multiple standard screen sizes, created using industry standard software	CMP1043-4.1, CMP1043-5.3
 
+
+
 ## R6	Screenshots of your Trello board throughout the duration of the project	CMP1043-5.2
 
 ### Trello
 Trello was used to keep track of our project by listing the tasks we needed to do, the tasks we are working on, the tasks we have completed and other requirements for the assignment. Please see the screenshots of our trello board below. 
+
+
 
 Trello 15-1-20
 ![](docs/Trello-15-1-20.png)
