@@ -150,7 +150,8 @@ Sources
 ### Trello
 Trello was used to keep track of our project by listing the tasks we needed to do, the tasks we are working on, the tasks we have completed and other requirements for the assignment. Please see the screenshots of our trello board below. 
 
-
+Trello 16-1-20
+![](docs/Trello-16-1-20.png)
 
 Trello 15-1-20
 ![](docs/Trello-15-1-20.png)
