@@ -1,7 +1,7 @@
 # Real World Application - One Good Street
 A web app developed by Molly Madden and Michelle Wong
 
-## R1	Description of your website, including:
+## R1	Description of your website
 
 ### Purpose
 
@@ -84,7 +84,15 @@ The tech stack used for this app are:
 
 ## R2	Dataflow Diagram	CMP1043-4.2
 
+Link to diagram https://www.lucidchart.com/documents/edit/ece6f7b9-e479-4795-be97-72cf2278d02c/0_0
+
+
 ## R3	Application Architecture Diagram	CMP1043-4.3
+
+Link to Lucid Chart https://www.lucidchart.com/documents/edit/82c229a8-0120-4702-9776-0ff7e80e8292/0_0
+
+Sources:
+* https://www.educative.io/edpresso/what-is-mern-stack 
 
 ## R4	User Stories	CMP1043-5.1
 
