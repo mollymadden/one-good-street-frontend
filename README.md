@@ -10,7 +10,7 @@ The purpose of this app is to refactor the website of One Good Street so that it
 #### About the organisation
 One Good Street is an organisation whose aim is 'to reduce social isolation and loneliness in older residents who live in our neighbourhoods through practical initiatives that everyone can get involved in.' There is currently a website that can be found [here](https://onegoodstreet.com.au/). It is run by Matiu Bush.
 
-Presently the website has typical features such as a Navbar, a home page, about page, library of care things, media and events, contact us, find us on Facebook, sign up and member login page. This site is currently built on WordPress. 
+Presently the website has typical features such as a Navbar, a Home page, About page, Library of Care Things, Media & Events, Contact us, Find us on Facebook, Get Involved, and Admin login page. This site is currently built on WordPress. 
 
 This is how the Library of Care Things currently looks.
 ![](docs/libraryofcarethings1.png)
@@ -18,9 +18,14 @@ This is how the Library of Care Things currently looks.
 
 
 #### Our main task - in connection with the purpose
-After speaking to the client (Matiu Bush), we have been requested to focus on improving the Library of Care Things. The Library of Care Things is a page that connects those who have equipment (for example electric wheelchairs and walking frames) for senior citizens to those who require such equipment. It is a free service offered by One Good Street and all equipment listed is free. Currently, people who want to offer equipment, contact One Good Street and Matiu Bush picks up the equipment and then lists them on the website. This is hard coded and can be time consuming to list a single item onto the site. Matiu informed us he would like for the redesigned website to have the ability for visitors to list donated items themselves. Once items are listed, he also wants the ability to be notified of an item so he can review it.
+After speaking to the client (Matiu Bush), we have been requested to focus on improving the Library of Care Things. The Library of Care Things is a page that connects those who have unwanted equipment (for example electric wheelchairs and walking frames) for senior citizens, to those who require such equipment. It is a free service offered by One Good Street and all equipment listed is free. Currently, people who want to offer equipment contact One Good Street and Matiu Bush picks up the equipment and then he lists them on the website. These listings are hard coded and it can be time consuming to list a single item onto the site. Matiu informed us he would like for the redesigned website to have the ability for visitors to list donated items themselves without the barrier of a forced sign up / log in. Once items are listed, Matiu also wants the ability to be notified of an item so he can review it before publishing.
 
 As a result, our main task is to make the 'Library of Care Things' dynamic and link it to a database. 
+
+There are also several issues around components being placed in a way that blocks text, and buttons lacking a label.
+
+
+
 
 Sources: 
 * https://onegoodstreet.com.au/about-one-good-street/
@@ -29,10 +34,10 @@ Sources:
 ### Functionality / features 
 
 #### Normal users 
-Normal users encompasses non admin users (which will be discussed below). They encompass people who may just visit the site as well as those who may be a more active participant.
+Normal users encompasses non admin users (which will be discussed below). These users are people who may just browse the site passively as well as those who may be a more active participant.
 
 ##### Normal users viewing ability
-* Normal users can view the Home, About, Library of Care Things, Media and Events, Contact us, Find us on Facebook and Sign up pages. 
+* Normal users can view the Home, About, Library of Care Things, individual Library item page, Media & Events, Contact us, and Get Involved pages. 
 * Normal users can view the home page to get a quick summary about what the website its about.
 * Normal users can view the about page to understand the purpose and aim of One Good Street.
 
@@ -66,7 +71,7 @@ John Foo has an elderly mother who used to live with him and had a shower stool.
 ##### Jane Doo - Case manager for a senior citizen
 Jane Doo is the case manager for a senior citizen, who is still living at home. Due to mobility issues, they are finding it more difficult to shower standing up and subsequently require a shower stool. Jane visited One Good Street and saw there was a shower stool available on the Library of Care Things. She was then connected to John.
 
-The outcome is that John is able to dispose of his shower stool in a responsible and meaningful way while Jane's client is not burdened with the potential steep financial costs of purchasing aged care equipment adn can reap the benefits of using John's unwanted equipment. 
+The outcome is that John is able to dispose of his shower stool in a responsible and meaningful way while Jane's client is not burdened with the potential steep financial costs of purchasing aged care equipment and can reap the benefits of using John's unwanted equipment. 
 
 #### Visitors
 Those who visit the site and wish to see what it is about and get a feel if it is suitable for their needs. They may be visiting as they are interested in requesting equipment or donating items. They may also be interested in requesting or donating items on behalf of a relative or client. Visitors may also be wanting to help out as a volunteer and are seeking guidance about the skills or items they can offer. 
@@ -101,40 +106,40 @@ Sources:
 
 For our app, there are two main types of users - visitors, normal users and admin users.
 
-### Normal user
-Epic: As a normal user I want to view the website to determine and understand the purpose of One Good Street and view the listings of items to determine if I want to request or donate an item.
+### Normal user as passive browser
+Epic: As a normal user I want to view the website to determine and understand the purpose of One Good Street, and view the listings of items to determine if I want to request or donate an item.
 
-As a normal user, I want to view the listings of the product without signing up so I can easily view the title and image of products being donated.
+As a normal user, I want to view the individual listing pages of each item without signing up so I can easily view the title and image of items being donated.
 
-As a normal user, I want to view a detailed list of an individual product so I can ascertain if it is suitable for me.
+As a normal user, I want to view the details of an individual item so I can ascertain if it is suitable for me.
 
-As a normal user, I want to view contact information of the donor so I can contact him/her if I need to clarify any aspect of the product. 
+As a normal user, I want to view contact information of the donor or Matiu Bush so I can contact him/her if I need to clarify any aspect of the item. 
 
 As a normal user, I want to be able to help out if I wish, and this may include contacting One Good Street.
 
-As a normal user, I want to have the option to sign up for an account in order to offer help. 
+As a normal user, I want to have the option to fill out a Get Involved form in order to offer help. 
 
 ### Normal users as donors
-Epic: As a normal user who wishes to donate, I want to post a listing for my product so it can be donated. 
+Epic: As a normal user who wishes to donate, I want to post a listing for my item so it can be donated to a person in need. 
 
-As a normal user, I want to post a listing with a title, description, condition, location and image so the donee can see what they are requesting. 
+As a normal user, I want to post a listing with a title, headline, description, category, location, and image so the donee can see what they are requesting. 
 
 As a normal user, I want to post a listing with contact details made publicly available so the donee can contact me if there are any questions. 
 
-As a normal user, I want to have the option of posting a listing without making my contact details publicly available. In this case, One Good Street would be the point of contact.
+As a normal user, I want to have the option of posting a listing without making my contact details publicly available. In this case, One Good Street & Matiu Bush would be the point of contact.
 
-As a normal user, I want the website to only display the detailed description of the product (including title, description, condition, location, image) to people who may be interested in the item.
+As a normal user, I want the website to only display the detailed description of the item (including title, headline, description, category, location, and image) to people who may be interested in the item.
 
 ### Admin users
 Epic: As an admin user, I want to have the ability to oversee listings in the Library of Care Things.
 
-As an admin users, I want to be notified when a new listing has been created.
+As an admin user, I want to be notified when a new listing has been created.
 
 As an admin user, I want to view all listings so I can see what has already been listed.
 
-As an admin user, I want the ability to create, add, edit or delete listings. 
+As an admin user, I want the ability to create, read, update, or delete listings. 
 
-As an admin user, I want visitors to use my contact details to be the point of contact if they do not wish to provide their personal contact details. 
+As an admin user, I want visitors to use my contact details to be the point of contact if they do not wish to make public their personal contact details. 
 
 
 Sources
