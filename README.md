@@ -24,8 +24,8 @@ As a result, our main task is to make the 'Library of Care Things' dynamic and l
 
 There are also several issues around components being placed in a way that blocks text, and buttons lacking labels.
 
-![](docs/Arrow copy.png)
-![](docs/Button copy.png)
+![](docs/Arrow.png)
+![](docs/Button.png)
 
 
 Sources: 
