@@ -86,6 +86,7 @@ The tech stack used for this MERN app are:
 * Mongoose
 * Node JS
 * CORS
+* Crypto
 
 * Heroku for deployment
 * Amazon S3 Service for photo storage
