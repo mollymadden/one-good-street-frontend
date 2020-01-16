@@ -3,7 +3,7 @@ A web app developed by Molly Madden and Michelle Wong
 
 ## R1	Description of your website
 
-### TEST Molly Purpose
+### Purpose
 
 The purpose of this app is to refactor the website of One Good Street so that it is more accessible to senior citizens and stakeholders of senior citizens. We have been specifically tasked with improving the Library of Care Things section of the website to make it similar to a two-way marketplace. 
 
