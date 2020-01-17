@@ -130,7 +130,7 @@ Sources:
 
 ## R4	User Stories	CMP1043-5.1
 
-For our app, there are two main types of users - visitors, normal users and admin users.
+For our app, there are two main types of users - normal users and admin users.
 
 ### Normal user as passive browser
 Epic: As a normal user I want to view the website to determine and understand the purpose of One Good Street, and view the listings of items to determine if I want to request or donate an item.
