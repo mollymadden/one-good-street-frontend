@@ -4,7 +4,7 @@ import "./App.css";
 import axios from "axios";
 
 import Library from './Components/Librarycarethings';
-// import NavBar from './Components/Shared/NavBar';
+
 import Home from './Components/Home';
 import Media from './Components/Media-Events';
 import Pagenotfound from './Components/Pagenotfound';

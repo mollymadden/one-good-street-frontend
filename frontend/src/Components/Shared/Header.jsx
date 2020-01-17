@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styles from "./NavBar.module.css";
+import styles from "./Header.module.css";
 
-function NavBar() {
+
+
+
+function Header() {
     return (<div className={styles}>
         <nav>
             <ul>
@@ -13,10 +16,18 @@ function NavBar() {
                 <li><Link to='/get-involved'>Get Involved</Link></li>
             </ul>
         </nav>
+
+        <div className="whitespace">
+            <Link to='/'><img src="FULL-COLOUR-LOGO_RGB.PNG" /></Link>
+        </div>
+
+
+
+
     </div>
 
     )
 }
 
 
-export default NavBar;
+export default Header;

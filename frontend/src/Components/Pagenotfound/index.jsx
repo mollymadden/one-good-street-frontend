@@ -1,13 +1,13 @@
 import React from 'react';
-import NavBar from '../Shared/NavBar';
+import Header from '../Shared/Header';
 
 const Pagenotfound = () => {
     return (
         <div>
-            <div><NavBar /></div>
+            <div><Header /></div>
             <p>Page not found</p>
         </div>
     );
 }
 
-export default Error;
+export default Pagenotfound;

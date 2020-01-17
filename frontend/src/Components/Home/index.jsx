@@ -1,11 +1,11 @@
 import React from 'react';
-import NavBar from '../Shared/NavBar';
+import Header from '../Shared/Header';
 
 class Home extends React.Component {
     render() {
         return (
             <div>
-                <div><NavBar /></div>
+                <div><Header /></div>
                 <h1>Home</h1>
                 <p>Home page body content</p>
             </div>

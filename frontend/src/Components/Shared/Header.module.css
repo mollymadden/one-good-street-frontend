@@ -1,3 +1,7 @@
+div {
+  background-color: white;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -33,16 +37,7 @@ li a:after{
 	content: "";
   margin:auto;
   display:inline-block;
-	float:right;
-  /* Float left to reverse entry
-   * Float left in hover:after 
-   * to exit in same direction
-   * Float right in both places 
-   * to achieve the converse
-   * Comment out the float 
-   * to expand from the middle.
-  */
-	
+  float: left;
   margin-top:-3px;
 	border-top:3px solid #F57722;
 	-webkit-transition: all .25s;
@@ -62,9 +57,13 @@ li a:active, li a:active:after{
 
 }
 
-
 nav {
   height: 52px;
   margin: 0;
   padding: 0;
+}
+
+
+img {
+  max-width: 7rem;
 }

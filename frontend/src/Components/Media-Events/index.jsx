@@ -1,11 +1,11 @@
 import React from 'react';
-import NavBar from '../Shared/NavBar';
+import Header from '../Shared/Header';
 
 class Media extends React.Component {
     render() {
         return (
             <div>
-                <div><NavBar /></div>
+                <div><Header /></div>
                 <h1>Media & Events</h1>
                 <p>Media & Events page body content</p>
             </div>

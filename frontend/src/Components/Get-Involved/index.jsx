@@ -1,10 +1,10 @@
 import React from 'react';
-import NavBar from '../Shared/NavBar';
+import Header from '../Shared/Header';
 
 const Getinvolved = () => {
     return (
         <div>
-            <div><NavBar /></div>
+            <div><Header /></div>
             <h1>Get Involved</h1>
             <p>Get involved page body content</p>
         </div>
