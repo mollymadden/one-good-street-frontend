@@ -1,17 +1,21 @@
 import React from 'react';
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
+import { Link } from 'react-router-dom';
+import styles from "./NavBar.module.css";
 
-import { NavLink } from 'react-router-dom';
+function NavBar() {
+    return (<div className={styles}>
+        <nav>
+            <ul>
+                <li><Link to='/'>Home</Link></li>
+                <li><Link to='/about'>About</Link></li>
+                <li><Link to='/contact'>Contact</Link></li>
 
-const NavBar = () => {
-    return (
-        <div>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/about">About</NavLink>
-            <NavLink to="/contact">Contact</NavLink>
-        </div>
-    );
+            </ul>
+        </nav>
+    </div>
+
+    )
 }
+
 
 export default NavBar;

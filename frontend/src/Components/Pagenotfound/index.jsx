@@ -1,11 +1,11 @@
 import React from 'react';
-import NavBar from './Components/Shared/NavBar';
+import NavBar from '../Shared/NavBar';
 
 const Pagenotfound = () => {
     return (
         <div>
             <div><NavBar /></div>
-            <p>Error: Page does not exist!</p>
+            <p>Page not found</p>
         </div>
     );
 }

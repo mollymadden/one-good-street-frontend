@@ -1,14 +1,17 @@
 import React from 'react';
-import NavBar from './Components/Shared/NavBar';
+import NavBar from '../Shared/NavBar';
 
-const About = () => {
-    return (
-        <div>
-            <div><NavBar /></div>
-            <h1>About Us</h1>
-            <p>About Us page body content</p>
-        </div>
-    );
+class About extends React.Component {
+    render() {
+        return (
+            <div>
+                <div><NavBar /></div>
+                <h1>About</h1>
+                <p>About page body content</p>
+            </div>
+        )
+    }
 }
+
 
 export default About;

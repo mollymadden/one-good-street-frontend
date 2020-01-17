@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Librarycard from './ItemUI';
-import NavBar from './Components/Shared/NavBar';
 import img1 from "../../assets/shower-stool.png";
 import img2 from "../../assets/electric-wheelchair.png"
 
