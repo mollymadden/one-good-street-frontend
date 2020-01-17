@@ -104,6 +104,13 @@ The tech stack used for this MERN app are:
 
 ## R2	Dataflow Diagram	CMP1043-4.2
 
+### Dataflow Diagram Level 0
+![](docs/DFD-level-0.png)
+
+
+### Dataflow Diagram Level 1
+![](docs/DFD-level-1.png)
+
 
 [Dataflow Diagram - Lucid chart](https://www.lucidchart.com/invitations/accept/f7ebccd4-fa26-4438-8999-35b0d80951a2)
 
@@ -111,7 +118,10 @@ The tech stack used for this MERN app are:
 
 ## R3	Application Architecture Diagram	CMP1043-4.3
 
-Link to Lucid Chart https://www.lucidchart.com/documents/edit/82c229a8-0120-4702-9776-0ff7e80e8292/0_0
+### Application Architecture
+![](docs/AppArchDiag.png)
+
+[Application Architecture - Lucid chart](https://www.lucidchart.com/invitations/accept/84bbb816-9eb8-4469-ba71-fcf3ee4ffc21)
 
 Sources:
 * https://www.educative.io/edpresso/what-is-mern-stack 
