@@ -78,16 +78,29 @@ The outcome is that John is able to dispose of his shower stool in a responsible
 Those who visit the site and wish to see what it is about and get a feel if it is suitable for their needs. They may be visiting as they are interested in requesting equipment or donating items. They may also be interested in requesting or donating items on behalf of a relative or client. Visitors may also be wanting to help out as a volunteer and are seeking guidance about the skills or items they can offer. 
 
 ### Tech stack	GENERAL
-The tech stack used for this app are:
-* HTML
-* CSS
-* MongoDB
+The tech stack used for this MERN app are:
+
+#### Back end
 * Express
-* React
+* MongoDB Atlas
+* Mongoose
 * Node JS
+* CORS
+* Crypto
+
 * Heroku for deployment
-* Netlify for deployment
-* Amazon S3 Service 
+* Amazon S3 Service for photo storage
+
+#### Front end
+* CSS
+* HTML
+* React
+* React router 
+* Axios 
+
+* Netlify for deployment 
+
+---
 
 ## R2	Dataflow Diagram	CMP1043-4.2
 
@@ -95,6 +108,7 @@ Link to diagram Level 0 https://www.lucidchart.com/documents/edit/ece6f7b9-e479-
 
 Link to diagram Level 1 https://www.draw.io/#G1rctgUMfcY5GOdSZ1WwNeayM1_JQZqplB
 
+---
 
 ## R3	Application Architecture Diagram	CMP1043-4.3
 
@@ -102,6 +116,8 @@ Link to Lucid Chart https://www.lucidchart.com/documents/edit/82c229a8-0120-4702
 
 Sources:
 * https://www.educative.io/edpresso/what-is-mern-stack 
+
+---
 
 ## R4	User Stories	CMP1043-5.1
 
@@ -146,10 +162,11 @@ As an admin user, I want visitors to use my contact details to be the point of c
 Sources
 * https://stormotion.io/blog/how-to-write-a-good-user-story-with-examples-templates/
 
+---
 
 ## R5	Wireframes for multiple standard screen sizes, created using industry standard software	CMP1043-4.1, CMP1043-5.3
 
-
+---
 
 ## R6	Screenshots of your Trello board throughout the duration of the project	CMP1043-5.2
 
