@@ -104,9 +104,8 @@ The tech stack used for this MERN app are:
 
 ## R2	Dataflow Diagram	CMP1043-4.2
 
-Link to diagram Level 0 https://www.lucidchart.com/documents/edit/ece6f7b9-e479-4795-be97-72cf2278d02c/0_0
 
-Link to diagram Level 1 https://www.draw.io/#G1rctgUMfcY5GOdSZ1WwNeayM1_JQZqplB
+[Dataflow Diagram - Lucid chart](https://www.lucidchart.com/invitations/accept/f7ebccd4-fa26-4438-8999-35b0d80951a2)
 
 ---
 
