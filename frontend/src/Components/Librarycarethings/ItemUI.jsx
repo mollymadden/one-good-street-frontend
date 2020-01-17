@@ -1,7 +1,7 @@
 import React from 'react';
 import './item-style.css'
 
-const Card = props => {
+const Librarycard = props => {
     return (
         <div className="card text-center shadow">
             <div className="overflow">
@@ -9,13 +9,11 @@ const Card = props => {
             </div>
             <div className="card-body text-dark">
                 <h4 className="card-title">{props.title}</h4>
-                <p className="card-text text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur nostrum sint numquam ipsam. Nesciunt impedit unde fuga optio quas dolorum!</p>
-                <a href="#" className="btn btn-outline-success">Go Anywhere</a>
-
-
+                <p className="card-text text-secondary">Lorem ipsum dolor sit amet</p>
+                <p className="card-text text-secondary">📍 Melbourne</p>
             </div>
         </div>
     )
 }
 
-export default Card;
+export default Librarycard;
