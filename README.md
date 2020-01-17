@@ -18,7 +18,7 @@ This is how the Library of Care Things currently looks.
 
 
 #### Our main task - in connection with the purpose
-After speaking to the client (Matiu Bush), we have been requested to focus on improving the Library of Care Things. The Library of Care Things is a page that connects those who have unwanted equipment (for example electric wheelchairs and walking frames) for senior citizens, to those who require such equipment. It is a free service offered by One Good Street and all equipment listed is free. Currently, people who want to offer equipment contact One Good Street and Matiu Bush picks up the equipment and then he lists them on the website. These listings are hard coded and it can be time consuming to list a single item onto the site. Matiu informed us he would like for the redesigned website to have the ability for visitors to list donated items themselves without the barrier of a forced sign up / log in. Once items are listed, Matiu also wants the ability to be notified of an item so he can review it before publishing.
+After speaking to the client (Matiu Bush), we have been requested to focus on improving the Library of Care Things. The Library of Care Things is a page that connects those who have unwanted equipment (for example electric wheelchairs and walking frames) for senior citizens, to those who require such equipment. It is a free service offered by One Good Street and all equipment listed is free. At present, people who want to offer equipment contact One Good Street, then Matiu Bush picks up the equipment and he lists them on the website. These listings are hard coded and it can be time consuming to list a single item onto the site. Matiu informed us he would like for the redesigned website to have the ability for visitors to list donated items themselves without the barrier of a forced sign up / log in. Once items are listed, Matiu also wants the ability to be notified of an item so he can review it as an administrator before publishing.
 
 As a result, our main task is to make the 'Library of Care Things' dynamic and link it to a database. 
 
@@ -39,7 +39,7 @@ Normal users encompasses non admin users (which will be discussed below). These 
 
 ##### Normal users viewing ability
 * Normal users can view the Home, About, Library of Care Things, individual Library item page, Media & Events, Contact us, and Get Involved pages. 
-* Normal users can view the home page to get a quick summary about what the website its about.
+* Normal users can view the home page to get a quick summary about what the website is about.
 * Normal users can view the about page to understand the purpose and aim of One Good Street.
 
 ##### Normal users - more active role
@@ -52,7 +52,7 @@ Normal users encompasses non admin users (which will be discussed below). These 
 
 ##### Normal users as donors
 * Normal users can list items without signing up. In order to list an item, visitors would need to fill in a form. This form requires visitors to enter a title (string), description (string), category (drop down box), condition (drop down box), location (string) and contact details (string).
-* The form will not be submitted unless all the fields are filled in. Once submitted, the form is saved to the Mongo database.
+* The form will not be submitted unless all the fields are filled in. Once submitted, the form is saved to the Mongo Atlas database.
 * Normal users who list items can provide their contact details (in the event someone wishes to contact them about requesting an item) or they can choose to not provide contact details, and in that event, 'One Good Street' would be the point of contact. 
 * In terms of form validations for normal users, errors will be displayed if any part of the form is incomplete. 
 
@@ -60,11 +60,12 @@ Normal users encompasses non admin users (which will be discussed below). These 
 * In addition to the functions that a visitor has, admin users can view, edit and update all pages and have CRUD functionality for the listings on the Library of Care Things.
 * Admin users can add new categories and conditions to the listings, which will be saved to the Mongo database. This will be achieved via a form. 
 * In terms of form validation, the administrator cannot submit a blank value when adding a new category or condition. 
+* Admin users also have CRUD functionality for other admin users on the site. This means they can view, create, update and delete users with admin rights. 
 
 ### Target audience
 The target audience of One Good Street senior citizens and stakeholders of senior citizens (including case managers, physiotherapists, occupational therapists, aged care and NDIS workers). 
 
-#### Case Study
+#### Case Study 1 - Using the Library of Care Things
 
 ##### John Foo - has a shower stool to donate
 John Foo has an elderly mother who used to live with him and had a shower stool. However, she has recently moved to an aged care home. As a result, she is no longer requiring the shower stool as this is already provided for at her new home. As a result, John decides to list this shower stool on the Library of Care Things through One Good Street. 
@@ -74,6 +75,16 @@ Jane Doo is the case manager for a senior citizen, who is still living at home. 
 
 The outcome is that John is able to dispose of his shower stool in a responsible and meaningful way while Jane's client is not burdened with the potential steep financial costs of purchasing aged care equipment and can reap the benefits of using John's unwanted equipment. 
 
+#### Case Study 2 - Person who wishes to volunteer (Based on communication with Matiu Bush)
+
+##### Lynne - volunteer
+Lynne is has an ageing mother and a leading member of society. Lynne has great skills in communication, time management, is resourceful and is digital literate. She has made use of the Library of Care Things for her mother and wishes to contritube back as a volunteer. Lynne decides to use the get involved form to offer her help. 
+
+##### One Good Street
+One Good Street receives Lynne's form and discusses with her potential opportunities she can be involved in, such as communicating with people interested in requesting or donating items to the Library of Care Things.
+
+The outcome is that Lynne feels like she can contribute back to society and One Good Street has another set of hands to help out. 
+
 #### Visitors
 Those who visit the site and wish to see what it is about and get a feel if it is suitable for their needs. They may be visiting as they are interested in requesting equipment or donating items. They may also be interested in requesting or donating items on behalf of a relative or client. Visitors may also be wanting to help out as a volunteer and are seeking guidance about the skills or items they can offer. 
 
@@ -81,15 +92,13 @@ Those who visit the site and wish to see what it is about and get a feel if it i
 The tech stack used for this MERN app are:
 
 #### Back end
-* Express
-* MongoDB Atlas
-* Mongoose
-* Node JS
 * CORS
 * Crypto
-
-* Heroku for deployment
-* Amazon S3 Service for photo storage
+* Express
+* JSON Web Token (JWT)
+* MongoDB
+* Mongoose
+* Node JS
 
 #### Front end
 * CSS
@@ -98,7 +107,11 @@ The tech stack used for this MERN app are:
 * React router 
 * Axios 
 
+### Cloud services
 * Netlify for deployment 
+* Heroku for deployment
+* Amazon S3 Service for photo storage
+* MongoDB Atlast
 
 ---
 
