@@ -23,6 +23,7 @@
 
 .container-fluid{
     padding-top: 5%;
+    max-width: 98%;
 }
 
 .overflow {

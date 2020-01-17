@@ -6,6 +6,8 @@ ul {
   background-color: #0C3B55;
   font-family: DINCondensed-Bold;
   text-transform: uppercase;
+  display: flex;
+  justify-content: center;
 }
 
 li {
@@ -20,6 +22,46 @@ li a {
   text-decoration: none;
   color: #ffffff;
 }
+
+li a:hover{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+li a:after{
+	width:0%;
+	content: "";
+  margin:auto;
+  display:inline-block;
+	float:right;
+  /* Float left to reverse entry
+   * Float left in hover:after 
+   * to exit in same direction
+   * Float right in both places 
+   * to achieve the converse
+   * Comment out the float 
+   * to expand from the middle.
+  */
+	
+  margin-top:-3px;
+	border-top:3px solid #F57722;
+	-webkit-transition: all .25s;
+       -moz-transition: all .25s;
+         -o-transition: all .25s;
+            transition: all .25s;	
+}
+
+
+li a:hover:after{
+	width:100%;
+}
+
+li a:active, li a:active:after{
+	border-color:#ccc;
+	color:#F57722;
+
+}
+
 
 nav {
   height: 52px;

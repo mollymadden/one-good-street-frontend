@@ -6,9 +6,10 @@ import axios from "axios";
 import Library from './Components/Librarycarethings';
 // import NavBar from './Components/Shared/NavBar';
 import Home from './Components/Home';
+import Media from './Components/Media-Events';
 import Pagenotfound from './Components/Pagenotfound';
 import About from './Components/About';
-import Contact from './Components/Contact';
+import Getinvolved from './Components/Get-Involved';
 
 
 function App() {
@@ -18,7 +19,8 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/libraryofcarethings" component={Library} />
-        <Route path="/contact" component={Contact} />
+        <Route path="/media-events" component={Media} />
+        <Route path="/get-involved" component={Getinvolved} />
         <Route path="/pagenotfound" component={Pagenotfound} />
       </Switch>
     </BrowserRouter>

@@ -1,14 +1,14 @@
 import React from 'react';
 import NavBar from '../Shared/NavBar';
 
-const Contact = () => {
+const Getinvolved = () => {
     return (
         <div>
             <div><NavBar /></div>
-            <h1>Contact US</h1>
-            <p>Contact US page body content</p>
+            <h1>Get Involved</h1>
+            <p>Get involved page body content</p>
         </div>
     );
 }
 
-export default Contact;
+export default Getinvolved;
