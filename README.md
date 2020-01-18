@@ -111,19 +111,22 @@ The tech stack used for this MERN app are:
 * Netlify for deployment 
 * Heroku for deployment
 * Amazon S3 Service for photo storage
-* MongoDB Atlas
+* MongoDB Atlast
 
 ---
 
 ## R2	Dataflow Diagram	CMP1043-4.2
+The dataflow diagram is based on the Library of Care Things page that we are specifically tasked with designing. 
 
 ### Dataflow Diagram Level 0
 ![](docs/DFD-level-0.png)
 
+This is a level 0 data flow diagram. It shows the entire data system and highlights how this interacts with external entities. The data system here is the 'inventory of donated goods' and the external entities are the visitors, donors and administrators who access the data system. 
 
 ### Dataflow Diagram Level 1
 ![](docs/DFD-level-1.png)
 
+This is a level 1 data flow diagram. It is more detailed than the previous level 0 DFD. It essentially divides the main actions into smaller actions that can be examined and improved upon at a deeper level. We can see how this compares to the level 0 diagram. In level 0, where the user requested an item we can now see that when the 'item is provided', this process is now broken down in the level 1 diagram where data is retrieved from the MongoDB database that is stored on MongoDB Atlas cloud, Mongoose is used to translate between how the data object is represented in MongoDB and it is represented in code and Express is the backend for NodeJS (which allows JS to execute server side), which manages the request, route and view of the item stored as an object from MongoDB. This is then rendered by React in the front end (client side).
 
 [Dataflow Diagram - Lucid chart](https://www.lucidchart.com/invitations/accept/f7ebccd4-fa26-4438-8999-35b0d80951a2)
 
@@ -165,7 +168,7 @@ As a normal user, I want to post a listing with a title, headline, description, 
 
 As a normal user, I want to post a listing with contact details made publicly available so the donee can contact me if there are any questions. 
 
-As a normal user, I want to have the option of posting a listing without making my contact details publicly available. In this case, One Good Street & Matiu Bush would be the point of contact.
+As a normal user, I want to have the option of posting a listing without making my contact details publicly available. In this case, One Good Street and Matiu Bush would be the point of contact.
 
 As a normal user, I want the website to only display the detailed description of the item (including title, headline, description, category, location, and image) to people who may be interested in the item.
 
