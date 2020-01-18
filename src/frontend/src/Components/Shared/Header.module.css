@@ -57,13 +57,19 @@ li a:active, li a:active:after{
 
 }
 
-nav {
-  height: 52px;
-  margin: 0;
-  padding: 0;
+
+span {
+  margin: 5px;
 }
 
+nav {
+  height: 52px;
+}
 
 img {
   max-width: 7rem;
+}
+
+.titleblurb {
+  margin: 7rem;
 }

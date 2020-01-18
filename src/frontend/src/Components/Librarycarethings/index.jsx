@@ -6,11 +6,10 @@ import Header from '../Shared/Header';
 
 class Library extends Component {
 
-
     render() {
         return (
             <div>
-                <div><Header /></div>
+                <Header />
                 <div className="container-fluid d-flex justify-content-center">
                     <div className="row">
                         <div className="col-sm-4"><Librarycard imgsrc={img1} title="Shower Stool" /></div>

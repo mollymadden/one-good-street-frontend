@@ -1,17 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Header from '../Shared/Header';
+
+const title = "Home";
 
 class Home extends React.Component {
     render() {
         return (
-            <div>
-                <div><Header /></div>
-                <h1>Home</h1>
-                <p>Home page body content</p>
-            </div>
+            <Header />
         )
     }
 }
+
 
 
 export default Home;
