@@ -119,7 +119,7 @@ The tech stack used for this MERN app are:
 The dataflow diagram is based on the Library of Care Things page that we are specifically tasked with designing. 
 
 ### Dataflow Diagram Level 0
-![](docs/DFD-level-0.png)
+![](docs/DFD-level-00.png)
 
 This is a level 0 data flow diagram. It shows the entire data system and highlights how this interacts with external entities. The data system here is the 'inventory of donated goods' and the external entities are the visitors, donors and administrators who access the data system. 
 
