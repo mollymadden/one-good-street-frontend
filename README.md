@@ -218,3 +218,8 @@ Trello 14-1-20
 
 
 [Trello Board link](https://trello.com/b/xNTst2Dp/real-world-app)
+
+---
+
+## Link to slide deck
+[Slide deck](docs/slidedeck-onegoodstreet.pdf)
