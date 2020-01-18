@@ -119,12 +119,12 @@ The tech stack used for this MERN app are:
 The dataflow diagram is based on the Library of Care Things page that we are specifically tasked with designing. 
 
 ### Dataflow Diagram Level 0
-![](docs/DFD-level-00.png)
+![](docs/DFD-Level-0.png)
 
 This is a level 0 data flow diagram. It shows the entire data system and highlights how this interacts with external entities. The data system here is the 'inventory of donated goods' and the external entities are the visitors, donors and administrators who access the data system. 
 
 ### Dataflow Diagram Level 1
-![](docs/DFD-level-1.png)
+![](docs/DFD-Level-1.png)
 
 This is a level 1 data flow diagram. It is more detailed than the previous level 0 DFD. It essentially divides the main actions into smaller actions that can be examined and improved upon at a deeper level. We can see how this compares to the level 0 diagram. In level 0 when the user requested an item and the process 'item provided' is being performed, this process is now broken down in the level 1 diagram. The level 1 diagram shows data is retrieved from the MongoDB database, which is stored on MongoDB Atlas cloud; Mongoose is used to translate between how the data object is represented in MongoDB and how it is represented in code; and Express is the backend for NodeJS (which allows JS to execute server side), which manages the request, route and view of the item stored as an object from MongoDB. This is then rendered by React in the front end (client side).
 
