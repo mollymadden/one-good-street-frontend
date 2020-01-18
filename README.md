@@ -191,7 +191,7 @@ Sources
 
 ## R5	Wireframes for multiple standard screen sizes, created using industry standard software	CMP1043-4.1, CMP1043-5.3
 
-![](docs/wireframes-final.png)
+![](docs/wireframe-final.png)
 
 ---
 
