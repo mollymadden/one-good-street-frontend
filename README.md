@@ -78,7 +78,7 @@ The outcome is that John is able to dispose of his shower stool in a responsible
 #### Case Study 2 - Person who wishes to volunteer (Based on communication with Matiu Bush)
 
 ##### Lynne - volunteer
-Lynne is has an ageing mother and a leading member of society. Lynne has great skills in communication, time management, is resourceful and is digital literate. She has made use of the Library of Care Things for her mother and wishes to contritube back as a volunteer. Lynne decides to use the get involved form to offer her help. 
+Lynne is has an ageing mother and a leading member of society. Lynne has great skills in communication, time management, is resourceful and is digital literate. She has made use of the Library of Care Things for her mother and wishes to contribute back as a volunteer. Lynne decides to use the get involved form to offer her help. 
 
 ##### One Good Street
 One Good Street receives Lynne's form and discusses with her potential opportunities she can be involved in, such as communicating with people interested in requesting or donating items to the Library of Care Things.
