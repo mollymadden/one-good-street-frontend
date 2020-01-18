@@ -191,6 +191,8 @@ Sources
 
 ## R5	Wireframes for multiple standard screen sizes, created using industry standard software	CMP1043-4.1, CMP1043-5.3
 
+![](docs/wireframes-final.png)
+
 ---
 
 ## R6	Screenshots of your Trello board throughout the duration of the project	CMP1043-5.2
