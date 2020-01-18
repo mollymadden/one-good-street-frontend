@@ -111,7 +111,7 @@ The tech stack used for this MERN app are:
 * Netlify for deployment 
 * Heroku for deployment
 * Amazon S3 Service for photo storage
-* MongoDB Atlast
+* MongoDB Atlas
 
 ---
 
@@ -197,6 +197,7 @@ Sources
 
 ### Trello
 Trello was used to keep track of our project by listing the tasks we needed to do, the tasks we are working on, the tasks we have completed and other requirements for the assignment. Please see the screenshots of our trello board below. 
+
 
 Trello 17-1-20
 ![](docs/Trello-17-1-20.png)
