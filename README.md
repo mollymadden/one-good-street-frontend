@@ -111,7 +111,7 @@ The tech stack used for this MERN app are:
 * Netlify for deployment 
 * Heroku for deployment
 * Amazon S3 Service for photo storage
-* MongoDB Atlast
+* MongoDB Atlas
 
 ---
 
