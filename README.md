@@ -113,6 +113,9 @@ The tech stack used for this MERN app are:
 * Amazon S3 Service for photo storage
 * MongoDB Atlas
 
+### Testing
+* Jest
+
 ---
 
 ## R2	Dataflow Diagram	CMP1043-4.2
