@@ -7,7 +7,9 @@ import styles from "./Title.module.css";
 class Title extends React.Component {
     render() {
         return (
-        <div></div>
+            <div>
+                <h1>{this.props.title}</h1>
+            </div>
         )
     }
 }
