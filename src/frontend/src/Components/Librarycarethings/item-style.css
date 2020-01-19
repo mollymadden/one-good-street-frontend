@@ -1,5 +1,6 @@
 .body {
     background-color: #D5ECEA !important;
+    
 }
 
 .card {
@@ -27,7 +28,8 @@
 
 .container-fluid{
     padding-top: 5%;
-    max-width: 98%;
+    border: 50px solid #D5ECEA;
+    background-color: #D5ECEA;
 }
 
 .overflow {
