@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styles from "./Header.module.css";
+import Logo from '../Shared/Logo';
+import Title from '../Shared/Title';
 
 
 class Header extends React.Component {
@@ -15,16 +17,12 @@ class Header extends React.Component {
                     <li><Link to='/get-involved'>Get Involved</Link></li>
                 </ul>
             </nav>
-            <div className="titleblurb">
-                <Link to='/'><img src="FULL-COLOUR-LOGO_RGB.PNG" /></Link>
-            </div>
+            <Logo />
         </div >
 
         )
     }
 }
-
-
 
 
 export default Header;
