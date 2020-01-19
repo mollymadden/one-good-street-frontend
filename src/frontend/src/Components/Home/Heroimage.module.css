@@ -1,4 +1,18 @@
-.hero {
-    width: 300px;
-    text-align: center;
+/* .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+} */
+
+.img {
+    object-fit: cover;
+    width: 50px;
+    height: 100px;
 }

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from '../Shared/Header';
 import Title from '../Shared/Title';
 import Hero from '../Home/Heroimage';
+import './Home.module.css'
 
 const title = "Home";
 
@@ -11,7 +12,9 @@ class Home extends React.Component {
             <div>
                 <Header />
                 <Title title="One Good Street" />
-                <Hero />
+                <div>
+                    <Hero />
+                </div>
             </div>
         )
     }
