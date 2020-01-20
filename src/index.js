@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import { render } from 'react-dom';
 import { Provider } from "react-redux";
-import { store } from "./Components/Librarycarethings/Upload/store";
+import { store } from "./Components/Library/Upload/store";
 
 import './index.css';
 import App from './App';
