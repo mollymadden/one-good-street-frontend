@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../Shared/Header';
 import Title from '../Shared/Title';
-import './About.module.css';
+import './About.css';
 
 class About extends React.Component {
     render() {

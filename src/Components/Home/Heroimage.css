@@ -11,8 +11,12 @@
     min-height: 100%;
 } */
 
-.img {
-    object-fit: cover;
-    width: 50px;
+.hero {
+    text-align: center;
+}
+
+.hero img {
+    /* object-fit: cover; */
+    width: 500px;
     height: 100px;
 }
