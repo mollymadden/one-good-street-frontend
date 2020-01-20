@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styles from "./Header.module.css";
 import Logo from '../Shared/Logo';
-import Title from '../Shared/Title';
-
 
 class Header extends React.Component {
     render() {
@@ -15,6 +13,7 @@ class Header extends React.Component {
                     <li><Link to='/libraryofcarethings'>Library Of Care Things</Link></li>
                     <li><Link to='/media-events'>Media & Events</Link></li>
                     <li><Link to='/get-involved'>Get Involved</Link></li>
+                    <li><Link to='/admin'>Admin</Link></li>
                 </ul>
             </nav>
             <Logo />
