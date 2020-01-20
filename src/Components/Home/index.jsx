@@ -4,8 +4,6 @@ import Title from '../Shared/Title';
 import Hero from '../Home/Heroimage';
 import './Home.css'
 
-const title = "Home";
-
 class Home extends React.Component {
     render() {
         return (
