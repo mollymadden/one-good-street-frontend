@@ -1,11 +1,12 @@
 import React from "react";
-import SyncValidationForm from './Form'
+import CreateItem from './Form'
 import Header from '../../Shared/Header';
 import Title from '../../Shared/Title';
 
-function handleForm(values) {
-    console.log(values);
-}
+
+// function handleForm(values) {
+//     console.log(values);
+// }
 
 class Upload extends React.Component {
     submit = (values) => {
@@ -19,7 +20,7 @@ class Upload extends React.Component {
             <Title title="Upload an Item" />
             <div>
 
-            <SyncValidationForm handleSubmit={handleForm} />
+            <CreateItem onSubmit={this.submit} />
 
             </div>
         </div>
