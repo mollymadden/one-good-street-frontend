@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from '../Shared/Header';
 import Title from '../Shared/Title';
 import Hero from '../Home/Heroimage';
-import './Home.module.css'
+import './Home.css'
 
 const title = "Home";
 
