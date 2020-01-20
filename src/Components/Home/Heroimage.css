@@ -13,6 +13,7 @@
 
 .hero {
     text-align: center;
+    min-width: 400px;
 }
 
 .hero img {

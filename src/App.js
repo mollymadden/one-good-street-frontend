@@ -13,6 +13,9 @@ import Getinvolved from './Components/Get-Involved';
 import Admin from './Components/Admin/Login';
 import AdminDashboard from './Components/Admin/Dashboard';
 
+import Upload from './Components/Librarycarethings/Upload';
+
+
 
 function App() {
   return (<div>
@@ -20,12 +23,17 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
-        <Route path="/libraryofcarethings" component={Library} />
+        <Route exact path="/libraryofcarethings" component={Library} />
         <Route path="/media-events" component={Media} />
         <Route path="/get-involved" component={Getinvolved} />
         <Route path="/admin" component={Admin} />
         <Route path="/admindashboard" component={AdminDashboard} />
         <Route path="/pagenotfound" component={Pagenotfound} />
+        <Route exact path="/libraryofcarethings/upload" component={Upload} />
+
+        {/* <Route exact path="/libraryofcarethings/upload" render={() => (
+          <SyncValidationForm handleSubmit={handleForm} />)} /> */}
+
       </Switch>
     </BrowserRouter>
   </div>
