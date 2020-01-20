@@ -10,7 +10,7 @@ import Media from './Components/Media-Events';
 import Pagenotfound from './Components/Pagenotfound';
 import About from './Components/About';
 import Getinvolved from './Components/Get-Involved';
-import Admin from './Components/Admin';
+import Admin from './Components/Admin/login';
 
 import Upload from './Components/Librarycarethings/Upload';
 
