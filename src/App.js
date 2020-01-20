@@ -10,6 +10,7 @@ import Media from './Components/Media-Events';
 import Pagenotfound from './Components/Pagenotfound';
 import About from './Components/About';
 import Getinvolved from './Components/Get-Involved';
+import Admin from './Components/Admin';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/libraryofcarethings" component={Library} />
         <Route path="/media-events" component={Media} />
         <Route path="/get-involved" component={Getinvolved} />
+        <Route path="/admin" component={Admin} />
         <Route path="/pagenotfound" component={Pagenotfound} />
       </Switch>
     </BrowserRouter>
