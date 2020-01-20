@@ -5,7 +5,7 @@ class Login extends React.Component
 {
     state =
     {
-        username: "",
+        email: "",
         password: "",
         data: {}
     }
@@ -21,9 +21,9 @@ class Login extends React.Component
 
         try
         {
-            let response = await axios.post('http://localhost:5000/login',
+            let response = await axios.post('http://localhost:5000/users/login',
             {
-                username: this.state.username,
+                email: this.state.email,
                 password: this.state.password
             } );
             console.log(response);
@@ -35,7 +35,7 @@ class Login extends React.Component
         }
         catch( err )
         {
-            this.setState( { data: err.response.data } );
+            this.setState( { data: err} );
         }
     }
 
@@ -45,7 +45,7 @@ class Login extends React.Component
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <label>
-                        Username: <input type="text" name="username" onChange={this.fieldChange} />
+                        Email: <input type="text" name="email" onChange={this.fieldChange} />
                     </label>
                     <label>
                         Password: <input type="text" name="password" onChange={this.fieldChange} />
