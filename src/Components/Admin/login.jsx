@@ -1,47 +1,38 @@
 import React from 'react';
 import axios from 'axios';
-
-class Login extends React.Component
-{
+class Login extends React.Component {
     state =
-    {
-        email: "",
-        password: "",
-        data: {}
-    }
-
-    fieldChange = (event) =>
-    {
+        {
+            email: "",
+            password: "",
+            data: {}
+        }
+    fieldChange = (event) => {
         this.setState({ [event.target.name]: event.target.value });
     }
-
-    handleSubmit = async (event) =>
-    {
+    handleSubmit = async (event) => {
         event.preventDefault();
-
-        try
-        {
+        try {
             let response = await axios.post('http://localhost:5000/users/login',
-            {
-                email: this.state.email,
-                password: this.state.password
-            } );
+                {
+                    email: this.state.email,
+                    password: this.state.password
+                });
             console.log(response);
-            
-            this.setState( { data: response.data } );
 
-            //axios.defaults.headers.common['Authorization'] = response.data.token;
-            localStorage.setItem( 'authToken', response.data.token );
+            this.setState({ data: response.data });
+            axios.defaults.headers.common['Authorization'] = response.data.token;
+            localStorage.setItem('authToken', response.data.token);
+            this.props.history.push('/admindashboard');
+            // this.props.history.push('/'); 
+
         }
-        catch( err )
-        {
-            this.setState( { data: err} );
+        catch (err) {
+            this.setState({ data: err });
         }
     }
-
-    render()
-    {
-        return(
+    render() {
+        return (
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <label>
@@ -57,12 +48,11 @@ class Login extends React.Component
                         Login response
                     </div>
                     <div>
-                        {JSON.stringify( this.state.data )}
+                        {JSON.stringify(this.state.data)}
                     </div>
                 </div>
             </div>
         );
     }
 }
-
 export default Login;
