@@ -1,23 +1,10 @@
-/* .hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.hero img {
-    flex-shrink: 0;
-    min-width: 100%;
-    min-height: 100%;
-} */
-
 .hero {
     text-align: center;
-    min-width: 400px;
+    width: 100%;
 }
 
 .hero img {
-    /* object-fit: cover; */
-    width: 500px;
-    height: 100px;
+    width: 400px;
+    height: auto;
 }
+

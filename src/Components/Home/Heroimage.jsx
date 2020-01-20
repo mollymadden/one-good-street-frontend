@@ -6,8 +6,10 @@ import './Heroimage.css';
 class Hero extends React.Component {
     render() {
         return (
-            <div className="hero">
-                <img src={ladies} />
+            <div>
+                <div className="hero">
+                    <img src={ladies} />
+                </div>
             </div>
         )
     }
