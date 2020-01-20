@@ -10,7 +10,8 @@ import Media from './Components/Media-Events';
 import Pagenotfound from './Components/Pagenotfound';
 import About from './Components/About';
 import Getinvolved from './Components/Get-Involved';
-import Admin from './Components/Admin/login';
+import Admin from './Components/Admin/Login';
+import AdminDashboard from './Components/Admin/Dashboard';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/media-events" component={Media} />
         <Route path="/get-involved" component={Getinvolved} />
         <Route path="/admin" component={Admin} />
+        <Route path="/admindashboard" component={AdminDashboard} />
         <Route path="/pagenotfound" component={Pagenotfound} />
       </Switch>
     </BrowserRouter>

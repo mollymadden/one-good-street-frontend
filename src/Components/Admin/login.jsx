@@ -30,8 +30,14 @@ class Login extends React.Component
             
             this.setState( { data: response.data } );
 
-            //axios.defaults.headers.common['Authorization'] = response.data.token;
+            axios.defaults.headers.common['Authorization'] = response.data.token;
             localStorage.setItem( 'authToken', response.data.token );
+
+            this.props.history.push('/admindashboard');
+
+            // this.props.history.push('/'); 
+
+            
         }
         catch( err )
         {
