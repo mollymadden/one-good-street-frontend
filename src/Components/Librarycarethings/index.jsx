@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Librarycard from './ItemUI';
+import Librarycard from './Card';
 import img1 from "../../assets/shower-stool.png";
 import img2 from "../../assets/electric-wheelchair.png";
 import Header from '../Shared/Header';
@@ -26,18 +26,19 @@ class Library extends Component {
                         Please email info@onegoodstreet.com.au if you are interested in any of the equipment.
                         </div>
                 </div>
-
-                <div className="container-fluid d-flex justify-content-center">
+                <div>
                     <Button />
-                    <div className="row">
-                        <div className="col-sm-4"><Librarycard imgsrc={img1} title="Shower Stool" /></div>
-                        <div className="col-sm-4"><Librarycard imgsrc={img2} title="Electric Wheelchair" /></div>
-                        <div className="col-sm-4"><Librarycard imgsrc={img1} title="Shower Stool" /></div>
-                        <div className="col-sm-4"><Librarycard imgsrc={img2} title="Electric Wheelchair" /></div>
-                        <div className="col-sm-4"><Librarycard imgsrc={img1} title="Shower Stool" /></div>
-                        <div className="col-sm-4"><Librarycard imgsrc={img2} title="Electric Wheelchair" /></div>
-                        <div className="col-sm-4"><Librarycard imgsrc={img1} title="Shower Stool" /></div>
-                        <div className="col-sm-4"><Librarycard imgsrc={img2} title="Electric Wheelchair" /></div>
+                    <div className="container-fluid d-flex justify-content-center">
+
+                        <div className="row">
+                            <Librarycard imgsrc={img2} title="Electric Wheelchair" />
+                            <Librarycard imgsrc={img1} title="Shower Stool" />
+                            <Librarycard imgsrc={img2} title="Electric Wheelchair" />
+                            <Librarycard imgsrc={img1} title="Shower Stool" />
+                            <Librarycard imgsrc={img2} title="Electric Wheelchair" />
+                            <Librarycard imgsrc={img1} title="Shower Stool" />
+                            <Librarycard imgsrc={img2} title="Electric Wheelchair" />
+                        </div>
                     </div>
                 </div>
             </div>
