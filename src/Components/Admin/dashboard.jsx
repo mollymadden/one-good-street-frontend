@@ -1,12 +1,18 @@
 import React from 'react';
 import axios from 'axios';
+import {withRouter} from 'react-router';
 class Dashboard extends React.Component {
     async componentDidMount() {
+      try {
         const response = await
-            axios.get("https://vast-headland-25884.herokuapp.com" + "/users/dashboard")
-        if (response.status != 200) {
-            this.props.history.push('/');
-        }
+            axios.get("http://localhost:5000" + "/users/dashboard")
+            console.log(response);
+      }
+      catch (error){
+        console.log(error.message)
+        this.props.history.push('/')
+      }
+        
     }
     render() {
         return (<div>
@@ -14,4 +20,4 @@ class Dashboard extends React.Component {
         </div>)
     }
 }
-export default Dashboard;
+export default withRouter(Dashboard);

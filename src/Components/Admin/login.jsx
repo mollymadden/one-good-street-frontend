@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from 'axios';
+import {withRouter} from 'react-router';
+
 class Login extends React.Component {
     state =
         {
@@ -23,8 +25,9 @@ class Login extends React.Component {
             this.setState({ data: response.data });
             axios.defaults.headers.common['Authorization'] = response.data.token;
             localStorage.setItem('authToken', response.data.token);
-            this.props.history.push('/admindashboard');
-            // this.props.history.push('/'); 
+            console.log(this.props.history);
+            this.props.history.push('/admin/dashboard');
+            
 
         }
         catch (err) {
@@ -55,4 +58,4 @@ class Login extends React.Component {
         );
     }
 }
-export default Login;
+export default withRouter(Login);
