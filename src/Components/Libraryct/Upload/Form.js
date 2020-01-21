@@ -18,7 +18,7 @@ class CreateItem extends React.Component {
             email: '',
             privacy: '', //drop Boolean
             image: '',
-            delivery: '' //checkbox boolean
+            delivery: '' //checkbox boolean check check
         }
     }
 
