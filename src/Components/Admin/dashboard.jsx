@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import {withRouter} from 'react-router';
+import { withRouter } from 'react-router';
 class Dashboard extends React.Component {
 
 
@@ -17,8 +17,7 @@ class Dashboard extends React.Component {
         
     }
 
-    
-
+  
     pageRender(){
       if(localStorage.authToken){
         return  <h1>You are on the admin dashboard page</h1>
@@ -31,5 +30,8 @@ class Dashboard extends React.Component {
     render() {
         return this.pageRender();
     }
-}
+
+  
+  }
+
 export default withRouter(Dashboard);
