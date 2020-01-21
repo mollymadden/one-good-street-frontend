@@ -26,8 +26,8 @@ function App() {
         <Route exact path="/library" component={Library} />
         <Route path="/media-events" component={Media} />
         <Route path="/get-involved" component={Getinvolved} />
-        <Route exact path="/admin" component={Admin} />
         <Route exact path="/admin/dashboard" component={Dashboard} />
+        <Route exact path="/admin" component={Admin} />
         <Route path="/pagenotfound" component={Pagenotfound} />
         <Route exact path="/library/upload" component={Upload} />
 

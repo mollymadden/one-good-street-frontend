@@ -53,20 +53,21 @@ import axios from 'axios';
 class CreateItem extends React.Component {
     constructor(props) {
         super(props);
+
         this.state = {
-            itemName: "",
-            headline: "",
-            description: "",
+            itemName: '',
+            headline: '',
+            description: '',
             category: [],
-            postcode: "",
-            firstName: "",
-            lastName: "",
-            phone: "",
-            address: "",
-            email: "",
-            privacy: "",
-            image: "",
-            delivery: ""
+            postcode: '',
+            firstName: '',
+            lastName: '',
+            phone: '',
+            address: '',
+            email: '',
+            privacy: false,
+            image: '',
+            delivery: false
         }
     }
 
@@ -96,6 +97,8 @@ class CreateItem extends React.Component {
             })
 
     }
+
+
     render() {
         return (<div>
             <form onSubmit={this.props.handleSubmit(this.onSubmit)}>

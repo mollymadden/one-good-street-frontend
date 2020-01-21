@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { Redirect } from 'react-router-dom';
 class Login extends React.Component {
     state =
         {
@@ -23,8 +24,11 @@ class Login extends React.Component {
             this.setState({ data: response.data });
             axios.defaults.headers.common['Authorization'] = response.data.token;
             localStorage.setItem('authToken', response.data.token);
-            this.props.history.push('/admindashboard');
-            // this.props.history.push('/'); 
+            // this.props.history.push('/');
+            // this.props.history.push('/admin/dashboard');
+            // console.log(this.props.history);
+
+            return <Redirect to='/admin/dashboard' />
 
         }
         catch (err) {
