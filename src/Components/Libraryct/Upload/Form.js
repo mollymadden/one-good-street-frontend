@@ -1,55 +1,6 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
-import axios from 'axios';
-// function validate(values) {
-//     let errors = {};
-//     if (!values.itemName) {
-//         errors.itemName = 'Required';
-//     }
-//     else if (values.itemName.length < 1) {
-//         errors.itemName = 'Must be 1 characters or more';
-//     }
-//     if (!values.headline) {
-//         errors.headline = 'Required';
-//     }
-//     else if (values.headline.length > 50) {
-//         errors.headline = 'Must be 50 characters or less';
-//     }
-//     if (!values.description) {
-//         errors.description = 'Required';
-//     }
-//     if (!values.category) {
-//         errors.category = 'Required';
-//     }
-//     if (!values.postcode) {
-//         errors.postcode = 'Required';
-//     }
-//     if (!values.firstName) {
-//         errors.firstName = 'Required';
-//     }
-//     else if (values.firstName.length < 1) {
-//         errors.firstName = 'Must be 3 characters or more';
-//     }
-//     if (!values.lastName) {
-//         errors.lastName = 'Required';
-//     }
-//     else if (values.lastName.length < 1) {
-//         errors.lastName = 'Must be 3 characters or more';
-//     }
-//     if (!values.phone) {
-//         errors.phone = 'Required';
-//     }
-//     if (!values.address) {
-//         errors.address = 'Required';
-//     }
-//     if (!values.email) {
-//         errors.email = 'Required';
-//     }
-//     else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-//         errors.email = 'Invalid email address'
-//     }
-//     return errors;
-// }
+
 class CreateItem extends React.Component {
     constructor(props) {
         super(props);
@@ -65,43 +16,16 @@ class CreateItem extends React.Component {
             phone: '',
             address: '',
             email: '',
-            privacy: false,
+            privacy: '',
             image: '',
-            delivery: false
+            delivery: ''
         }
     }
 
-    // renderField({ input, label, type, meta: { error } }) {
-    //     return (
-    //         <div>
-    //                 <label>{label}</label>
-    //                 <div>
-    //                     <input {...input} placeholder={label} type={type} />
-    //                 </div>
-    //                 <div>
-    //                     {error}
-    //                 </div>
-    //         </div>
-    //     )
-    //     }
-    onSubmit = (data) => {
-        console.log(data);
-
-        axios.post('https://vast-headland-25884.herokuapp.com' + '/items/create', data)
-
-            .then(res => {
-                this.props.history.push('/');
-            })
-            .catch((err) => {
-                console.log(err)
-            })
-
-    }
-
-
+    
     render() {
         return (<div>
-            <form onSubmit={this.props.handleSubmit(this.onSubmit)}>
+            <form onSubmit={this.props.handleSubmit}>
                 <div>
                     <label htmlFor="itemName">Name of item</label>
                     <Field name="itemName" component="input" type="text"></Field>
