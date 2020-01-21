@@ -5,7 +5,7 @@ class Dashboard extends React.Component {
     async componentDidMount() {
       try {
         const response = await
-            axios.get("http://localhost:5000" + "/users/dashboard")
+            axios.get('https://vast-headland-25884.herokuapp.com' + "/users/dashboard")
             console.log(response);
       }
       catch (error){

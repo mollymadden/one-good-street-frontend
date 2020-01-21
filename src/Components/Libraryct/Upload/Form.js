@@ -9,16 +9,16 @@ class CreateItem extends React.Component {
             itemName: '',
             headline: '',
             description: '',
-            category: [],
+            category: [], //drop down
             postcode: '',
             firstName: '',
             lastName: '',
             phone: '',
             address: '',
             email: '',
-            privacy: '',
+            privacy: '', //drop Boolean
             image: '',
-            delivery: ''
+            delivery: '' //checkbox boolean check check
         }
     }
 
