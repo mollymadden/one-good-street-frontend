@@ -2,6 +2,8 @@ import React from 'react';
 import axios from 'axios';
 import {withRouter} from 'react-router';
 class Dashboard extends React.Component {
+
+
     async componentDidMount() {
       try {
         const response = await
@@ -10,14 +12,24 @@ class Dashboard extends React.Component {
       }
       catch (error){
         console.log(error.message)
-        this.props.history.push('/')
+        //this.props.history.push('/')
       }
         
     }
+
+    
+
+    pageRender(){
+      if(localStorage.authToken){
+        return  <h1>You are on the admin dashboard page</h1>
+      }
+      else{
+       return <h1>What are you doing here?</h1>
+      }
+    }
+
     render() {
-        return (<div>
-            <h1>You are on the admin dashboard page</h1>
-        </div>)
+        return this.pageRender();
     }
 }
 export default withRouter(Dashboard);

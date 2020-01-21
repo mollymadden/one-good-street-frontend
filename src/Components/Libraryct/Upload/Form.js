@@ -1,6 +1,9 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 
+
+const categories = ["a", "b", "c"]
+
 class CreateItem extends React.Component {
     constructor(props) {
         super(props);
@@ -9,18 +12,20 @@ class CreateItem extends React.Component {
             itemName: '',
             headline: '',
             description: '',
-            category: [], //drop down
+            category: '', //drop down
             postcode: '',
             firstName: '',
             lastName: '',
             phone: '',
             address: '',
             email: '',
-            privacy: '', //drop Boolean
+            privacy: '', //drop down Boolean
             image: '',
-            delivery: '' //checkbox boolean check check
+            delivery: '' //checkbox boolean check box
         }
     }
+
+    
 
     
     render() {
@@ -40,7 +45,23 @@ class CreateItem extends React.Component {
                 </div>
                 <div>
                     <label htmlFor="category">Category</label>
-                    <Field name="category" component="input" type="text"></Field>
+                    <Field 
+                    name="category" 
+                    component="select" 
+                    type="category">
+                    <option></option>
+                    <option value="Bedroom">Bedroom</option>
+                    <option value="Braces and support">Braces and Support</option>
+                    <option value="Dressing and Grooming">Dressing and Grooming</option>
+                    <option value="Orthotics and Footcare">Exercise and therapy</option>
+                    <option value="Furniture">Furniture</option>
+                    <option value="Household Aid">Household Aid</option>
+                    <option value="Kitchen">Kitchen</option>
+                    <option value="Mobility">Mobility</option>
+                    <option value="Orthotics and footcare">Orthotics and Footcare</option>
+                    <option value="Toileting">Toileting</option>
+                    <option value="Other">Other</option>
+                    </Field>
                 </div>
                 <div>
                     <label htmlFor="postcode">Postcode</label>
@@ -67,17 +88,28 @@ class CreateItem extends React.Component {
                     <Field name="email" component="input" type="text"></Field>
                 </div>
                 <div>
-                    <label htmlFor="privacy">Privacy</label>
+                    <label htmlFor="privacy">Privacy Settings</label>
                     <Field name="privacy" component="input" type="text"></Field>
                 </div>
                 <div>
                     <label htmlFor="image">Image</label>
                     <Field name="image" component="input" type="text"></Field>
                 </div>
-                <div>
+                {/* <div>
                     <label htmlFor="delivery">Delivery</label>
-                    <Field name="delivery" component="input" type="text"></Field>
-                </div>
+                    <Field 
+                    name="delivery" 
+                    component="select" 
+                    type="delivery">
+                    <option></option>
+                    <option value="publish">Publish my phone number and first name - I will arrange handover directly</option>
+                    <option value="doNotPublish">Please do not publish my details - One Good Street should arrange handover</option>
+
+                    </Field>
+
+                    
+                    
+                </div> */}
                 <div>
                     <button type="submit">Add Item</button>
                 </div>
