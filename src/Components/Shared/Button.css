@@ -1,3 +1,10 @@
 .button {
     margin: 5px;
 }
+
+.buttondiv {
+    min-width: 100vw;
+    background-color: #D5ECEA;
+    margin-bottom: -1%;
+    margin-top: 1%;
+}
