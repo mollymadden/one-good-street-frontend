@@ -1,11 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
 import './card-style.css'
 
-
+// mapping through json file located here
+// https://vast-headland-25884.herokuapp.com/items
 
 class Librarycard extends React.Component {
     state = {
-        data: null
+        items: []
     }
 
     async componentDidMount() {
@@ -14,29 +17,26 @@ class Librarycard extends React.Component {
         this.setState({
             items: data
         })
-        console.log(data)
     }
-
-
 
     // Key might get rid of console errors
 
     render() {
-        console.log(process.env.REACT_APP_BACKEND_URL + "/items/:_id")
-        const { data } = this.state
+        console.log(process.env.REACT_APP_BACKEND_URL + "/items/")
+        const { items } = this.state
         return (
             <div className="card text-center shadow">
                 <h1>👻</h1>
-                {data ? data.items.map((items) => {
+                {items ? items.map((item) => {
                     return (
                         <div className="card text-center shadow">
                             <div className="overflow">
-                                <img src={items.image} alt="Image 1" className="card-img-top" />
+                                <img src={item.image} alt="Image 1" className="card-img-top" />
                             </div>
                             <div className="card-body text-dark">
-                                <h4 className="card-title">{items.itemName}</h4>
-                                <p className="card-text text-secondary">{items.headline}</p>
-                                <p className="card-text text-secondary">📍 {items.postcode}</p>
+                                <h4 className="card-title">{item.itemName}</h4>
+                                <p className="card-text text-secondary">{item.headline}</p>
+                                <p className="card-text text-secondary">📍 {item.postcode}</p>
                             </div>
                         </div>
                     )
