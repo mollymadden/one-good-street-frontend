@@ -95,9 +95,12 @@ class CreateItem extends React.Component {
                     <label htmlFor="image">Image</label>
                     <Field name="image" component="input" type="text"></Field>
                 </div>
-                {/* <div>
-                    <label htmlFor="delivery">Delivery</label>
-                    <Field 
+                <div>
+                    <label htmlFor="delivery">I can offer delivery</label>
+                    
+                    <Field name="delivery" component="input" type="checkbox"></Field>
+
+                    {/* <Field 
                     name="delivery" 
                     component="select" 
                     type="delivery">
@@ -105,11 +108,11 @@ class CreateItem extends React.Component {
                     <option value="publish">Publish my phone number and first name - I will arrange handover directly</option>
                     <option value="doNotPublish">Please do not publish my details - One Good Street should arrange handover</option>
 
-                    </Field>
+                    </Field> */}
 
                     
                     
-                </div> */}
+                </div>
                 <div>
                     <button type="submit">Add Item</button>
                 </div>
@@ -173,6 +176,8 @@ class CreateItem extends React.Component {
                     </button> */}
 
             </form>
+
+            <p>You cannot edit this form once subumitted. For any changes, or to remove this listing, please email matiubush@onegoodstreet.com</p>
         </div>
         );
     }
