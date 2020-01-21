@@ -12,7 +12,7 @@ class Librarycard extends React.Component {
     }
 
     async componentDidMount() {
-        const response = await fetch(process.env.REACT_APP_BACKEND_URL + "/items/")
+        const response = await fetch("https://vast-headland-25884.herokuapp.com/items")
         const data = await response.json()
         this.setState({
             items: data
@@ -22,7 +22,7 @@ class Librarycard extends React.Component {
     // Key might get rid of console errors
 
     render() {
-        console.log(process.env.REACT_APP_BACKEND_URL + "/items/")
+        console.log("https://vast-headland-25884.herokuapp.com/items")
         const { items } = this.state
         return (
             <div className="card text-center shadow">
@@ -47,4 +47,3 @@ class Librarycard extends React.Component {
 }
 
 export default Librarycard;
-
