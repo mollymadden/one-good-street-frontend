@@ -31,13 +31,7 @@ class Library extends Component {
                     <div className="container-fluid d-flex justify-content-center">
 
                         <div className="row">
-                            <Librarycard imgsrc={img2} title="Electric Wheelchair" />
-                            <Librarycard imgsrc={img1} title="Shower Stool" />
-                            <Librarycard imgsrc={img2} title="Electric Wheelchair" />
-                            <Librarycard imgsrc={img1} title="Shower Stool" />
-                            <Librarycard imgsrc={img2} title="Electric Wheelchair" />
-                            <Librarycard imgsrc={img1} title="Shower Stool" />
-                            <Librarycard imgsrc={img2} title="Electric Wheelchair" />
+                            <Librarycard />
                         </div>
                     </div>
                 </div>
