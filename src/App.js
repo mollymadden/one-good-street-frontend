@@ -15,6 +15,7 @@ import Dashboard from './Components/Admin/dashboard';
 
 import Upload from './Components/Libraryct/Upload';
 import Show from './Components/Libraryct/show-item';
+import EditItem from './Components/Libraryct/Upload/editItem'
 
 
 
@@ -34,6 +35,7 @@ function App() {
         <Route path="/pagenotfound" component={Pagenotfound} />
         <Route exact path="/library/upload" component={Upload} />
         <Route exact path="/items/:id" component={Show} />
+        <Route exact path="/items/edit/:id" component={EditItem} />
       </Switch>
     </BrowserRouter>
   </div>

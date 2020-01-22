@@ -1,5 +1,6 @@
-//This is the base form component for the edit and create item component.
-//It calls on the 'handleSubmit' function that is 
+//This is the base form component for the edit and create item component. It renders for both edit and create
+//It calls on the 'handleSubmit' function that is like a middle-layer for this form's submit handlers - see index.jsx and createItem.jsx and editItem.jsx 
+
 
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
@@ -71,8 +72,8 @@ class Form extends React.Component {
                     <label htmlFor="privacy">Privacy Settings</label>
                     <Field name="privacy" component="select" type="text">
                     <option></option>
-                    <option value="publish">Publish my phone number and first name - I will arrange handover directly</option>
-                    <option value="doNotPublish">Please do not publish my details - One Good Street should arrange handover</option>
+                    <option value="publishDetails">Publish my phone number and first name - I will arrange handover directly</option>
+                    <option value="NotPublishDetails">Please do not publish my details - One Good Street should arrange handover</option>
                     </Field>
                 </div>
                 <div>

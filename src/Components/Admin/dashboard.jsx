@@ -1,6 +1,6 @@
-//Admin dashboard where only logged in admin user can view, edit and delete any of the items.
+//Dashboard component renders the tableList component. It only renders this table (with all the item listings in a table format) upon successful user login via the login component.  
 
-//ADDDDDDD - admin changes things to published 
+//This page renders once login successful otherwise there is redirection to home page
 
 import React from 'react';
 import axios from 'axios';
@@ -25,28 +25,36 @@ class Dashboard extends React.Component {
         axios.get('https://vast-headland-25884.herokuapp.com' + "/users/dashboard", { headers: { 'Authorization': localStorage.getItem('authToken') } });
       console.log(response);
 
-      const res = await axios.get("https://vast-headland-25884.herokuapp.com/items");
+    async componentDidMount() {
+      try {
+        const response = await
+            axios.get('https://vast-headland-25884.herokuapp.com' + "/users/dashboard", { headers: {'Authorization': localStorage.getItem('authToken') } } );
+            console.log(response);
 
-      this.setState({
-        items: res.data
-      })
+        const res = await axios.get("https://vast-headland-25884.herokuapp.com/items");
+        
+        this.setState({
+            items: res.data
+        })
+      }
+      catch (error){
+        console.log(error.message)
+        this.props.history.push('/')
+      }
+        
     }
-    catch (error) {
-      console.log(error.message)
-      this.props.history.push('/')
-    }
 
-  }
-
-
-  pageRender() {
-    if (localStorage.authToken) {
-
-      return (
-        <div>
-          <Header />
-          <Adminav />
-          <Title title='Admin Dashboard' />
+  
+  //This page will only render with the right users - it checks the token. 
+    pageRender(){
+      if(localStorage.authToken){
+  
+        return ( 
+          <div>
+            <Header />
+            <Adminav />
+            <Title title='You are on the admin dashboard page' />
+            
 
           {/* <EditItem /> */}
           {this.state.items.length > 0 &&

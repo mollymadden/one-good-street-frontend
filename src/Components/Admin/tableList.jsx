@@ -1,3 +1,5 @@
+//This is the table that the admin sees 
+
 import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -32,15 +34,26 @@ class TableList extends React.Component {
     items: this.props.items
   }
 
+//Jack help way
   deleteItem = (id) => {
 
-    axios.delete('https://vast-headland-25884.herokuapp.com/items/delete/' + id)
-      .then(response => { console.log(response.data) });
+    const option = {
+      url: "https://vast-headland-25884.herokuapp.com/items/delete/" + id,
+      method: "DELETE",
+      headers: {
+        "content-type": "application/x-www-form-urlencoded",
+        "authorization": `${localStorage.authToken}`
+      }
+    }
+    axios(option)
+      .then(response => { console.log(response.data)});
+      
 
     this.setState({
       items: this.state.items.filter(el => el._id !== id)
     })
   }
+
 
   itemList() {
     return this.state.items.map(currentitem => {
