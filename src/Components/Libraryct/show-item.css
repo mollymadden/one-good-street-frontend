@@ -1,3 +1,18 @@
 .mainshowdiv {
     border: 50px solid #D5ECEA;
 }
+
+.mainshowdiv img {
+    float: right;
+    width: auto;
+    max-height: 400px;
+    margin-right: 5%;
+}
+
+.showtext {
+    max-width: 30rem;
+    text-align: center;
+    min-height: 400px;
+    font-family: "open sans";
+    margin-left: 5%;
+}

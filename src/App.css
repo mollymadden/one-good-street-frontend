@@ -1,3 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
 body {
   background-color: #D5ECEA !important;
+}
+
+.blurb {
+  max-width: 50%;
+  font-family: "Open Sans";
+  display: inline-block;
+  font-size: 12px;
+}
+
+.blurb-border {
+  font-family: "Open Sans";
+  display: inline-block;
+  font-size: 12px;
+  border-left: 10rem solid #D5ECEA;
+  border-right: 10rem solid #D5ECEA;
+}
+
+.blurb-border p {
+  max-width: 80vw;
+}
+
+.blurb-border-title {
+  min-width: 99vw;
+  font-family: "DINCondensed-Bold";
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 20px;
+  background-color: #D5ECEA;
 }

@@ -22,20 +22,23 @@ class Show extends React.Component {
         console.log("https://vast-headland-25884.herokuapp.com/items/" + this.props.match.params.id)
         const { item } = this.state;
 
-        // let name = "";
-        // let phone = "";
-        // let email = "";
+        //     let name = "";
+        //     let phone = "";
+        //     let email = "";
 
-        // if ({ item.privacy } == "true") {
-        //     name = { item.firstName },
-        //         phone = { item.phone },
-        //         email = { item.email }
-        // }
-        // else {
-        //     name = "Matiu Bush",
-        //         phone = "0455 555 555",
-        //         email = "info@onegoodstreet.com.au"
-        // };
+
+
+        //     function Privacy(props) {
+        //         const privacy = props.privacy;
+        //         if (privacy == "Publish my phone number and first name - I will arrange handover directly") {
+        //             name = item.firstName,
+        //                 phone = item.phone,
+        //                 email = item.email;
+        //         }
+        //         name = "Matiu Bush",
+        //             phone = "0455 555 555",
+        //             email = "info@onegoodstreet.com.au";
+        //     }
 
 
         return (
@@ -50,16 +53,22 @@ class Show extends React.Component {
                         <p>{item.description}</p>
                         <p>📍 {item.postcode}</p>
 
-
-
-                        {/* <p>Please enquire with {name} on {phone} or at {email}</p> */}
                         <p>{item.delivery ? "✅ Delivery available" : "❌ Delivery unavailable"}</p>
+
+                        <p>If you are interested in the above item, &nbsp;
+                            {item.privacy == "publish"
+                                ? `please enquire with ${item.firstName} at ${item.email}`
+                                : "please enquire with Matiu Bush at info@onegoodstreet.com.au"}
+                        </p>
+
+
+
 
                     </div>
 
                 </div>
 
-            </div>
+            </div >
         )
     }
 }

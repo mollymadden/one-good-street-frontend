@@ -1,0 +1,66 @@
+
+  
+  .adminav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+    font-family: 'DINCondensed-Bold';
+    text-transform: uppercase;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .adminav li {
+    float: left;
+    
+  }
+  
+  .adminav li a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #F57722;
+  }
+  
+  .adminav li a:hover{
+      text-decoration: none;
+      color: #F57722;
+  }
+  
+  .adminav li a:after{
+      width:0%;
+      content: "";
+    margin:auto;
+    display:inline-block;
+    float: left;
+    margin-top:-3px;
+      border-top:3px solid #0C3B55;
+      -webkit-transition: all .25s;
+         -moz-transition: all .25s;
+           -o-transition: all .25s;
+              transition: all .25s;	
+  }
+  
+  
+  .adminav li a:hover:after{
+      width:100%;
+  }
+  
+  .adminav li a:active, li a:active:after{
+      border-color:#ccc;
+      color:#0C3B55;
+  
+  }
+  
+  
+  .adminav span {
+    margin: 5px;
+  }
+  
+  .adminav nav {
+    height: 52px;
+  }
+  

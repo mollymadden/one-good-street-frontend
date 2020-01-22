@@ -1,8 +1,9 @@
 div {
   background-color: white;
+
 }
 
-ul {
+nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -14,12 +15,8 @@ ul {
   justify-content: center;
 }
 
-li {
-  float: left;
-  
-}
-
-li a {
+nav li a {
+  font-size: 14px;
   display: block;
   text-align: center;
   padding: 14px 16px;
@@ -27,12 +24,12 @@ li a {
   color: #ffffff;
 }
 
-li a:hover{
+nav li a:hover{
     text-decoration: none;
     color: #ffffff;
 }
 
-li a:after{
+nav li a:after{
 	width:0%;
 	content: "";
   margin:auto;
@@ -47,11 +44,11 @@ li a:after{
 }
 
 
-li a:hover:after{
+nav li a:hover:after{
 	width:100%;
 }
 
-li a:active, li a:active:after{
+nav li a:active, li a:active:after{
 	border-color:#ccc;
 	color:#F57722;
 
@@ -64,12 +61,4 @@ span {
 
 nav {
   height: 52px;
-}
-
-.logo a img {
-  max-width: 7rem;
-}
-
-.titleblurb {
-  margin: 7rem;
 }
