@@ -9,7 +9,26 @@ import Button from '../Shared/Button';
 
 
 class Library extends Component {
+    state = {
+        items: []
+    }
 
+    async componentDidMount() {
+        try {
+         
+          const response = await fetch("https://vast-headland-25884.herokuapp.com/items")
+          const data = await response.json()
+          this.setState({
+              items: data
+          })
+        }
+        catch (error){
+          console.log(error.message)
+          //this.props.history.push('/')
+        }
+          
+      }
+    
     render() {
         return (
             <div>
@@ -31,7 +50,7 @@ class Library extends Component {
                     <div className="container-fluid d-flex justify-content-center">
 
                         <div className="row">
-                            <Librarycard />
+                            <Librarycard items={this.state.items} />
                         </div>
                     </div>
                 </div>

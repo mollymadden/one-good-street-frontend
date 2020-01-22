@@ -1,3 +1,6 @@
+//This component is rendering in index.jsx of Libraryct
+
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -10,23 +13,13 @@ import './card-style.css'
 
 
 class Librarycard extends React.Component {
-    state = {
-        items: []
-    }
-
-    async componentDidMount() {
-        const response = await fetch("https://vast-headland-25884.herokuapp.com/items")
-        const data = await response.json()
-        this.setState({
-            items: data
-        })
-    }
+    
 
     // Key might get rid of console errors
 
     render() {
         console.log("https://vast-headland-25884.herokuapp.com/items")
-        const { items } = this.state;
+        const { items } = this.props;
 
         return (
             <section>
