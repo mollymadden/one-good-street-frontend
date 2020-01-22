@@ -32,8 +32,15 @@ state = {
 }
 
   deleteItem = (id) => {
-  
-    axios.delete('https://vast-headland-25884.herokuapp.com/items/delete/' + id)
+    const option = {
+      url: "https://vast-headland-25884.herokuapp.com/items/delete/" + id,
+      method: "DELETE",
+      headers: {
+        "content-type": "application/x-www-form-urlencoded",
+        "authorization": `${localStorage.authToken}`
+      }
+    }
+    axios(option)
       .then(response => { console.log(response.data)});
       
     this.setState({
