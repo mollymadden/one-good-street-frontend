@@ -1,3 +1,6 @@
+//This is the base form component for the edit and create item component.
+//It calls on the 'handleSubmit' function that is 
+
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 
