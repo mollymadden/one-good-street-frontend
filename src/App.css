@@ -2,6 +2,7 @@
 
 body {
   background-color: #D5ECEA !important;
+  overflow-y: scroll;
 }
 
 .blurb {
@@ -24,7 +25,7 @@ body {
 }
 
 .blurb-border-title {
-  min-width: 95vw;
+  min-width: 98vw;
   min-height: 5vh;
   font-family: "DINCondensed-Bold";
   text-transform: uppercase;

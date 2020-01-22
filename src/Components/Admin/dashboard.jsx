@@ -17,58 +17,58 @@ import TableList from '../Admin/tableList';
 class Dashboard extends React.Component {
   state = {
     items: []
-}
-
-    async componentDidMount() {
-      try {
-        const response = await
-            axios.get('https://vast-headland-25884.herokuapp.com' + "/users/dashboard", { headers: {'Authorization': localStorage.getItem('authToken') } } );
-            console.log(response);
-
-        const res = await axios.get("https://vast-headland-25884.herokuapp.com/items");
-        
-        this.setState({
-            items: res.data
-        })
-      }
-      catch (error){
-        console.log(error.message)
-        this.props.history.push('/')
-      }
-        
-    }
-
-  
-    pageRender(){
-      if(localStorage.authToken){
-  
-        return ( 
-          <div>
-            <Header />
-            <Adminav />
-            <Title title='You are on the admin dashboard page' />
-            
-          {/* <EditItem /> */}
-          {this.state.items.length > 0 && 
-            <TableList items={this.state.items} /> 
-          }
-          </div>
-          
-        )  
-        
-
-
-      }
-      else{
-       return <h1>What are you doing here?</h1>
-      }
-    }
-
-    render() {
-        return this.pageRender();
-    }
-
-  
   }
+
+  async componentDidMount() {
+    try {
+      const response = await
+        axios.get('https://vast-headland-25884.herokuapp.com' + "/users/dashboard", { headers: { 'Authorization': localStorage.getItem('authToken') } });
+      console.log(response);
+
+      const res = await axios.get("https://vast-headland-25884.herokuapp.com/items");
+
+      this.setState({
+        items: res.data
+      })
+    }
+    catch (error) {
+      console.log(error.message)
+      this.props.history.push('/')
+    }
+
+  }
+
+
+  pageRender() {
+    if (localStorage.authToken) {
+
+      return (
+        <div>
+          <Header />
+          <Adminav />
+          <Title title='Admin Dashboard' />
+
+          {/* <EditItem /> */}
+          {this.state.items.length > 0 &&
+            <TableList items={this.state.items} />
+          }
+        </div>
+
+      )
+
+
+
+    }
+    else {
+      return <h1>What are you doing here?</h1>
+    }
+  }
+
+  render() {
+    return this.pageRender();
+  }
+
+
+}
 
 export default withRouter(Dashboard);

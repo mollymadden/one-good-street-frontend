@@ -1,7 +1,7 @@
 body {
     margin: 0px auto;
     font-size: 100%;
-    overflow-y: scroll;
+    overflow-x: hidden;
     text-align: center;
     font-family: "Open Sans";
   }
