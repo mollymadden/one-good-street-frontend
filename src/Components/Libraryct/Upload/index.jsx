@@ -1,3 +1,7 @@
+//This is where the components CreateItem and EditItem are rendered. 
+
+//CreateItem and EditItem render the base Form.jsx and then index.jsx renders components CreateItem and EditItem. 
+
 import React from "react";
 import CreateItem from './createItem'
 import EditItem from './editItem';
@@ -46,7 +50,7 @@ class Upload extends React.Component {
                 <Title title="Upload an Item" />
                 <div>
                     <CreateItem onSubmit={this.handleCreateItem} />
-                    {/* <EditItem onSubmit={this.handleEditItem}/> */}
+                    <EditItem onSubmit={this.handleEditItem}/>
 
 
                 </div>

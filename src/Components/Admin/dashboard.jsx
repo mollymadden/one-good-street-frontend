@@ -1,6 +1,6 @@
-//Admin dashboard where only logged in admin user can view, edit and delete any of the items.
+//Dashboard component renders the tableList component. It only renders this table (with all the item listings in a table format) upon successful user login via the login component.  
 
-//ADDDDDDD - admin changes things to published 
+//This page renders once login successful otherwise there is redirection to home page
 
 import React from 'react';
 import axios from 'axios';
@@ -18,6 +18,7 @@ class Dashboard extends React.Component {
   state = {
     items: []
 }
+
 
     async componentDidMount() {
       try {
@@ -39,6 +40,7 @@ class Dashboard extends React.Component {
     }
 
   
+  //This page will only render with the right users - it checks the token. 
     pageRender(){
       if(localStorage.authToken){
   

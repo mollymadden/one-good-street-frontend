@@ -1,3 +1,8 @@
+//This component renders the login form. 
+//This component calls the backend api (where the backend is deployed to, Heroku) and checks the user email against their assigned passwords.
+//If they match, they can login and are redirected to the admin dashboard via this.props.history.push.
+
+
 import React from 'react';
 import axios from 'axios';
 import {withRouter} from 'react-router';

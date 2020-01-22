@@ -1,6 +1,6 @@
+//Calling base form component here in Form.jsx
+
 import React from "react";
-import axios from 'axios';
-import { Field, reduxForm } from 'redux-form';
 import Form from './Form';
 
 class EditItem extends React.Component {
@@ -28,7 +28,7 @@ class EditItem extends React.Component {
   
   render() {
       return (<div>
-          <Form btnText={'Edit Item'} onSubmit={this.props.handleEditItem} />
+          <Form btnText={'Edit Item'} onSubmit={this.props.onSubmit} />
 
           
       </div>

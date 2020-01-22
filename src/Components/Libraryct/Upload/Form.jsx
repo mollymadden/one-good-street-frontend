@@ -1,5 +1,6 @@
-//This is the base form component for the edit and create item component.
-//It calls on the 'handleSubmit' function that is 
+//This is the base form component for the edit and create item component. It renders for both edit and create
+//It calls on the 'handleSubmit' function that is like a middle-layer for this form's submit handlers - see index.jsx and createItem.jsx and editItem.jsx 
+
 
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
