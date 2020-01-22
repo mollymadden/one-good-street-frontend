@@ -1,8 +1,15 @@
+//Admin dashboard where only logged in admin user can view, edit and delete any of the items.
+
+//ADDDDDDD - admin changes things to published 
+
 import React from 'react';
 import axios from 'axios';
 import { withRouter } from 'react-router';
 import EditItem from '../Libraryct/Upload/editItem';
 import LibraryCard from '../Libraryct/Card';
+
+import TableList from '../Admin/tableList';
+//import table component 
 
 class Dashboard extends React.Component {
   state = {
@@ -12,18 +19,18 @@ class Dashboard extends React.Component {
     async componentDidMount() {
       try {
         const response = await
-            axios.get('https://vast-headland-25884.herokuapp.com' + "/users/dashboard")
+            axios.get('https://vast-headland-25884.herokuapp.com' + "/users/dashboard", { headers: {'Authorization': localStorage.getItem('authToken') } } );
             console.log(response);
 
-        const res = await fetch("https://vast-headland-25884.herokuapp.com/items")
-        const data = await res.json()
+        const res = await axios.get("https://vast-headland-25884.herokuapp.com/items");
+        
         this.setState({
-            items: data
+            items: res.data
         })
       }
       catch (error){
         console.log(error.message)
-        //this.props.history.push('/')
+        this.props.history.push('/')
       }
         
     }
@@ -35,7 +42,10 @@ class Dashboard extends React.Component {
         return ( 
           <div>
           <h1>You are on the admin dashboard page</h1>
-          <EditItem />
+          {/* <EditItem /> */}
+          {this.state.items.length > 0 && 
+            <TableList items={this.state.items} /> 
+          }
           </div>
           
         )  

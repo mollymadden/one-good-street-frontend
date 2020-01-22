@@ -1,3 +1,5 @@
+//This is the Library of care things page - where cards of donated items are rendering. In component did mount, we are fetching the server side data from heroku. 
+
 import React, { Component } from 'react'
 import Librarycard from './Card';
 import img1 from "../../assets/shower-stool.png";
@@ -24,7 +26,6 @@ class Library extends Component {
         }
         catch (error){
           console.log(error.message)
-          //this.props.history.push('/')
         }
           
       }
