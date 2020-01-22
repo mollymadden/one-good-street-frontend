@@ -5,8 +5,6 @@ import { BrowserRouter } from 'react-router-dom';
 import { render } from 'react-dom';
 import { Provider } from "react-redux";
 import { store } from "./Components/Libraryct/Upload/store";
-
-import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
