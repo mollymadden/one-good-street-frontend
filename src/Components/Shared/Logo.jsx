@@ -7,7 +7,7 @@ import "./Logo.css";
 class Logo extends React.Component {
     render() {
         return (
-            <div className="logo">
+            <div className="mainlogo">
                 <Link to='/'><img src="FULL-COLOUR-LOGO_RGB.PNG" /></Link>
             </div>
         )

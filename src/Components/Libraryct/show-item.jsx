@@ -50,10 +50,9 @@ class Show extends React.Component {
                         <p>{item.description}</p>
                         <p>📍 {item.postcode}</p>
 
-
-
-                        {/* <p>Please enquire with {name} on {phone} or at {email}</p> */}
                         <p>{item.delivery ? "✅ Delivery available" : "❌ Delivery unavailable"}</p>
+
+
 
                     </div>
 
