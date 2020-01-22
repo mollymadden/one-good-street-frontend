@@ -7,6 +7,7 @@ import img2 from "../../assets/electric-wheelchair.png";
 import Header from '../Shared/Header';
 import Title from '../Shared/Title';
 import Button from '../Shared/Button';
+import Adminav from '../Admin/admin-nav';
 
 
 class Library extends Component {
@@ -33,6 +34,7 @@ class Library extends Component {
         return (
             <div>
                 <Header />
+                <Adminav />
                 <Title title="Library of Care Things" />
                 <div className="blurb">
                     All equipment is free. Equipment must be cleaned and in working order prior to collection.

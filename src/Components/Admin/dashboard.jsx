@@ -7,6 +7,9 @@ import axios from 'axios';
 import { withRouter } from 'react-router';
 import EditItem from '../Libraryct/Upload/editItem';
 import LibraryCard from '../Libraryct/Card';
+import Header from '../Shared/Header';
+import Title from '../Shared/Title';
+import Adminav from './admin-nav';
 
 import TableList from '../Admin/tableList';
 //import table component 
@@ -41,7 +44,10 @@ class Dashboard extends React.Component {
   
         return ( 
           <div>
-          <h1>You are on the admin dashboard page</h1>
+            <Header />
+            <Adminav />
+            <Title title='You are on the admin dashboard page' />
+            
           {/* <EditItem /> */}
           {this.state.items.length > 0 && 
             <TableList items={this.state.items} /> 
