@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../Shared/Header';
 import Title from '../Shared/Title';
 import './show-item.css'
+import Adminav from '../Admin/admin-nav';
 
 
 class Show extends React.Component {
@@ -44,6 +45,7 @@ class Show extends React.Component {
         return (
             <div >
                 <Header />
+                <Adminav />
                 <Title title={item.itemName} />
 
 
