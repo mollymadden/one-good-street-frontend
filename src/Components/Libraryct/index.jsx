@@ -5,7 +5,7 @@ import img2 from "../../assets/electric-wheelchair.png";
 import Header from '../Shared/Header';
 import Title from '../Shared/Title';
 import Button from '../Shared/Button';
-// import "./Library.css"
+import "./Library.css"
 
 
 class Library extends Component {
@@ -16,7 +16,7 @@ class Library extends Component {
                 <Header />
                 <Title title="Library of Care Things" />
                 <div className="library">
-                    <div className="blurb">
+                    <div className="library-blurb">
                         All equipment is free. Equipment must be cleaned and in working order prior to collection.
 
                         For some equipment an Occupation Therapy assessment is recommended to make sure the equipment is the right size and type for the older person.

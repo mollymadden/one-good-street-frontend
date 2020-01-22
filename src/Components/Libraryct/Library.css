@@ -4,8 +4,10 @@
     text-align: center;
 }
 
-.blurb {
+.library-blurb {
     max-width: 50%;
-    font-family: "comic Sans";
+    font-family: "Open Sans";
+    display: inline-block;
     font-size: 12px;
+ 
 }

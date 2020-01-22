@@ -6,6 +6,7 @@
     float: right;
     width: auto;
     max-height: 400px;
+    margin-right: 5%;
 }
 
 .showtext {
@@ -13,4 +14,5 @@
     text-align: center;
     min-height: 400px;
     font-family: "open sans";
+    margin-left: 5%;
 }
