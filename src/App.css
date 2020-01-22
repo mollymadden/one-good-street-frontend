@@ -30,4 +30,5 @@ body {
   display: inline-block;
   font-size: 20px;
   background-color: #D5ECEA;
+  border: 10px solid #D5ECEA;
 }
