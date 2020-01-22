@@ -1,3 +1,5 @@
+//This is the table that the admin sees 
+
 import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -31,6 +33,7 @@ state = {
   items: this.props.items
 }
 
+//Jack help way
   deleteItem = (id) => {
     const option = {
       url: "https://vast-headland-25884.herokuapp.com/items/delete/" + id,
@@ -47,6 +50,23 @@ state = {
       items: this.state.items.filter(el => el._id !==id)
     })
   }
+
+
+  
+  
+
+  
+
+
+//chris way - not working
+  // deleteItem = (id) => {
+  //   axios
+  //   .delete("https://vast-headland-25884.herokuapp.com/items/delete/" + id)
+  //   .then(response => {
+  //     window.location.replace("/items");
+  //     console.log(response.data);
+  //   })
+  // }
 
   itemList() { 
     return this.state.items.map(currentitem => {
