@@ -3,7 +3,6 @@ import Header from '../Shared/Header';
 import Title from '../Shared/Title';
 import Hero from '../Home/Heroimage';
 import Adminav from '../Admin/admin-nav';
-import './Home.css'
 
 class Home extends React.Component {
     render() {
