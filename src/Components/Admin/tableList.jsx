@@ -27,19 +27,22 @@ const Item = props => (
   )
 
 class TableList extends React.Component {
-
+state = {
+  items: this.props.items
+}
 
   deleteItem = (id) => {
-    axios.delete('https://vast-headland-25884.herokuapp.com' + "/items/" + id)
+  
+    axios.delete('https://vast-headland-25884.herokuapp.com/items/delete/' + id)
       .then(response => { console.log(response.data)});
       
     this.setState({
-      items: this.props.items.filter(el => el._id !==id)
+      items: this.state.items.filter(el => el._id !==id)
     })
   }
 
   itemList() { 
-    return this.props.items.map(currentitem => {
+    return this.state.items.map(currentitem => {
       return <Item item={currentitem} deleteItem={this.deleteItem} key={currentitem._id}/>;
     })
   }
