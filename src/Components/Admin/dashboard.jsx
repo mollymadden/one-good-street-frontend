@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { withRouter } from 'react-router';
+import EditItem from '../Libraryct/Upload/editItem';
 class Dashboard extends React.Component {
 
 
@@ -20,7 +21,17 @@ class Dashboard extends React.Component {
   
     pageRender(){
       if(localStorage.authToken){
-        return  <h1>You are on the admin dashboard page</h1>
+  
+        return ( 
+          <div>
+          <h1>You are on the admin dashboard page</h1>
+          <EditItem />
+          </div>
+          
+        )  
+        
+
+
       }
       else{
        return <h1>What are you doing here?</h1>
