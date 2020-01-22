@@ -8,6 +8,18 @@ const Item = props => (
     <td>{props.item.itemName}</td>
     <td>{props.item.headline}</td>
     <td>{props.item.description}</td>
+    <td>{props.item.category}</td>
+    <td>{props.item.postcode}</td>
+    <td>{props.item.firstName}</td>
+    <td>{props.item.lastName}</td>
+    <td>{props.item.phone}</td>
+    <td>{props.item.address}</td>
+    <td>{props.item.email}</td>
+    <td>{props.item.privacy}</td>
+    <td>{props.item.image}</td>
+    <td>{props.item.delivery}</td>
+    <td>{props.item.published}</td>
+    
     <td>
       <Link to={"/edit/"+props.item._id}>edit</Link> | <a href="#" onClick={() => { props.deleteItem(props.item._id) }}>delete</a>
     </td>
