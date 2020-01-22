@@ -4,10 +4,7 @@ import { withRouter } from 'react-router';
 import axios from 'axios';
 import "./admin-nav.css";
 
-
-
 class Adminav extends React.Component {
-
   
       async componentDidMount() {
         try {

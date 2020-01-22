@@ -17,8 +17,13 @@ import TableList from '../Admin/tableList';
 class Dashboard extends React.Component {
   state = {
     items: []
-}
+  }
 
+  async componentDidMount() {
+    try {
+      const response = await
+        axios.get('https://vast-headland-25884.herokuapp.com' + "/users/dashboard", { headers: { 'Authorization': localStorage.getItem('authToken') } });
+      console.log(response);
 
     async componentDidMount() {
       try {
@@ -50,27 +55,28 @@ class Dashboard extends React.Component {
             <Adminav />
             <Title title='You are on the admin dashboard page' />
             
+
           {/* <EditItem /> */}
-          {this.state.items.length > 0 && 
-            <TableList items={this.state.items} /> 
+          {this.state.items.length > 0 &&
+            <TableList items={this.state.items} />
           }
-          </div>
-          
-        )  
-        
+        </div>
+
+      )
 
 
-      }
-      else{
-       return <h1>What are you doing here?</h1>
-      }
+
     }
-
-    render() {
-        return this.pageRender();
+    else {
+      return <h1>What are you doing here?</h1>
     }
-
-  
   }
+
+  render() {
+    return this.pageRender();
+  }
+
+
+}
 
 export default withRouter(Dashboard);
