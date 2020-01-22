@@ -71,8 +71,8 @@ class Form extends React.Component {
                     <label htmlFor="privacy">Privacy Settings</label>
                     <Field name="privacy" component="select" type="text">
                     <option></option>
-                    <option value="publish">Publish my phone number and first name - I will arrange handover directly</option>
-                    <option value="doNotPublish">Please do not publish my details - One Good Street should arrange handover</option>
+                    <option value="publishDetails">Publish my phone number and first name - I will arrange handover directly</option>
+                    <option value="NotPublishDetails">Please do not publish my details - One Good Street should arrange handover</option>
                     </Field>
                 </div>
                 <div>

@@ -13,7 +13,7 @@ class Upload extends React.Component {
 
         //component to say uploading?? Put in here
 
-        axios.post('https://vast-headland-25884.herokuapp.com' + '/items/create', data)
+        axios.post('https://vast-headland-25884.herokuapp.com/items/create', data)
 
             .then(res => {
                 this.props.history.push('/');
@@ -28,7 +28,7 @@ class Upload extends React.Component {
 
         //component to say uploading?? Put in here
 
-        axios.patch('https://vast-headland-25884.herokuapp.com' + '/items/edit/:id', data)
+        axios.patch('https://vast-headland-25884.herokuapp.com/items/edit/:id', data)
 
             .then(res => {
                 this.props.history.push('/');
