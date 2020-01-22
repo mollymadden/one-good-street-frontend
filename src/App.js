@@ -14,6 +14,9 @@ import Admin from './Components/Admin';
 import Dashboard from './Components/Admin/dashboard';
 
 import Upload from './Components/Libraryct/Upload';
+import Show from './Components/Libraryct/show-item';
+
+
 
 // change
 
@@ -30,10 +33,7 @@ function App() {
         <Route exact path="/admin" component={Admin} />
         <Route path="/pagenotfound" component={Pagenotfound} />
         <Route exact path="/library/upload" component={Upload} />
-
-        {/* <Route exact path="/libraryofcarethings/upload" render={() => (
-          <SyncValidationForm handleSubmit={handleForm} />)} /> */}
-
+        <Route exact path="/items/:id" component={Show} />
       </Switch>
     </BrowserRouter>
   </div>

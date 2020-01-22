@@ -7,6 +7,8 @@ import './card-style.css'
 // mapping through json file located here
 // https://vast-headland-25884.herokuapp.com/items
 
+
+
 class Librarycard extends React.Component {
     state = {
         items: []
@@ -34,7 +36,7 @@ class Librarycard extends React.Component {
 
                             <div className="card" max-width="200">
                                 <div className="image">
-                                    <a href={"items/" + (item._id)} target="_blank">
+                                    <a href={"/items/" + (item._id)} target="_blank">
                                         <img src={item.image} width="200" /></a>
                                 </div>
                                 <div className="carddescript">
