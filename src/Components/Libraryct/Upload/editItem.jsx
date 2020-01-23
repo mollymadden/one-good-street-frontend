@@ -71,7 +71,8 @@ class EditItem extends React.Component {
             email: response.data.email,
             privacy: response.data.privacy,
             image: response.data.image,
-            delivery: response.data.delivery
+            delivery: response.data.delivery,
+            published: response.data.published
         } } )
       })
       .catch(function(error) {
@@ -81,6 +82,8 @@ class EditItem extends React.Component {
 
   
   render() {
+
+    if(localStorage.authToken) {
       return (<div>
    
             <Form btnText={'Edit Item'} onSubmit={this.handleEditItem} item={this.state} initialValues={this.state.itemData} />
@@ -90,6 +93,13 @@ class EditItem extends React.Component {
       </div>
       );
   }
+  else {
+    return (
+        null
+    )
+}
+  
+}
 }
 
 export default EditItem;
