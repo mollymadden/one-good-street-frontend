@@ -1,13 +1,14 @@
 //This is the Library of care things page - where cards of donated items are rendering. In component did mount, we are fetching the server side data from heroku. 
 
 import React, { Component } from 'react'
-import Librarycard from './Card';
+import Search from './search';
 import img1 from "../../assets/shower-stool.png";
 import img2 from "../../assets/electric-wheelchair.png";
 import Header from '../Shared/Header';
 import Title from '../Shared/Title';
 import Button from '../Shared/Button';
 import Adminav from '../Admin/admin-nav';
+
 
 
 class Library extends Component {
@@ -17,19 +18,19 @@ class Library extends Component {
 
     async componentDidMount() {
         try {
-         
-          const response = await fetch("https://vast-headland-25884.herokuapp.com/items")
-          const data = await response.json()
-          this.setState({
-              items: data
-          })
+
+            const response = await fetch("https://vast-headland-25884.herokuapp.com/items")
+            const data = await response.json()
+            this.setState({
+                items: data
+            })
         }
-        catch (error){
-          console.log(error.message)
+        catch (error) {
+            console.log(error.message)
         }
-          
-      }
-    
+
+    }
+
     render() {
         return (
             <div>
@@ -46,9 +47,9 @@ class Library extends Component {
                     Please email info@onegoodstreet.com.au if you are interested in any of the equipment.
                 </div>
 
-                    <Button />
-                    <Librarycard items={this.state.items} />
-                </div>
+                <Button />
+                <Search items={this.state.items} />
+            </div>
 
         );
     }
