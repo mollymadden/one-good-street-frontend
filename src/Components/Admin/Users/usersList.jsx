@@ -3,6 +3,9 @@
 import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import Header from '../Shared/Header';
+import Title from '../Shared/Title';
+import Adminav from './admin-nav';
 
 const User = props => (
   <tr>
@@ -27,18 +30,18 @@ class UserList extends React.Component {
 
   async componentDidMount() {
     try {
-    await
-        axios.get(process.env.REACT_APP_BACKEND_URL + "/users/dashboard", { headers: {'Authorization': localStorage.getItem('authToken') } } );
-       
+      await
+        axios.get(process.env.REACT_APP_BACKEND_URL + "/users/dashboard", { headers: { 'Authorization': localStorage.getItem('authToken') } });
 
-        const users = await 
+
+      const users = await
         axios.get(process.env.REACT_APP_BACKEND_URL + "/users");
 
-        this.setState({
-          users: users.data
-        })
+      this.setState({
+        users: users.data
+      })
     }
-    catch (error){
+    catch (error) {
       console.log(error.message)
       this.props.history.push('/')
     }
@@ -66,12 +69,15 @@ class UserList extends React.Component {
   }
 
 
+render() {
+    if (localStorage.authToken) {
+      return (
+        <div>
+          <Header />
+          <Adminav />
+          <Title title="Manage Users" />
 
-  render() {
-    if(localStorage.authToken ){
-    return (
-      <div>
-        <table>
+          <table>
             <thead>
               <tr>
                 <th>First name</th>
@@ -84,17 +90,15 @@ class UserList extends React.Component {
               {this.state.users.map(user => <User user={user} key={user._id} deleteUser={this.deleteUser} />)}
             </tbody>
           </table>
-
-          
-      </div>
-    )
-  }
-  else {
-    return (
+        </div>
+      )
+    }
+    else {
+      return (
         null
-    )
-}
-}
+      )
+    }
+  }
 }
 
 export default UserList;
