@@ -6,8 +6,9 @@ import { Link } from 'react-router-dom';
 import "./table.css";
 
 const Item = props => (
+         
 
-  <tr>
+    <tr>
     <td className="resize"><Link to={"/items/" + props.item._id}>{props.item.itemName}</Link></td>
     <td className="resize">{props.item.description}</td>
     <td>{props.item.firstName}</td>
@@ -19,8 +20,8 @@ const Item = props => (
     <td>{props.item.privacy}</td>
     <td><Link to={"/items/" + props.item._id}><img src={props.item.image} /></Link></td>
     {/* <td>{props.item.image}</td> */}
-    <td>{props.item.delivery}</td>
-    <td>{props.item.published}</td>
+    <td>{props.item.delivery ? 'yes' : 'no'}</td>
+    <td>{props.item.published ? 'yes' : 'no'}</td>
 
     <td className="icons">
       <Link to={"/items/edit/" + props.item._id}>📝</Link>
@@ -34,6 +35,9 @@ class TableList extends React.Component {
     items: this.props.items
   }
 
+componentDidMount() {
+  console.log(this.state.items[0].delivery)
+}
 //Jack help way
   deleteItem = (id) => {
 
@@ -66,6 +70,7 @@ class TableList extends React.Component {
     return (
       <div>
         <h1 className="blurb-border-title">List of all items</h1>
+
 
         <table>
           <thead>

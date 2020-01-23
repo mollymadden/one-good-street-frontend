@@ -39,7 +39,7 @@ class Upload extends React.Component {
                 <Title title="Upload an Item" />
                 <div>
                     <CreateItem onSubmit={this.handleCreateItem} />
-                    <EditItem onSubmit={this.handleEditItem}/>
+                    
 
 
                 </div>
