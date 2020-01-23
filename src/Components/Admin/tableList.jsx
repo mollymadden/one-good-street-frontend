@@ -1,9 +1,10 @@
-//This is the table that the admin sees 
+//This is the table of all items that the admin sees 
 
 import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import "./table.css";
+import { thistle } from 'color-name';
 
 const Item = props => (
          
@@ -26,6 +27,7 @@ const Item = props => (
     <td className="icons">
       <Link to={"/items/edit/" + props.item._id}>📝</Link>
       <a href="#" onClick={() => { props.deleteItem(props.item._id) }}>🗑</a>
+      <a href="#" onClick={() => { props.togglePublished(props.item._id) }}>P</a>
     </td>
   </tr >
 )
@@ -37,6 +39,7 @@ class TableList extends React.Component {
 
 componentDidMount() {
   console.log(this.state.items[0].delivery)
+  console.log('item 0 published status', this.state.items[0].published)
 }
 //Jack help way
   deleteItem = (id) => {
@@ -58,10 +61,22 @@ componentDidMount() {
     })
   }
 
+  togglePublished = (id) => {
+    const foundItemIndex = this.state.items.findIndex(item => item._id === id)
+
+    console.log(foundItemIndex);
+    console.log(this.state.items[foundItemIndex])
+
+    {/* this.setState(prevState =>
+    {
+      items[foundItemIndex].published = !prevState.items[foundItemIndex].published
+    } ); */}
+  }
+
 
   itemList() {
     return this.state.items.map(currentitem => {
-      return <Item item={currentitem} deleteItem={this.deleteItem} key={currentitem._id} />;
+      return <Item item={currentitem} deleteItem={this.deleteItem} key={currentitem._id} togglePublished={this.togglePublished}/>;
     })
   }
 
