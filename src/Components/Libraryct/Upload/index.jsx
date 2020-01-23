@@ -1,10 +1,11 @@
+//Index page for upload an item
+
 //This is where the components CreateItem and EditItem are rendered. 
 
 //CreateItem and EditItem render the base Form.jsx and then index.jsx renders components CreateItem and EditItem. 
 
 import React from "react";
 import CreateItem from './createItem'
-import EditItem from './editItem';
 import Header from '../../Shared/Header';
 import Title from '../../Shared/Title';
 import axios from 'axios';
@@ -29,6 +30,43 @@ class Upload extends React.Component {
                 console.log(err)
             })
     }
+
+    //for cloudinary image upload
+
+    // async handleImageUpload() {
+    //     const data = new FormData()
+    //     data.append('file', item.image)
+    //     data.append('upload_preset', 'onegoodst')
+    //     data.append('cloud_name', 'onegoodst')
+    //     const response = await axios.post(process.env.CLOUDINARY_URL, data);
+    //     const imageUrl = response.data.url;
+    //     return imageUrl;
+
+    // }
+
+
+    // //check this!!!!
+    // async handleSubmit(event) {
+    //     try {
+    //       event.preventDefault();
+    //       setLoading(true);
+    //       setError("");
+    //       const imageUrl = await handleImageUpload();
+    //       const url = `${baseUrl}/api/product`;
+    //       const { name, price, description } = product;
+    //       const payload = { name, price, description, imageUrl };
+    //       await axios.post(url, payload);
+    //       // console.log({ response });
+    //       setProduct(INITIAL_PRODUCT);
+    //       setSuccess(true);
+    //     } catch (error) {
+    //       catchErrors(error, setError);
+    //     } finally {
+    //       setLoading(false);
+    //     }
+    //   }
+
+
 
     
 
