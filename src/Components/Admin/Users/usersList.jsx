@@ -16,8 +16,8 @@ const User = props => (
 
     <td>
       <Link to={"/users/edit/" + props.user._id}>📝</Link>
-      {/* <a href="#" onClick={() => { props.deleteItem(props.item._id) }}>🗑</a>
-      <a href="#" onClick={() => { props.togglePublished(props.item._id) }}>P</a> */}
+      <a href="#" onClick={() => { props.deleteUser(props.user._id) }}>🗑</a>
+     
     </td>
   </tr>
 )
@@ -49,9 +49,27 @@ class UserList extends React.Component {
 
 
 
+  deleteUser = (id) => {
+    const option = {
+      url: process.env.REACT_APP_BACKEND_URL + "/users/delete/" + id,
+      method: "DELETE",
+      headers: {
+        "content-type": "application/x-www-form-urlencoded",
+        "authorization": `${localStorage.authToken}`
+      }
+    }
+    axios(option)
+      .then(response => { console.log(response.data)});
+      
+    this.setState({
+      items: this.state.users.filter(el => el._id !== id)
+    })
 
-  render() {
+    
+  }
 
+
+render() {
     if (localStorage.authToken) {
       return (
         <div>
@@ -69,12 +87,10 @@ class UserList extends React.Component {
               </tr>
             </thead>
             <tbody>
-              {this.state.users.map(user => <User user={user} key={user._id} />)}
+              {this.state.users.map(user => <User user={user} key={user._id} deleteUser={this.deleteUser} />)}
             </tbody>
           </table>
         </div>
-
-
       )
     }
     else {

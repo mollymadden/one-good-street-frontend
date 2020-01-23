@@ -13,15 +13,17 @@ import Getinvolved from './Components/Get-Involved';
 import Admin from './Components/Admin';
 import Dashboard from './Components/Admin/dashboard';
 
-import Upload from './Components/Libraryct/Upload';
+import CreateItem from './Components/Libraryct/Upload/createItem';
 import Show from './Components/Libraryct/show-item';
 import EditItem from './Components/Libraryct/Upload/editItem';
-import UserList from './Components/Admin/users'
+
+import UserList from './Components/Admin/Users/index'
+import CreateUser from './Components/Admin/Users/createUser';
+import EditUser from './Components/Admin/Users/editUser';
 
 
 
-// change
-
+//create users edit route path
 function App() {
   return (<div>
     <BrowserRouter>
@@ -34,8 +36,12 @@ function App() {
         <Route exact path="/admin/dashboard" component={Dashboard} />
         <Route exact path="/admin" component={Admin} />
         <Route exact path="/users" component={UserList} />
+        <Route exact path="/users/add" component={CreateUser} />
+        <Route exact path="/users/edit/:id" component={EditUser} />
+
+
         <Route path="/pagenotfound" component={Pagenotfound} />
-        <Route exact path="/library/upload" component={Upload} />
+        <Route exact path="/library/upload" component={CreateItem} />
         <Route exact path="/items/:id" component={Show} />
         <Route exact path="/items/edit/:id" component={EditItem} />
       </Switch>

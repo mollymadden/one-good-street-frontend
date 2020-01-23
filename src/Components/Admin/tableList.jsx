@@ -43,7 +43,6 @@ componentDidMount() {
 }
 //Jack help way
   deleteItem = (id) => {
-
     const option = {
       url: process.env.REACT_APP_BACKEND_URL + "/items/delete/" + id,
       method: "DELETE",
@@ -54,8 +53,7 @@ componentDidMount() {
     }
     axios(option)
       .then(response => { console.log(response.data)});
-      
-
+  
     this.setState({
       items: this.state.items.filter(el => el._id !== id)
     })
