@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import "./Button.css";
 import { withRouter, Link } from 'react-router-dom';
 
 class Button extends React.Component {

@@ -8,6 +8,7 @@ import Header from '../Shared/Header';
 import Title from '../Shared/Title';
 import Button from '../Shared/Button';
 import Adminav from '../Admin/admin-nav';
+import './library.css'
 
 
 
@@ -47,8 +48,10 @@ class Library extends Component {
                     Please email info@onegoodstreet.com.au if you are interested in any of the equipment.
                 </div>
 
-                <Button />
-                <Search items={this.state.items} />
+                <div className="search">
+                    <Button />
+                    <Search items={this.state.items} />
+                </div>
             </div>
 
         );
