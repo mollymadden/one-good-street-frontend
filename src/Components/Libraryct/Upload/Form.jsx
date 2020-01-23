@@ -14,7 +14,7 @@ class Form extends React.Component {
             <form onSubmit={this.props.handleSubmit}>
                 <div>
                     <label htmlFor="itemName">Name of item</label>
-                    <Field name="itemName" component="input" type="text"></Field>
+                    <Field name="itemName" component="input" type="text" value={this.props.item.itemName}></Field>
                 </div>
                 <div>
                     <label htmlFor="headline">Headline</label>

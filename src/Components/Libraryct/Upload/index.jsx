@@ -12,6 +12,9 @@ import axios from 'axios';
 
 
 class Upload extends React.Component {
+
+
+
     handleCreateItem = (data) => {
         console.log(data);
 
@@ -27,30 +30,7 @@ class Upload extends React.Component {
             })
     }
 
-    handleEditItem = (id, data) => {
-        console.log(data);
     
-        //component to say uploading?? Put in here
-        const option = {
-            url: "https://vast-headland-25884.herokuapp.com/items/edit/" + id,
-            method: "PATCH",
-            headers: {
-              "content-type": "application/x-www-form-urlencoded",
-              "authorization": `${localStorage.authToken}`
-            },
-            data: data
-          }
-    
-        axios(option)
-    
-            .then(res => {
-                this.props.history.push('/');
-            })
-            .catch((err) => {
-                console.log(err)
-            })
-    }
-
 
     render() {
         return (

@@ -23,7 +23,7 @@ const Item = props => (
     <td>{props.item.published}</td>
 
     <td className="icons">
-      <Link to={"/edit/" + props.item._id}>📝</Link>
+      <Link to={"/items/edit/" + props.item._id}>📝</Link>
       <a href="#" onClick={() => { props.deleteItem(props.item._id) }}>🗑</a>
     </td>
   </tr >
