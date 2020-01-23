@@ -27,6 +27,7 @@ class Dashboard extends React.Component {
         axios.get('https://vast-headland-25884.herokuapp.com' + "/users/dashboard", { headers: { 'Authorization': localStorage.getItem('authToken') } });
       console.log(response);
 
+
       const res = await axios.get("https://vast-headland-25884.herokuapp.com/items");
 
       this.setState({
