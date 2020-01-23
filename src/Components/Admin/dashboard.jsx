@@ -16,22 +16,24 @@ import TableList from '../Admin/tableList';
 
 class Dashboard extends React.Component {
   state = {
-    items: []
+    items: [],
   }
 
 
 
   async componentDidMount() {
     try {
-      const response = await
-        axios.get('https://vast-headland-25884.herokuapp.com' + "/users/dashboard", { headers: { 'Authorization': localStorage.getItem('authToken') } });
-      console.log(response);
+      await
+        axios.get(process.env.REACT_APP_BACKEND_URL + "/users/dashboard", { headers: { 'Authorization': localStorage.getItem('authToken') } });
 
+      const items = await
+      axios.get(process.env.REACT_APP_BACKEND_URL + "/items");
+   
 
-      const res = await axios.get("https://vast-headland-25884.herokuapp.com/items");
+      // const res = await axios.get("https://vast-headland-25884.herokuapp.com/items");
 
       this.setState({
-        items: res.data
+        items: items.data
       })
     }
     catch (error) {

@@ -19,7 +19,7 @@ class Library extends Component {
     async componentDidMount() {
         try {
 
-            const response = await fetch("https://vast-headland-25884.herokuapp.com/items")
+            const response = await fetch(process.env.REACT_APP_BACKEND_URL + "/items")
             const data = await response.json()
             this.setState({
                 items: data

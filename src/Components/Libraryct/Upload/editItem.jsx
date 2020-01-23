@@ -30,7 +30,7 @@ class EditItem extends React.Component {
     console.log('handleEdit data', data);
     //component to say uploading?? Put in here
     const option = {
-        url: "https://vast-headland-25884.herokuapp.com/items/edit/" + this.props.match.params.id,
+        url: process.env.REACT_APP_BACKEND_URL + "/items/edit/" + this.props.match.params.id,
         method: "PUT",
         headers: {
           "authorization": `${localStorage.authToken}`
@@ -51,7 +51,7 @@ class EditItem extends React.Component {
 
   componentDidMount() {
 
-    axios.get('https://vast-headland-25884.herokuapp.com/items/'+this.props.match.params.id)
+    axios.get(process.env.REACT_APP_BACKEND_URL + '/items/'+this.props.match.params.id)
 
       .then(response => {
           console.log(response.data)

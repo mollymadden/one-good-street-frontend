@@ -38,7 +38,7 @@ class TableList extends React.Component {
   deleteItem = (id) => {
 
     const option = {
-      url: "https://vast-headland-25884.herokuapp.com/items/delete/" + id,
+      url: process.env.REACT_APP_BACKEND_URL + "/items/delete/" + id,
       method: "DELETE",
       headers: {
         "content-type": "application/x-www-form-urlencoded",

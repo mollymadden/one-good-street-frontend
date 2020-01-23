@@ -11,7 +11,7 @@ class Search extends Component {
     }
 
     componentDidMount() {
-        axios.get("https://vast-headland-25884.herokuapp.com/items")
+        axios.get(process.env.REACT_APP_BACKEND_URL + "/items")
             .then(({ data }) => {
                 this.setState({
                     results: data,
@@ -21,7 +21,7 @@ class Search extends Component {
     }
 
     getInfo = () => {
-        axios.get("https://vast-headland-25884.herokuapp.com/items")
+        axios.get(process.env.REACT_APP_BACKEND_URL + "/items")
             .then(({ data }) => {
                 this.setState({
                     results: data

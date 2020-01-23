@@ -9,7 +9,7 @@ class Adminav extends React.Component {
       async componentDidMount() {
         try {
           const response = await
-              axios.get('https://vast-headland-25884.herokuapp.com' + "/users/dashboard", { headers: {'Authorization': localStorage.getItem('authToken') } } );
+              axios.get(process.env.REACT_APP_BACKEND_URL + "/users/dashboard", { headers: {'Authorization': localStorage.getItem('authToken') } } );
               console.log(response);
         }
         catch (error){

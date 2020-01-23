@@ -20,7 +20,7 @@ class Upload extends React.Component {
 
         //component to say uploading?? Put in here
 
-        axios.post('https://vast-headland-25884.herokuapp.com/items/create', data)
+        axios.post(process.env.REACT_APP_BACKEND_URL + '/items/create', data)
 
             .then(res => {
                 this.props.history.push('/');
