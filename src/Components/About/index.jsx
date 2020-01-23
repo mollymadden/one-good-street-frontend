@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../Shared/Header';
 import Title from '../Shared/Title';
 import Adminav from '../Admin/admin-nav';
+import hands from "../../assets/hands.jpg"
 
 class About extends React.Component {
     render() {
@@ -29,6 +30,23 @@ class About extends React.Component {
                 <div className="blurb-border">
                     <p>1024 Members. 4 Active Suburbs. 3 Projects Running</p>
                 </div>
+
+
+                <div className="blurb-border-title">GOOD STREETS TO AGE IN</div>
+
+                <div className="blurb-border">
+
+            
+
+                    <img src={hands} className="image-float-left" />
+
+                    <p>One Good Street seeks to create opportunities for residents to make a positive difference in the lives of their senior neighbours. We work with initiatives like casserole club, cycling without ageing, community houses and local councils to promote activities that reduce loneliness and isolation.</p>
+
+                    <p>Activities are practical, low commitment and you can join at short notice with the aim of promoting neighbourhood participation around the older person. Involvement in these activities makes your street a great street to age in.</p>
+
+                </div>
+
+
 
                 </div>
             </div>

@@ -9,14 +9,14 @@ body {
   max-width: 50%;
   font-family: "Open Sans";
   display: inline-block;
-  font-size: 12px;
+  font-size: 16px;
 
 }
 
 .blurb-border {
   font-family: "Open Sans";
   display: inline-block;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .blurb-border p {
@@ -26,22 +26,22 @@ body {
 
 .blurb-border-title {
   min-width: 98vw;
-  min-height: 5vh;
   font-family: "DINCondensed-Bold";
   text-transform: uppercase;
   display: inline-block;
-  font-size: 20px;
+  font-size: 30px;
   background-color: #D5ECEA;
+  border-top: 10px solid #D5ECEA;
 }
 
 button {
   border-radius: 5px;
   background: #F57722;
-  padding: 15px;
+  padding: 20px;
   font-family: "DINCondensed-Bold";
   text-transform: uppercase;
   color: white;
-  font-size: 15px;
+  font-size: 20px;
   margin-top: 10px;
 }
 
@@ -54,3 +54,15 @@ button:hover {
 a:hover {
   cursor: pointer;
 }
+
+strong { 
+  font-weight: bold;
+}
+
+.image-float-left {
+  float: left;
+  border-radius: 2%;
+  box-shadow: 0 0 5px #888;
+  margin-top: 2%;
+}
+
