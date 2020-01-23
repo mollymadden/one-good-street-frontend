@@ -9,6 +9,8 @@
     "axios": "^0.19.1",
     "bootstrap": "^4.4.1",
     "dotenv": "^8.2.0",
+    "google-map-react": "^1.1.5",
+    "google-maps-react": "^2.0.2",
     "gulp-print": "^5.0.0",
     "i": "^0.3.6",
     "natives": "^1.1.6",
