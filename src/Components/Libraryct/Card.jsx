@@ -1,6 +1,3 @@
-//This component is rendering in index.jsx of Libraryct
-
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -13,21 +10,21 @@ import './card-style.css'
 
 
 class Librarycard extends React.Component {
-    
+
 
     // Key might get rid of console errors
 
     render() {
-        console.log("https://vast-headland-25884.herokuapp.com/items")
-        const { items } = this.props;
-
+        // console.log("https://vast-headland-25884.herokuapp.com/items")
+        const { results } = this.props;
+        console.log(results)
         return (
             <section>
                 <div className="cards">
-                    {items ? items.map((item, index) => {
+                    {results ? results.map((item, index) => {
                         return (
 
-                            <div className="card" max-width="200">
+                            <div className="card" max-width="200" key={index}>
                                 <div className="image">
                                     <a href={"/items/" + (item._id)} target="_blank">
                                         <img src={item.image} width="200" /></a>
@@ -51,20 +48,3 @@ class Librarycard extends React.Component {
 
 
 export default Librarycard;
-
-
-
-
-
-
-{/* <Card style={{ width: '18rem' }}>
-    <Card.Img variant="top" src="holder.js/100px180" />
-    <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-            Some quick example text to build on the card title and make up the bulk of
-            the card's content.
-    </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-    </Card.Body>
-</Card> */}
