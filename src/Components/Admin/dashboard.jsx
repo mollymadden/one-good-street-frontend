@@ -5,8 +5,6 @@
 import React from 'react';
 import axios from 'axios';
 import { withRouter } from 'react-router';
-import EditItem from '../Libraryct/Upload/editItem';
-import LibraryCard from '../Libraryct/Card';
 import Header from '../Shared/Header';
 import Title from '../Shared/Title';
 import Adminav from './admin-nav';
@@ -28,6 +26,8 @@ class Dashboard extends React.Component {
 
       const items = await
       axios.get(process.env.REACT_APP_BACKEND_URL + "/items");
+
+      
    
 
       // const res = await axios.get("https://vast-headland-25884.herokuapp.com/items");
@@ -54,8 +54,6 @@ class Dashboard extends React.Component {
           <Adminav />
           <Title title='You are on the admin dashboard page' />
 
-
-          {/* <EditItem /> */}
           {this.state.items.length > 0 &&
             <TableList items={this.state.items} />
           }
@@ -63,11 +61,9 @@ class Dashboard extends React.Component {
 
       )
 
-
-
     }
     else {
-      return <h1>What are you doing here?</h1>
+      return <h1>You are not authorised to view this page</h1>
     }
   }
 

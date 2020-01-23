@@ -15,7 +15,8 @@ import Dashboard from './Components/Admin/dashboard';
 
 import Upload from './Components/Libraryct/Upload';
 import Show from './Components/Libraryct/show-item';
-import EditItem from './Components/Libraryct/Upload/editItem'
+import EditItem from './Components/Libraryct/Upload/editItem';
+import UserList from './Components/Admin/users'
 
 
 
@@ -32,6 +33,7 @@ function App() {
         <Route path="/get-involved" component={Getinvolved} />
         <Route exact path="/admin/dashboard" component={Dashboard} />
         <Route exact path="/admin" component={Admin} />
+        <Route exact path="/users" component={UserList} />
         <Route path="/pagenotfound" component={Pagenotfound} />
         <Route exact path="/library/upload" component={Upload} />
         <Route exact path="/items/:id" component={Show} />
