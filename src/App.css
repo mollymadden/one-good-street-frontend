@@ -21,7 +21,6 @@ body {
 
 .blurb-border p {
   min-width: 70vw;
-  max-width: 75vw;
 }
 
 .blurb-border-title {
@@ -59,10 +58,16 @@ strong {
   font-weight: bold;
 }
 
-.image-float-left {
-  float: left;
-  border-radius: 2%;
-  box-shadow: 0 0 5px #888;
+.float-left-p {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 70vw;
   margin-top: 2%;
+}
+
+.float-left-p p {
+  max-width: 5vw;
+  border-radius: 2%;
 }
 

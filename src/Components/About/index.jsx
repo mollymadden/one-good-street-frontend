@@ -36,14 +36,15 @@ class About extends React.Component {
 
                 <div className="blurb-border">
 
-            
 
-                    <img src={hands} className="image-float-left" />
+                <div className="float-left-p">
+                    <img src={hands} />
 
-                    <p>One Good Street seeks to create opportunities for residents to make a positive difference in the lives of their senior neighbours. We work with initiatives like casserole club, cycling without ageing, community houses and local councils to promote activities that reduce loneliness and isolation.</p>
+                    <p>One Good Street seeks to create opportunities for residents to make a positive difference in the lives of their senior neighbours. We work with initiatives like casserole club, cycling without ageing, community houses and local councils to promote activities that reduce loneliness and isolation. &nbsp;
 
-                    <p>Activities are practical, low commitment and you can join at short notice with the aim of promoting neighbourhood participation around the older person. Involvement in these activities makes your street a great street to age in.</p>
-
+                    Activities are practical, low commitment and you can join at short notice with the aim of promoting neighbourhood participation around the older person. Involvement in these activities makes your street a great street to age in.</p>
+                </div>
+                
                 </div>
 
 
