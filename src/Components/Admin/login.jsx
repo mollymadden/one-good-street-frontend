@@ -20,7 +20,7 @@ class Login extends React.Component {
     handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            let response = await axios.post('https://vast-headland-25884.herokuapp.com' + '/users/login',
+            let response = await axios.post(process.env.REACT_APP_BACKEND_URL + '/users/login',
                 {
                     email: this.state.email,
                     password: this.state.password

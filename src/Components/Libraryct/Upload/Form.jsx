@@ -83,7 +83,7 @@ class Form extends React.Component {
                 <div>
                     <label htmlFor="delivery">I can offer delivery</label>
                     
-                    <Field name="delivery" component="input" type="checkbox"></Field>
+                    <Field name="delivery" component="input" type="checkbox" value="false"></Field>
 
                 </div>
                 <div>

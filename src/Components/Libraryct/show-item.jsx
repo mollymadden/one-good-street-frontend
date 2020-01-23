@@ -12,7 +12,7 @@ class Show extends React.Component {
 
 
     async componentDidMount() {
-        const response = await fetch("https://vast-headland-25884.herokuapp.com/items/" + this.props.match.params.id)
+        const response = await fetch(process.env.REACT_APP_BACKEND_URL + "/items/" + this.props.match.params.id)
         const data = await response.json()
         this.setState({
             item: data
@@ -20,7 +20,7 @@ class Show extends React.Component {
     }
 
     render() {
-        console.log("https://vast-headland-25884.herokuapp.com/items/" + this.props.match.params.id)
+        console.log(process.env.REACT_APP_BACKEND_URL + "/items/" + this.props.match.params.id)
         const { item } = this.state;
 
         //     let name = "";
