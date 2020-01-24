@@ -59,11 +59,19 @@ componentDidMount() {
     })
   }
 
-  togglePublished = (id) => {
-    const foundItemIndex = this.state.items.findIndex(item => item._id === id)
+  togglePublished = async (id) => {
+    debugger
+    try {
+      const response = axios.put("http://localhost:5000/items/toggle-publish", {
+        id: this.props.match.params.id
+      })
+    } catch(err) {
+      console.log(err.message)
+    }
+    {/* const foundItemIndex = this.state.items.findIndex(item => item._id === id)
 
     console.log(foundItemIndex);
-    console.log(this.state.items[foundItemIndex])
+    console.log(this.state.items[foundItemIndex]) */}
 
     {/* this.setState(prevState =>
     {
