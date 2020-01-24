@@ -20,22 +20,26 @@ const Item = props => (
     <td>{props.item.phone}</td>
     <td>{props.item.address}</td>
     <td><a href={"mailto:" + props.item.email}>{props.item.email}</a></td>
-    {/* <td>{props.item.email}</td> */}
-    <td>{props.item.privacy}</td>
+    {/* <td>{props.item.privacy}</td> */}
+
+    <td>{props.item.privacy == "publishDetails"
+      ? `public`
+      : 'private'}</td>
+
+
+
     <td><Link to={"/items/" + props.item._id}><img src={props.item.image} /></Link></td>
-    {/* <td>{props.item.image}</td> */}
     <td>{props.item.delivery ? 'yes' : 'no'}</td>
     <td>{props.item.published ? 'yes' : 'no'}</td>
 
     <td className="icons">
-      <Link to={"/items/edit/" + props.item._id}>📝</Link>
+      <Link to={"/items/edit/" + props.item._id}>📝</Link></td>
 
-      {/* <a href="#" onClick={window.confirm("Are you sure you want to delete this item?")}>🗑</a> */}
+    <td className="icons"><a href="#" onClick={() => { if (window.confirm('Are you sure you want to delete this item?')) { props.deleteItem(props.item._id) } }}>🗑</a></td>
 
-      <a href="#" onClick={() => { if (window.confirm('Are you sure you want to delete this item?')) { props.deleteItem(props.item._id) } }}>🗑</a>
-
-      < a href="#" onClick={() => { props.togglePublished(props.item._id) }}>P</a>
-    </td>
+    <td className="icons">< a href="#" onClick={() => { props.togglePublished(props.item._id) }}>
+      {props.item.published ? '🔓' : '🔐'}
+    </a></td>
   </tr >
 )
 
@@ -125,6 +129,9 @@ class TableList extends React.Component {
               <th>Image</th>
               <th>Delivery</th>
               <th>Published</th>
+              <th>Edit</th>
+              <th>Delete</th>
+              <th>Toggle Published</th>
             </tr>
           </thead>
           <tbody>
