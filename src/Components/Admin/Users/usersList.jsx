@@ -3,9 +3,9 @@
 import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import Header from '../Shared/Header';
-import Title from '../Shared/Title';
-import Adminav from './admin-nav';
+import Header from '../../Shared/Header';
+import Title from '../../Shared/Title';
+import Adminav from '../admin-nav';
 
 const User = props => (
   <tr>

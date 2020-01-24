@@ -55,7 +55,7 @@ class Dashboard extends React.Component {
           <Title title='You are on the admin dashboard page' />
 
           {this.state.items.length > 0 &&
-            <TableList items={this.state.items} />
+            <TableList items={this.state.items} {...this.props} />
           }
         </div>
 

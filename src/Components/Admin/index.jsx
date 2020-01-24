@@ -28,7 +28,7 @@ class Admin extends React.Component {
                 <Adminav />
                 <Title title="Admin Login" />
                 <div>
-                    <Login />
+                    <Login {...this.props} />
                 </div>
             </div>
         )
