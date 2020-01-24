@@ -44,6 +44,10 @@ class Show extends React.Component {
                                 : "please enquire with Matiu Bush at info@onegoodstreet.com.au"}
                         </p>
 
+                        {/* 
+                        <button type="button" className="btn btn-info" onClick={() => (`mailto:${item.email}`)} type="button">Send an Email to {item.firstName}</button> */}
+
+
                     </div>
 
                 </div>

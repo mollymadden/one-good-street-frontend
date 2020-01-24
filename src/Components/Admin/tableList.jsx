@@ -27,17 +27,17 @@ const Item = props => (
       : 'private'}</td>
 
 
-
-    <td><Link to={"/items/" + props.item._id}><img src={props.item.image} /></Link></td>
     <td>{props.item.delivery ? 'yes' : 'no'}</td>
-    <td>{props.item.published ? 'yes' : 'no'}</td>
+    <td><Link to={"/items/" + props.item._id}><img src={props.item.image} /></Link></td>
+
+
 
     <td className="icons">
       <Link to={"/items/edit/" + props.item._id}>📝</Link></td>
 
     <td className="icons"><a href="#" onClick={() => { if (window.confirm('Are you sure you want to delete this item?')) { props.deleteItem(props.item._id) } }}>🗑</a></td>
-
-    <td className="icons">< a href="#" onClick={() => { props.togglePublished(props.item._id) }}>
+    <td>{props.item.published ? 'yes' : 'no'}</td>
+    <td className="icons">< a href="#" onClick={(e) => { props.togglePublished(e, props.item._id) }}>
       {props.item.published ? '🔓' : '🔐'}
     </a></td>
   </tr >
@@ -72,9 +72,9 @@ class TableList extends React.Component {
     })
   }
 
-  togglePublished = async (id) => {
+  togglePublished = async (e, id) => {
     try {
-
+      e.preventDefault()
 
 
       {/* makes a put request to backend, returns the updated document with publish toggled */ }
@@ -126,11 +126,11 @@ class TableList extends React.Component {
               <th>Address</th>
               <th>Email</th>
               <th>Privacy</th>
-              <th>Image</th>
               <th>Delivery</th>
-              <th>Published</th>
+              <th>Image</th>
               <th>Edit</th>
               <th>Delete</th>
+              <th>Published</th>
               <th>Toggle Published</th>
             </tr>
           </thead>

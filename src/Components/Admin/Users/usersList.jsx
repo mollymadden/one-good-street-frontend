@@ -14,13 +14,10 @@ const User = props => (
     <td>{props.user.email}</td>
     <td>{props.user.password}</td>
 
-    <td>
-      <Link to={"/users/edit/" + props.user._id}>📝</Link>
+    <td className="icons">
+      <Link to={"/users/edit/" + props.user._id}>📝</Link></td>
 
-      <a href="#" onClick={() => { if (window.confirm('Are you sure you want to delete this user?')) { props.deleteUser(props.user._id) } window.location.reload() }}>🗑</a>
-
-      {/* <a href="#" onClick={() => { props.deleteUser(props.user._id) }}>🗑</a> */}
-
+    <td className="icons"><a href="#" onClick={() => { if (window.confirm('Are you sure you want to delete this user?')) { props.deleteUser(props.user._id) } window.location.reload() }}>🗑</a>
     </td>
   </tr>
 )
@@ -87,6 +84,8 @@ class UserList extends React.Component {
                 <th>Last name</th>
                 <th>Email</th>
                 <th>Password</th>
+                <th>Edit</th>
+                <th>Delete</th>
               </tr>
             </thead>
             <tbody>
