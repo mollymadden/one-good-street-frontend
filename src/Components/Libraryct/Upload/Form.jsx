@@ -46,7 +46,7 @@ class Form extends React.Component {
                     </Field>
                 </div>
                 <div>
-                    <label htmlFor="postcode">Postcode</label>
+                    <label htmlFor="postcode">Postcode where item is located</label>
                     <Field name="postcode" component="input" type="text"></Field>
                 </div>
                 <div>

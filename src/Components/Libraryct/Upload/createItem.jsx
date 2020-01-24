@@ -38,7 +38,8 @@ class CreateItem extends React.Component {
         axios.post(process.env.REACT_APP_BACKEND_URL + '/items/create', data)
 
             .then(res => {
-                this.props.history.push('/');
+                window.alert("Your item has been submitted for review. Please allow 72 hours for a response.");
+                this.props.history.push('/library');
             })
             .catch((err) => {
                 console.log(err)
