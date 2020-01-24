@@ -34,6 +34,9 @@ class CreateItem extends React.Component {
     handleCreateItem = (data) => {
         console.log(data);
 
+        //this is pushing the image url of cloudinary to mongodb
+        data.image = this.state.image
+        console.log('data image', data.image)
         //component to say uploading?? Put in here
 
         axios.post(process.env.REACT_APP_BACKEND_URL + '/items/create', data)
@@ -45,6 +48,8 @@ class CreateItem extends React.Component {
             .catch((err) => {
                 console.log(err)
             })
+
+
     }
 
 
@@ -56,18 +61,25 @@ class CreateItem extends React.Component {
             cloudName: 'onegoodst', 
             uploadPreset: 'onegoodst'}, (error, result) => { 
               if (!error && result && result.event === "success") { 
-                console.log('Done! Here is the image info: ', result.info); 
+                console.log('Done! Here is the image info: ', result.info.url); 
+                this.setState({
+                    image: result.info.url
+                })
               }
             }
           )
 
-          const showWidget = () => {
-            myWidget.open()
+          const showWidget = async () => {
+            await myWidget.open()
+            console.log('state image', this.state.image)
+           
         }
+
         return (<div>
             <Header />
             <Adminav />
             <Title title="Add a New Item" />
+            {/* {this.state.image !== '' && <p>{this.state.image}</p>} */}
             <Form btnText={'Add Item'} onSubmit={this.handleCreateItem} showWidget={showWidget} />
             <h1>{this.props.test}</h1>
         </div>
