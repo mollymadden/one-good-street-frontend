@@ -4,12 +4,13 @@
 
 import React from 'react';
 import Form from './Form';
+import axios from 'axios'
 
 
 class CreateItem extends React.Component {
     constructor(props) {
         super(props);
-
+        
         this.state = {
             itemName: '',
             headline: '',
@@ -26,13 +27,27 @@ class CreateItem extends React.Component {
             delivery: '' //checkbox boolean
         }
     }
+    handleCreateItem = (data) => {
+        console.log(data);
 
+        //component to say uploading?? Put in here
+
+        axios.post(process.env.REACT_APP_BACKEND_URL + '/items/create', data)
+
+            .then(res => {
+                this.props.history.push('/');
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+    }
 
 
     render() {
         return (<div>
-            <Form btnText={'Add Item'} onSubmit={this.props.onSubmit} />
-
+            <Form btnText={'Add Item'} onSubmit={this.handleCreateItem} />
+            <h1>{this.props.test}</h1>
+            <h1>test</h1>
         </div>
         );
     }
