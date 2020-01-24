@@ -77,9 +77,11 @@ class Form extends React.Component {
                         <option value="NotPublishDetails">Please do not publish my details - One Good Street should arrange handover</option>
                     </Field>
                 </div>
+                
                 <div>
+                <button onClick={this.props.showWidget}></button>
                     <label htmlFor="image">Image</label>
-                    <Field name="image" component="input" type="text"></Field>
+                    <Field name="image" component="input" type="image"></Field>
                 </div>
                 <div>
                     <label htmlFor="delivery">I can offer delivery</label>

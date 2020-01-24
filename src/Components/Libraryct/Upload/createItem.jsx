@@ -47,12 +47,27 @@ class CreateItem extends React.Component {
     }
 
 
+    
+
     render() {
+
+        const myWidget = window.cloudinary.createUploadWidget({
+            cloudName: 'onegoodst', 
+            uploadPreset: 'onegoodst'}, (error, result) => { 
+              if (!error && result && result.event === "success") { 
+                console.log('Done! Here is the image info: ', result.info); 
+              }
+            }
+          )
+
+          const showWidget = () => {
+            myWidget.open()
+        }
         return (<div>
             <Header />
             <Adminav />
             <Title title="Add a New Item" />
-            <Form btnText={'Add Item'} onSubmit={this.handleCreateItem} />
+            <Form btnText={'Add Item'} onSubmit={this.handleCreateItem} showWidget={showWidget} />
             <h1>{this.props.test}</h1>
         </div>
         );
