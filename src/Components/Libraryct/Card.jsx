@@ -19,8 +19,9 @@ class Librarycard extends React.Component {
         return (
             <section>
                 <div className="cards">
-                    {results ? results.map((item, index) => {
-                        return (
+                    {results ? results.map((item, index) => { 
+                        if (item.published) {
+                            return (
 
                             <div className="card" max-width="200" key={index}>
                                 <div className="image">
@@ -35,7 +36,9 @@ class Librarycard extends React.Component {
                             </div>
 
 
-                        )
+                            ) 
+                        }
+                      
                     }) : null}
                 </div>
             </section >

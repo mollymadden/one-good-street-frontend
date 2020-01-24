@@ -63,23 +63,26 @@ class TableList extends React.Component {
   }
 
   togglePublished = async (id) => {
-    debugger
     try {
-      const response = axios.put("http://localhost:5000/items/toggle-publish", {
-        id: this.props.match.params.id
+      {/* makes a put request to backend, returns the updated document with publish toggled */}
+      const response = await axios.put("http://localhost:5000/items/toggle-publish", {
+        id: id
+      })
+      {/* iterates through all the items in state, when it finds the document with the same as the above it overrides the original with the updated document */}
+      const newItems = this.state.items.map((item) => {
+        if (item._id === id) {
+          return response.data
+        } else {
+          return item
+        }
+      })
+      {/* resets the state with the mapped array */}
+      this.setState({
+        items: newItems
       })
     } catch(err) {
       console.log(err.message)
     }
-    {/* const foundItemIndex = this.state.items.findIndex(item => item._id === id)
-
-    console.log(foundItemIndex);
-    console.log(this.state.items[foundItemIndex]) */}
-
-    {/* this.setState(prevState =>
-    {
-      items[foundItemIndex].published = !prevState.items[foundItemIndex].published
-    } ); */}
   }
 
 
