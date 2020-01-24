@@ -8,6 +8,7 @@ import React from "react";
 import CreateItem from './createItem'
 import Header from '../../Shared/Header';
 import Title from '../../Shared/Title';
+import Adminav from '../Admin/admin-nav';
 import axios from 'axios';
 
 
@@ -68,16 +69,17 @@ class Upload extends React.Component {
 
 
 
-    
+
 
     render() {
         return (
             <div>
                 <Header />
+                <Adminav />
                 <Title title="Upload an Item" />
                 <div>
                     <CreateItem onSubmit={this.handleCreateItem} />
-                    
+
 
 
                 </div>

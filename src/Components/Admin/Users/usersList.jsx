@@ -3,9 +3,9 @@
 import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import Header from '../Shared/Header';
-import Title from '../Shared/Title';
-import Adminav from './admin-nav';
+import Header from '../../Shared/Header';
+import Title from '../../Shared/Title';
+import Adminav from '../admin-nav';
 
 const User = props => (
   <tr>
@@ -16,8 +16,11 @@ const User = props => (
 
     <td>
       <Link to={"/users/edit/" + props.user._id}>📝</Link>
-      <a href="#" onClick={() => { props.deleteUser(props.user._id) }}>🗑</a>
-     
+
+      <a href="#" onClick={() => { if (window.confirm('Are you sure you want to delete this user?')) { props.deleteUser(props.user._id) } window.location.reload() }}>🗑</a>
+
+      {/* <a href="#" onClick={() => { props.deleteUser(props.user._id) }}>🗑</a> */}
+
     </td>
   </tr>
 )
@@ -59,17 +62,17 @@ class UserList extends React.Component {
       }
     }
     axios(option)
-      .then(response => { console.log(response.data)});
-      
+      .then(response => { console.log(response.data) });
+
     this.setState({
       items: this.state.users.filter(el => el._id !== id)
     })
 
-    
+
   }
 
 
-render() {
+  render() {
     if (localStorage.authToken) {
       return (
         <div>
