@@ -4,13 +4,16 @@
 
 import React from 'react';
 import Form from './Form';
-import axios from 'axios'
+import axios from 'axios';
+import Header from '../../Shared/Header';
+import Title from '../../Shared/Title';
+import Adminav from '../../Admin/admin-nav';
 
 
 class CreateItem extends React.Component {
     constructor(props) {
         super(props);
-        
+
         this.state = {
             itemName: '',
             headline: '',
@@ -45,9 +48,11 @@ class CreateItem extends React.Component {
 
     render() {
         return (<div>
+            <Header />
+            <Adminav />
+            <Title title="Add a New Item" />
             <Form btnText={'Add Item'} onSubmit={this.handleCreateItem} />
             <h1>{this.props.test}</h1>
-            <h1>test</h1>
         </div>
         );
     }

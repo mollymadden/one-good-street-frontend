@@ -2,6 +2,9 @@
 
 import React from 'react';
 import axios from 'axios';
+import Header from '../../Shared/Header';
+import Title from '../../Shared/Title';
+import Adminav from '../admin-nav';
 
 
 class CreateUser extends React.Component {
@@ -71,7 +74,9 @@ class CreateUser extends React.Component {
   render() {
     return (
       <div>
-        <h1>Create user</h1>
+        <Header />
+        <Adminav />
+        <Title title="Create User" />
         <form action="/action_page.php">
           <div>
             <label htmlFor="">First Name</label>
