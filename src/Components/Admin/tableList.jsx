@@ -4,12 +4,11 @@ import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import "./table.css";
-import { thistle } from 'color-name';
 
 const Item = props => (
-         
 
-    <tr>
+
+  <tr>
     <td className="resize"><Link to={"/items/" + props.item._id}>{props.item.itemName}</Link></td>
     <td className="resize">{props.item.description}</td>
     <td>{props.item.firstName}</td>
@@ -26,8 +25,12 @@ const Item = props => (
 
     <td className="icons">
       <Link to={"/items/edit/" + props.item._id}>📝</Link>
-      <a href="#" onClick={() => { props.deleteItem(props.item._id) }}>🗑</a>
-      <a href="#" onClick={() => { props.togglePublished(props.item._id) }}>P</a>
+
+      {/* <a href="#" onClick={window.confirm("Are you sure you want to delete this item?")}>🗑</a> */}
+
+      <a href="#" onClick={() => { if (window.confirm('Are you sure you want to delete this item?')) { props.deleteItem(props.item._id) } }}>🗑</a>
+
+      < a href="#" onClick={() => { props.togglePublished(props.item._id) }}>P</a>
     </td>
   </tr >
 )
@@ -37,11 +40,11 @@ class TableList extends React.Component {
     items: this.props.items
   }
 
-componentDidMount() {
-  console.log(this.state.items[0].delivery)
-  console.log('item 0 published status', this.state.items[0].published)
-}
-//Jack help way
+  componentDidMount() {
+    console.log(this.state.items[0].delivery)
+    console.log('item 0 published status', this.state.items[0].published)
+  }
+  //Jack help way
   deleteItem = (id) => {
     const option = {
       url: process.env.REACT_APP_BACKEND_URL + "/items/delete/" + id,
@@ -52,8 +55,8 @@ componentDidMount() {
       }
     }
     axios(option)
-      .then(response => { console.log(response.data)});
-  
+      .then(response => { console.log(response.data) });
+
     this.setState({
       items: this.state.items.filter(el => el._id !== id)
     })
@@ -82,7 +85,7 @@ componentDidMount() {
 
   itemList() {
     return this.state.items.map(currentitem => {
-      return <Item item={currentitem} deleteItem={this.deleteItem} key={currentitem._id} togglePublished={this.togglePublished}/>;
+      return <Item item={currentitem} deleteItem={this.deleteItem} key={currentitem._id} togglePublished={this.togglePublished} />;
     })
   }
 

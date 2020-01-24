@@ -39,20 +39,11 @@ body {
     -webkit-box-shadow: 0 0 5px#888;
     box-shadow: 0 0 5px #888;
     margin-top: 5%;
-
   }
   
   .image {
     height: 15rem;
-    max-width: 300px;
-    align-items: center;
-  }
-  
-  .cardimg {
-    max-height: 500px;
-    width: 100%;
-    max-width: 400px;
-    box-shadow: 0 0 5px #888;
+    margin: 0%;
   }
   
   .carddescript {

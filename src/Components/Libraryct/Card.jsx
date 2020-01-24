@@ -1,7 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
-import './card-style.css'
+import './Card.css'
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 // mapping through json file located here
@@ -26,7 +24,7 @@ class Librarycard extends React.Component {
 
                             <div className="card" max-width="200" key={index}>
                                 <div className="image">
-                                    <a href={"/items/" + (item._id)} target="_blank">
+                                    <a href={"/items/" + (item._id)} >
                                         <img src={item.image} width="200" /></a>
                                 </div>
                                 <div className="carddescript">

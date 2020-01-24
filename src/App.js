@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import "./App.css";
-import axios from "axios";
 
 import Library from './Components/Libraryct';
 
