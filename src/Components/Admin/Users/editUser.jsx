@@ -109,7 +109,7 @@ class EditUser extends React.Component {
 
     console.log(this.state);
 
-    axios.put('http://localhost:5000/users/edit/' + this.props.match.params.id, this.state, option)
+    axios.put(process.env.REACT_APP_BACKEND_URL + '/users/edit/' + this.props.match.params.id, this.state, option)
       .then(res => {
         this.props.history.push('/users');
       })

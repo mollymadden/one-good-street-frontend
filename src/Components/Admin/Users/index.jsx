@@ -9,6 +9,7 @@ import React from "react";
 import axios from 'axios';
 import UserList from "./usersList";
 
+
 class User extends React.Component {
   handleCreateUser = (data) => {
     console.log(data);
@@ -28,6 +29,7 @@ class User extends React.Component {
   render() {
     return (
       <div>
+
         <UserList />
         <button type="button" className="btn btn-info" onClick={() => { this.props.history.push("/users/add") }} type="button">Add a New User</button>
       </div>
