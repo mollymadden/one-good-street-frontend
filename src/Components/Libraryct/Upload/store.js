@@ -1,3 +1,5 @@
+//This is the store for the Form component
+
 import { createStore, combineReducers } from 'redux';
 import { reducer as formReducer } from 'redux-form';
 
