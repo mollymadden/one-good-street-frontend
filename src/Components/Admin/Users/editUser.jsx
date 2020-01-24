@@ -32,7 +32,7 @@ class EditUser extends React.Component {
 
     axios(option)
       .then(res => {
-        this.props.history.push('/');
+        this.props.history.push('/users');
       })
       .catch((err) => {
         console.log(err)
@@ -111,7 +111,7 @@ class EditUser extends React.Component {
 
     axios.put('http://localhost:5000/users/edit/' + this.props.match.params.id, this.state, option)
       .then(res => {
-        this.props.history.push('/');
+        this.props.history.push('/users');
       })
       .catch((err) => {
         console.log(err)

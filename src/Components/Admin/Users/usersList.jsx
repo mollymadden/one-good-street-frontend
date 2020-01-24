@@ -46,7 +46,7 @@ class UserList extends React.Component {
     }
     catch (error) {
       console.log(error.message)
-      this.props.history.push('/')
+      this.props.history.push('/users')
     }
   }
 
