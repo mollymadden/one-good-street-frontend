@@ -3,7 +3,6 @@
 
 
 import React from 'react';
-import { Field, reduxForm } from 'redux-form';
 import Form from './Form';
 
 
@@ -29,11 +28,11 @@ class CreateItem extends React.Component {
     }
 
 
-    
+
     render() {
         return (<div>
-            <Form btnText={'Add Item'} onSubmit={this.props.onSubmit}/>
-            
+            <Form btnText={'Add Item'} onSubmit={this.props.onSubmit} />
+
         </div>
         );
     }

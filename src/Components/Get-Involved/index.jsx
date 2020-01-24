@@ -6,58 +6,73 @@ import axios from 'axios'
 
 
 
-function Getinvolved() {
-    const [serverState, setServerState] = useState({
-        submitting: false,
-        status: null
-    });
-    const handleServerResponse = (ok, msg, form) => {
-        setServerState({
-            submitting: false,
-            status: { ok, msg }
-        });
-        if (ok) {
-            form.reset();
+class Getinvolved extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: '',
+            email: '',
+            message: ''
         }
-    };
-    const handleOnSubmit = e => {
-        e.preventDefault();
-        const form = e.target;
-        setServerState({ submitting: true });
-        axios({
-            method: "post",
-            url: "https://formspree.io/YOUR_FORM_ID",
-            data: new FormData(form)
-        })
-            .then(r => {
-                handleServerResponse(true, "Thanks!", form);
-            })
-            .catch(r => {
-                handleServerResponse(false, r.response.data.error, form);
-            });
-    };
-    return (
-        <div>
-            <Header />
-            <Adminav />
-            <Title title="Get Involved!" />
+    }
 
-            <form onSubmit={handleOnSubmit}>
-                <label htmlFor="email">Email:</label>
-                <input id="email" type="email" name="email" required />
-                <label htmlFor="message">Message:</label>
-                <textarea id="message" name="message"></textarea>
-                <button type="submit" disabled={serverState.submitting}>
-                    Submit
-          </button>
-                {serverState.status && (
-                    <p className={!serverState.status.ok ? "errorMsg" : ""}>
-                        {serverState.status.msg}
-                    </p>
-                )}
-            </form>
-        </div>
-    );
-};
+    handleSubmit(e) {
+        e.preventDefault();
+        axios({
+            method: "POST",
+            url: "http://localhost:3002/send",
+            data: this.state
+        }).then((response) => {
+            if (response.data.status === 'success') {
+                alert("Message Sent.");
+                this.resetForm()
+            } else if (response.data.status === 'fail') {
+                alert("Message failed to send.")
+            }
+        })
+    }
+
+    resetForm() {
+
+        this.setState({ name: '', email: '', message: '' })
+    }
+
+    render() {
+        return (
+            <div>
+                <Header />
+                <Adminav />
+                <Title title="Get Involved" />
+                <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
+                    <div className="form-group">
+                        <label htmlFor="name">Name</label>
+                        <input type="text" className="form-control" id="name" value={this.state.name} onChange={this.onNameChange.bind(this)} />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="exampleInputEmail1">Email address</label>
+                        <input type="email" className="form-control" id="email" aria-describedby="emailHelp" value={this.state.email} onChange={this.onEmailChange.bind(this)} />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="message">Message</label>
+                        <textarea className="form-control" rows="5" id="message" value={this.state.message} onChange={this.onMessageChange.bind(this)} />
+                    </div>
+                    <button type="submit" className="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        );
+    }
+
+    onNameChange(event) {
+        this.setState({ name: event.target.value })
+    }
+
+    onEmailChange(event) {
+        this.setState({ email: event.target.value })
+    }
+
+    onMessageChange(event) {
+        this.setState({ message: event.target.value })
+    }
+}
 
 export default Getinvolved;
