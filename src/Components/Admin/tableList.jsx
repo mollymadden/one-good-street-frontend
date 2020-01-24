@@ -70,13 +70,11 @@ class TableList extends React.Component {
 
   togglePublished = async (id) => {
     try {
-<<<<<<< HEAD
+
+
+
       {/* makes a put request to backend, returns the updated document with publish toggled */ }
-      const response = await axios.put("http://localhost:5000/items/toggle-publish", {
-=======
-      {/* makes a put request to backend, returns the updated document with publish toggled */}
       const response = await axios.put(process.env.REACT_APP_BACKEND_URL + "/items/toggle-publish", {
->>>>>>> cded76b5ac78d41ef3a88edc0096e35105195808
         id: id
       })
       {/* iterates through all the items in state, when it finds the document with the same as the above it overrides the original with the updated document */ }
