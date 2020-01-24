@@ -43,8 +43,9 @@ class Search extends Component {
         // console.log(e.target.value)
         this.setState({
             filteredResults: this.state.results.filter((result) => {
+                const item = result.itemName.toLowerCase()
                 if (result.itemName) {
-                    return result.itemName.includes(e.target.value)
+                    return item.includes(e.target.value)
                 }
             })
         })

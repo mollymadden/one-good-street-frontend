@@ -25,10 +25,10 @@ class Dashboard extends React.Component {
         axios.get(process.env.REACT_APP_BACKEND_URL + "/users/dashboard", { headers: { 'Authorization': localStorage.getItem('authToken') } });
 
       const items = await
-      axios.get(process.env.REACT_APP_BACKEND_URL + "/items");
+        axios.get(process.env.REACT_APP_BACKEND_URL + "/items");
 
-      
-   
+
+
 
       // const res = await axios.get("https://vast-headland-25884.herokuapp.com/items");
 
@@ -52,7 +52,7 @@ class Dashboard extends React.Component {
         <div>
           <Header />
           <Adminav />
-          <Title title='You are on the admin dashboard page' />
+          <Title title='Library Dashboard' />
 
           {this.state.items.length > 0 &&
             <TableList items={this.state.items} {...this.props} />
