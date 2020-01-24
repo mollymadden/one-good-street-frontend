@@ -23,25 +23,6 @@ class Show extends React.Component {
         console.log(process.env.REACT_APP_BACKEND_URL + "/items/" + this.props.match.params.id)
         const { item } = this.state;
 
-        //     let name = "";
-        //     let phone = "";
-        //     let email = "";
-
-
-
-        //     function Privacy(props) {
-        //         const privacy = props.privacy;
-        //         if (privacy == "Publish my phone number and first name - I will arrange handover directly") {
-        //             name = item.firstName,
-        //                 phone = item.phone,
-        //                 email = item.email;
-        //         }
-        //         name = "Matiu Bush",
-        //             phone = "0455 555 555",
-        //             email = "info@onegoodstreet.com.au";
-        //     }
-
-
         return (
             <div >
                 <Header />
@@ -58,13 +39,10 @@ class Show extends React.Component {
                         <p>{item.delivery ? "✅ Delivery available" : "❌ Delivery unavailable"}</p>
 
                         <p>If you are interested in the above item, &nbsp;
-                            {item.privacy == "publish"
+                            {item.privacy == "publishDetails"
                                 ? `please enquire with ${item.firstName} at ${item.email}`
                                 : "please enquire with Matiu Bush at info@onegoodstreet.com.au"}
                         </p>
-
-
-
 
                     </div>
 

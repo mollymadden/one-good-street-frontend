@@ -18,7 +18,7 @@ class User extends React.Component {
     axios.post(process.env.REACT_APP_BACKEND_URL + '/users/create', data)
 
       .then(res => {
-        this.props.history.push('/');
+        this.props.history.push('/users');
       })
       .catch((err) => {
         console.log(err)
