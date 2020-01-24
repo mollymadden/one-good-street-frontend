@@ -58,7 +58,7 @@ class CreateUser extends React.Component {
 
     console.log(this.state);
 
-    axios.post('http://localhost:5000/users/create', this.state)
+    axios.post(process.env.REACT_APP_BACKEND_URL + '/users/create', this.state)
       .then(res => {
         this.props.history.push('/users'); //goes back to manage users page
       })
