@@ -1,4 +1,5 @@
 //Calling base form component here in Form.jsx
+// This page is being rendered by clicking on the link in tableList.jsx
 
 import React from "react";
 import Form from './Form';

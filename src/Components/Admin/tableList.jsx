@@ -1,19 +1,18 @@
 //This is the table of all items that the admin sees 
 
+//On this page the admin can delete items. The function for delete items is also on this page. 
+//The admin can edit items. Clicking the edit link renders the EditItem component. 
+
 import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import moment from 'moment';
 import "./table.css";
-
-
 
 const Item = props => (
 
 
   <tr>
     <td className="resize"><Link to={"/items/" + props.item._id}>{props.item.itemName}</Link></td>
-    <td>{moment(new Date(props.item.createdAt)).format("DD-MM-YYYY")}</td>
     <td className="resize">{props.item.description}</td>
     <td>{props.item.firstName}</td>
     <td>{props.item.lastName}</td>
@@ -48,8 +47,6 @@ class TableList extends React.Component {
     items: this.props.items
   }
 
-
-
   componentDidMount() {
     console.log(this.state.items[0].delivery)
     console.log('item 0 published status', this.state.items[0].published)
@@ -74,6 +71,7 @@ class TableList extends React.Component {
 
   togglePublished = async (e, id) => {
     try {
+
       e.preventDefault()
 
 
@@ -81,7 +79,7 @@ class TableList extends React.Component {
       const response = await axios.put(process.env.REACT_APP_BACKEND_URL + "/items/toggle-publish", {
         id: id
       })
-      {/* iterates through all the items in state, when it finds the document with the same as the above it overrides the original with the updated document */ }
+      {/* iterates through all the items in state, when it finds the document with the same as the above it overrides the original with the updated document */}
       const newItems = this.state.items.map((item) => {
         if (item._id === id) {
           return response.data
@@ -89,16 +87,14 @@ class TableList extends React.Component {
           return item
         }
       })
-      {/* resets the state with the mapped array */ }
+      {/* resets the state with the mapped array */}
       this.setState({
         items: newItems
       })
-    } catch (err) {
+    } catch(err) {
       console.log(err.message)
     }
   }
-
-
 
 
   itemList() {
@@ -118,7 +114,6 @@ class TableList extends React.Component {
           <thead>
             <tr>
               <th>Item Name</th>
-              <th>Date Created</th>
               <th>Description</th>
               <th>First Name</th>
               <th>Last Name</th>
