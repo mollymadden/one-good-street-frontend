@@ -19,26 +19,22 @@ class Librarycard extends React.Component {
         return (
             <section>
                 <div className="cards">
-                    {results ? results.map((item, index) => { 
+                    {results ? results.map((item, index) => {
                         if (item.published) {
                             return (
-
-                            <div className="card" max-width="200" key={index}>
-                                <div className="image">
-                                    <a href={"/items/" + (item._id)} >
-                                        <img src={item.image} width="200" /></a>
+                                <div className="card" max-width="200" key={index}>
+                                    <div className="image">
+                                        <a href={"/items/" + (item._id)} >
+                                            <img src={item.image} width="200" /></a>
+                                    </div>
+                                    <div className="carddescript">
+                                        <h3>{item.itemName}</h3>
+                                        {item.headline}
+                                        <p>📍 {item.postcode}</p>
+                                    </div>
                                 </div>
-                                <div className="carddescript">
-                                    <h3>{item.itemName}</h3>
-                                    {item.headline}
-                                    <p>📍 {item.postcode}</p>
-                                </div>
-                            </div>
-
-
-                            ) 
+                            )
                         }
-                      
                     }) : null}
                 </div>
             </section >

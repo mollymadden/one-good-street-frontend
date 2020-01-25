@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../Shared/Header';
 import Title from '../Shared/Title';
+import { Link } from 'react-router-dom';
 import './show-item.css'
 import Adminav from '../Admin/admin-nav';
 
@@ -10,18 +11,21 @@ class Show extends React.Component {
         item: {}
     }
 
-
     async componentDidMount() {
         const response = await fetch(process.env.REACT_APP_BACKEND_URL + "/items/" + this.props.match.params.id)
         const data = await response.json()
         this.setState({
             item: data
         })
+
+
     }
 
     render() {
         console.log(process.env.REACT_APP_BACKEND_URL + "/items/" + this.props.match.params.id)
         const { item } = this.state;
+        let { email } = item.privacy == "publishDetails" ? item.email : 'info@onegoodstreet.com.au';
+        let { name } = item.privacy == "publishDetails" ? item.firstName : 'One Good Street';
 
         return (
             <div >
@@ -43,15 +47,8 @@ class Show extends React.Component {
                                 ? `please enquire with ${item.firstName} at ${item.email}`
                                 : "please enquire with Matiu Bush at info@onegoodstreet.com.au"}
                         </p>
-
-                        {/* 
-                        <button type="button" className="btn btn-info" onClick={() => (`mailto:${item.email}`)} type="button">Send an Email to {item.firstName}</button> */}
-
-
                     </div>
-
                 </div>
-
             </div >
         )
     }

@@ -59,23 +59,3 @@ strong {
   font-weight: bold;
 }
 
-.float-left-p {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.float-left-p p {
-  min-width: 30vw;
-  max-width: 30vw;
-  margin-left: 5px;
-}
-
-.float-left-p img {
-  margin-top: 2%;
-  margin-right: 5px;
-  border-radius: 2%;
-  box-shadow: 1px 1px 10px #888;
-  max-width: 50%;
-  height: auto;
-}

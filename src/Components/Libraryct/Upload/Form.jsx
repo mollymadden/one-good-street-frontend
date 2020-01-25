@@ -77,9 +77,9 @@ class Form extends React.Component {
                         <option value="NotPublishDetails">Please do not publish my details - One Good Street should arrange handover</option>
                     </Field>
                 </div>
-                
+
                 <div>
-                {/* <button onClick={this.props.showWidget}></button> */}
+                    {/* <button onClick={this.props.showWidget}></button> */}
                     <label htmlFor="image" >Image</label>
                     <Field name="image" component="input" type="button" onClick={this.props.showWidget}></Field>
                 </div>
@@ -95,7 +95,7 @@ class Form extends React.Component {
 
             </form>
 
-            <p>You cannot edit this form once submitted. For any changes, or to remove this listing, please email matiubush@onegoodstreet.com</p>
+            <p>You cannot edit this form once submitted. For any changes, or to remove this listing, please email info@onegoodstreet.com.au</p>
         </div>
         );
     }
