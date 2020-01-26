@@ -34,9 +34,10 @@ class CreateItem extends React.Component {
     handleCreateItem = (data) => {
         console.log(data);
 
-        //this is pushing the image url of cloudinary to mongodb
+        //this is pushing the image url of cloudinary to mongodb and enables the image to then render on pages of the website
         data.image = this.state.image
         console.log('data image', data.image)
+        
         //component to say uploading?? Put in here
 
         axios.post(process.env.REACT_APP_BACKEND_URL + '/items/create', data)
@@ -81,7 +82,7 @@ class CreateItem extends React.Component {
             <Title title="Add a New Item" />
             {/* {this.state.image !== '' && <p>{this.state.image}</p>} */}
             <Form btnText={'Add Item'} onSubmit={this.handleCreateItem} showWidget={showWidget} />
-            <h1>{this.props.test}</h1>
+
         </div>
         );
     }

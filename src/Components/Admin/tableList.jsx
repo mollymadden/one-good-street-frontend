@@ -21,7 +21,7 @@ const Item = props => (
     <td><a href={"mailto:" + props.item.email}>{props.item.email}</a></td>
     {/* <td>{props.item.privacy}</td> */}
 
-    <td>{props.item.privacy == "publishDetails"
+    <td>{props.item.privacy === "publishDetails"
       ? `public`
       : 'private'}</td>
 
@@ -47,10 +47,7 @@ class TableList extends React.Component {
     items: this.props.items
   }
 
-  componentDidMount() {
-    console.log(this.state.items[0].delivery)
-    console.log('item 0 published status', this.state.items[0].published)
-  }
+  
   //Jack help way
   deleteItem = (id) => {
     const option = {

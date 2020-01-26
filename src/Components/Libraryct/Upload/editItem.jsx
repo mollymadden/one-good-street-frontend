@@ -30,6 +30,7 @@ class EditItem extends React.Component {
   }
 
   handleEditItem = (data) => {
+   
 
     console.log('handleEdit data', data);
     //component to say uploading?? Put in here
@@ -40,9 +41,16 @@ class EditItem extends React.Component {
         "authorization": `${localStorage.authToken}`
       },
       data: data
+      
     }
 
+    console.log(data)
+   
+    data.image = this.state.image
+    console.log('data image', data.image)
+
     axios(option)
+   
       .then(res => {
         this.props.history.push('/admin/dashboard');
       })
@@ -62,7 +70,7 @@ class EditItem extends React.Component {
         this.setState(
           {
             itemData:
-
+            
             {
               itemName: response.data.itemName,
               headline: response.data.headline,
@@ -80,6 +88,8 @@ class EditItem extends React.Component {
               published: response.data.published
             }
           })
+
+         
       })
       .catch(function (error) {
         console.log(error);
@@ -89,13 +99,34 @@ class EditItem extends React.Component {
 
   render() {
 
+    
+
     if (localStorage.authToken) {
+
+      const myWidget = window.cloudinary.createUploadWidget({
+        cloudName: 'onegoodst', 
+        uploadPreset: 'onegoodst'}, (error, result) => { 
+          if (!error && result && result.event === "success") { 
+            console.log('Done! Here is the image info: ', result.info.url); 
+            this.setState({
+                image: result.info.url
+            })
+          }
+        }
+      )
+  
+      const showWidget = async () => {
+        await myWidget.open()
+        console.log('state image', this.image)
+       
+    }
+
       return (<div>
         <Header />
         <Adminav />
         <Title title="Edit Item" />
 
-        <Form btnText={'Edit Item'} onSubmit={this.handleEditItem} item={this.state} initialValues={this.state.itemData} />
+        <Form btnText={'Edit Item'} onSubmit={this.handleEditItem} item={this.state} initialValues={this.state.itemData} showWidget={showWidget} />
 
 
 
