@@ -20,7 +20,7 @@ class EditUser extends React.Component {
   handleEditUser = (data) => {
 
     console.log('handleEditUser data', data);
-    //component to say uploading?? Put in here
+   
     const option = {
       url: process.env.REACT_APP_BACKEND_URL + "/users/edit/" + this.props.match.params.id,
       method: "PUT",
@@ -120,6 +120,8 @@ class EditUser extends React.Component {
 
 
   render() {
+
+    //only rendering this page if it is authorized user.
 
     if (localStorage.authToken) {
       return (
