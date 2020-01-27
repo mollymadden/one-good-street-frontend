@@ -1,0 +1,27 @@
+form {
+    display: inline-block;
+}
+
+.form-group {
+    text-align: left;
+    /* justify-self: center; */
+}
+
+.form-control {
+    width: 40vw;
+    height: 40%;
+    border-radius: 4px;
+    transition: 0.3s all;
+}
+
+label {
+    text-align: left;
+}
+
+input {
+    width: 40vw;
+    height: 40%;
+    border-radius: 4px;
+    transition: 0.3s all;
+}
+

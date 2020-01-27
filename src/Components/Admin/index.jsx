@@ -7,19 +7,20 @@ import Login from './login';
 import Adminav from './admin-nav';
 import axios from 'axios';
 
+
 class Admin extends React.Component {
 
     async componentDidMount() {
         try {
-          const response = await
-              axios.get(process.env.REACT_APP_BACKEND_URL + "/users/dashboard", { headers: {'Authorization': localStorage.getItem('authToken') } } );
-              console.log(response);
+            const response = await
+                axios.get(process.env.REACT_APP_BACKEND_URL + "/users/dashboard", { headers: { 'Authorization': localStorage.getItem('authToken') } });
+            console.log(response);
         }
-        catch (error){
-          console.log(error.message)
-          this.props.history.push('/')
+        catch (error) {
+            console.log(error.message)
+            this.props.history.push('/')
         }
-      }
+    }
 
     render() {
         return (
@@ -32,9 +33,9 @@ class Admin extends React.Component {
                 </div>
             </div>
         )
-        
+
     }
-    
+
 }
 
 export default Admin;

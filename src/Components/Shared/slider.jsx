@@ -3,8 +3,8 @@ import { render } from 'react-dom';
 import Modal from 'react-modal';
 import SlidingPane from 'react-sliding-pane';
 import 'react-sliding-pane/dist/react-sliding-pane.css';
-import './contact-form.css';
-import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import './slider.css';
+import { faEnvelopeOpenText } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -28,7 +28,7 @@ class ContactForm extends Component {
         return <div ref={ref => this.el = ref}>
             <div className="icon-bar">
                 <a href="https://www.facebook.com/groups/onegoodstreet/" className="facebook" target="_blank"><FontAwesomeIcon icon={faFacebook} /></a>
-                <button onClick={() => this.setState({ isPaneOpen: true })} className="contact-button">Contact Us</button>
+                <button onClick={() => this.setState({ isPaneOpen: true })} className="contact-button"><FontAwesomeIcon icon={faEnvelopeOpenText} /></button>
             </div>
 
 

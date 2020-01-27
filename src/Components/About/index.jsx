@@ -2,9 +2,10 @@ import React from 'react';
 import Header from '../Shared/Header';
 import Title from '../Shared/Title';
 import Adminav from '../Admin/admin-nav';
-import hands from "../../assets/hands.jpg"
-import help from "../../assets/help.jpeg"
-import ride from "../../assets/ride.jpg"
+import hands from "../../assets/hands.jpg";
+import help from "../../assets/help.jpeg";
+import ride from "../../assets/ride.jpg";
+import ContactForm from '../Shared/slider';
 import './about.css';
 
 class About extends React.Component {
@@ -13,6 +14,7 @@ class About extends React.Component {
             <div className="center-things">
                 <div className="Main">
                     <Header />
+                    <ContactForm />
                     <Adminav />
                     <Title title="About One Good Street" />
                     <div className="blurb">

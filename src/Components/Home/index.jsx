@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../Shared/Header';
 import Title from '../Shared/Title';
+import ContactForm from '../Shared/slider';
 import Hero from '../Home/Heroimage';
 import HeatMap from './map';
 import Adminav from '../Admin/admin-nav';
@@ -14,7 +15,7 @@ class Home extends React.Component {
             <div className="Home">
                 <Header />
                 <Adminav />
-
+                <ContactForm />
                 <Title title="One Good Street" />
                 <div>
                     <Hero />

@@ -4,6 +4,8 @@
 
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
+import '../../Shared/form-styling.css';
+
 
 
 
@@ -12,21 +14,22 @@ class Form extends React.Component {
 
     render() {
         return (<div>
+
             <form onSubmit={this.props.handleSubmit}>
-                <div>
-                    <label htmlFor="itemName">Name of item</label>
+                <div className="form-group">
+                    <label htmlFor="itemName">Name of item</label><br />
                     <Field name="itemName" component="input" type="text" ></Field>
                 </div>
-                <div>
-                    <label htmlFor="headline">Headline</label>
+                <div className="form-group">
+                    <label htmlFor="headline">Headline</label><br />
                     <Field name="headline" component="input" type="text"></Field>
                 </div>
-                <div>
-                    <label htmlFor="description">Description</label>
+                <div className="form-group">
+                    <label htmlFor="description">Description</label><br />
                     <Field name="description" component="input" type="text"></Field>
                 </div>
-                <div>
-                    <label htmlFor="category">Category</label>
+                <div className="form-group">
+                    <label htmlFor="category">Category</label><br />
                     <Field
                         name="category"
                         component="select"
@@ -45,32 +48,32 @@ class Form extends React.Component {
                         <option value="Other">Other</option>
                     </Field>
                 </div>
-                <div>
-                    <label htmlFor="postcode">Postcode where item is located</label>
+                <div className="form-group">
+                    <label htmlFor="postcode">Postcode where item is located</label><br />
                     <Field name="postcode" component="input" type="text"></Field>
                 </div>
-                <div>
-                    <label htmlFor="firstName">First Name</label>
+                <div className="form-group">
+                    <label htmlFor="firstName">First Name</label><br />
                     <Field name="firstName" component="input" type="text"></Field>
                 </div>
-                <div>
-                    <label htmlFor="lastName">Last Name</label>
+                <div className="form-group">
+                    <label htmlFor="lastName">Last Name</label><br />
                     <Field name="lastName" component="input" type="text"></Field>
                 </div>
-                <div>
-                    <label htmlFor="phone">Phone</label>
+                <div className="form-group">
+                    <label htmlFor="phone">Phone</label><br />
                     <Field name="phone" component="input" type="text"></Field>
                 </div>
-                <div>
-                    <label htmlFor="address">Address</label>
+                <div className="form-group">
+                    <label htmlFor="address">Address</label><br />
                     <Field name="address" component="input" type="text"></Field>
                 </div>
-                <div>
-                    <label htmlFor="email">Email</label>
+                <div className="form-group">
+                    <label htmlFor="email">Email</label><br />
                     <Field name="email" component="input" type="text"></Field>
                 </div>
-                <div>
-                    <label htmlFor="privacy">Privacy Settings</label>
+                <div className="form-group">
+                    <label htmlFor="privacy">Privacy Settings</label><br />
                     <Field name="privacy" component="select" type="text">
                         <option></option>
                         <option value="publishDetails">Publish my phone number and first name - I will arrange handover directly</option>
@@ -78,16 +81,14 @@ class Form extends React.Component {
                     </Field>
                 </div>
 
-                <div>
+                <div className="form-group">
                     {/* <button onClick={this.props.showWidget}></button> */}
-                    <label htmlFor="image" >Image</label>
+                    <label htmlFor="image" >Image</label><br />
                     <Field name="image" component="input" type="button" className="upload-image-button" onClick={this.props.showWidget}></Field>
                 </div>
-                <div>
+                <div className="form-group">
                     <label htmlFor="delivery">I can offer delivery</label>
-
                     <Field name="delivery" component="input" type="checkbox"></Field>
-
                 </div>
                 <div>
                     <button type="submit" className="general-button">{this.props.btnText}</button>
