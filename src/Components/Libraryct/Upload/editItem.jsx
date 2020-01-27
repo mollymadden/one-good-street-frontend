@@ -31,6 +31,7 @@ class EditItem extends React.Component {
 
   handleEditItem = (data) => {
    
+    data.image = this.state.image
 
     console.log('handleEdit data', data);
     //component to say uploading?? Put in here
@@ -46,7 +47,6 @@ class EditItem extends React.Component {
 
     console.log(data)
    
-    data.image = this.state.image
     console.log('data image', data.image)
 
     axios(option)
@@ -117,7 +117,7 @@ class EditItem extends React.Component {
   
       const showWidget = async () => {
         await myWidget.open()
-        console.log('state image', this.image)
+        // console.log('state image', this.image)
        
     }
 
