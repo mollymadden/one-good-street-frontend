@@ -1,5 +1,8 @@
 //This is the Library of care things page - where cards of donated items are rendering. In component did mount, we are fetching the server side data from heroku. 
 
+//This page also renders the Button component which when clicked redirects the user to the library of care things form 
+//the library/upload page renders the CreateItem component. 
+
 import React, { Component } from 'react'
 import Search from './search';
 import Header from '../Shared/Header';

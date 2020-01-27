@@ -106,6 +106,8 @@ class CreateUser extends React.Component {
 
     console.log(this.state);
 
+    
+
     axios.post(process.env.REACT_APP_BACKEND_URL + '/users/create', this.state)
       .then(res => {
         this.props.history.push('/users'); //goes back to manage users page
@@ -115,6 +117,8 @@ class CreateUser extends React.Component {
       })
   
     }  
+
+    return this.state;
   }
 
   
@@ -174,6 +178,7 @@ class CreateUser extends React.Component {
               errortext={this.state.emailError}
             />
           </div>
+          <div>{this.state.emailError}</div>
 
           <div>
             <label htmlFor="">Password</label>
@@ -189,10 +194,13 @@ class CreateUser extends React.Component {
               errortext={this.state.passwordError}
             />
           </div>
+          <div>{this.state.passwordError}</div>
 
           <div>
             <button onClick={this.onSubmit} className="submit" >Add User</button>
           </div>
+
+
         </form>
       </div>
     )

@@ -46,7 +46,8 @@ class Search extends Component {
                 const item = result.itemName.toLowerCase()
                 if (result.itemName) {
                     return item.includes(e.target.value)
-                }
+                } else {}
+                
             })
         })
     }
