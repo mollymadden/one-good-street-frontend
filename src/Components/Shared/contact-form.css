@@ -1,0 +1,33 @@
+
+
+  .icon-bar {
+    position: fixed;
+    top: 40%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: -2%;
+    background-color: transparent;
+  }
+  
+  /* Style the icon bar links */
+  .icon-bar a {
+    display: block;
+    text-align: center;
+    transition: all 0.3s ease;
+    color: #3B5998;
+    font-size: 25px;
+    margin-bottom: 25px;
+  }
+
+  .icon-bar .contact-button  {
+      background:none;
+      border:none;
+      cursor: pointer;
+      transform: rotate(90deg);
+      background-color: #F57722;
+      font-family: "DINCondensed-Bold";
+      font-size: 20px;
+      color: white;
+  }
+  

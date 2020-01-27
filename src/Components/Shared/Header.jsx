@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import "./Header.css";
 import Logo from '../Shared/Logo';
+import ContactForm from '../Shared/contact-form';
 
 class Header extends React.Component {
     render() {
@@ -18,6 +19,7 @@ class Header extends React.Component {
                     </ul>
                 </nav>
                 <Logo />
+                <ContactForm />
             </div >
 
         )

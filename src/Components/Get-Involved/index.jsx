@@ -56,7 +56,7 @@ class Getinvolved extends React.Component {
                         <label htmlFor="message">Message</label>
                         <textarea className="form-control" rows="5" id="message" value={this.state.message} onChange={this.onMessageChange.bind(this)} />
                     </div>
-                    <button type="submit" className="btn btn-primary">Submit</button>
+                    <button type="submit" className="general-button">Submit</button>
                 </form>
             </div>
         );

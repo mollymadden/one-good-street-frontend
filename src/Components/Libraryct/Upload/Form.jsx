@@ -81,7 +81,7 @@ class Form extends React.Component {
                 <div>
                     {/* <button onClick={this.props.showWidget}></button> */}
                     <label htmlFor="image" >Image</label>
-                    <Field name="image" component="input" type="button" onClick={this.props.showWidget}></Field>
+                    <Field name="image" component="input" type="button" className="upload-image-button" onClick={this.props.showWidget}></Field>
                 </div>
                 <div>
                     <label htmlFor="delivery">I can offer delivery</label>
@@ -90,7 +90,7 @@ class Form extends React.Component {
 
                 </div>
                 <div>
-                    <button type="submit">{this.props.btnText}</button>
+                    <button type="submit" className="general-button">{this.props.btnText}</button>
                 </div>
 
             </form>

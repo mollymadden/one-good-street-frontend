@@ -34,21 +34,28 @@ body {
   border-top: 10px solid #D5ECEA;
 }
 
-button {
-  border-radius: 5px;
-  background: #F57722;
-  padding: 20px;
-  font-family: "DINCondensed-Bold";
-  text-transform: uppercase;
-  color: white;
-  font-size: 20px;
+.general-button {
+	border-radius: 5px;
+	background: #F57722;
+	padding: 20px;
+	font-family: "DINCondensed-Bold";
+	text-transform: uppercase;
+	color: white;
+	font-size: 20px;
   margin-top: 10px;
-}
+  margin-bottom: 2%;
+  }
+  
+.general-button:hover {
+	background: #D5ECEA;
+	color: black;
+	cursor: pointer;
+  }
 
-button:hover {
-  background: #D5ECEA;
+.upload-image-button {
+  background: white;
   color: black;
-  cursor: pointer;
+  content: "Click here to choose an image";
 }
 
 a:hover {

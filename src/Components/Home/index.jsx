@@ -7,12 +7,14 @@ import Adminav from '../Admin/admin-nav';
 import './home.css'
 import partners from "../../assets/partners.png"
 
+
 class Home extends React.Component {
     render() {
         return (
             <div className="Home">
                 <Header />
                 <Adminav />
+
                 <Title title="One Good Street" />
                 <div>
                     <Hero />

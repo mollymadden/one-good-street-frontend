@@ -6,7 +6,7 @@ class Button extends React.Component {
     render() {
         return (
             <div className="buttondiv">
-                <button type="button" className="btn btn-info" onClick={() => { this.props.history.push("/library/upload") }} type="button">Upload an Item</button>
+                <button type="button" className="general-button" onClick={() => { this.props.history.push("/library/upload") }} type="button">Upload an Item</button>
             </div>)
     }
 }

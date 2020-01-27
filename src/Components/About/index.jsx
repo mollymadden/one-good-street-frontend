@@ -5,7 +5,7 @@ import Adminav from '../Admin/admin-nav';
 import hands from "../../assets/hands.jpg"
 import help from "../../assets/help.jpeg"
 import ride from "../../assets/ride.jpg"
-import './about.css'
+import './about.css';
 
 class About extends React.Component {
     render() {
@@ -46,7 +46,7 @@ class About extends React.Component {
                                 <p>One Good Street seeks to create opportunities for residents to make a positive difference in the lives of their senior neighbours. We work with initiatives like casserole club, cycling without ageing, community houses and local councils to promote activities that reduce loneliness and isolation.</p>
 
                                 <p>Activities are practical, low commitment and you can join at short notice with the aim of promoting neighbourhood participation around the older person. Involvement in these activities makes your street a great street to age in.</p>
-                                <button type="button" className="about-button" onClick={() => { this.props.history.push("/get-involved") }} type="button">Register Your Street</button>
+                                <button type="button" className="general-button" onClick={() => { this.props.history.push("/get-involved") }} type="button">Register Your Street</button>
 
                             </div>
                         </div>
@@ -65,7 +65,7 @@ class About extends React.Component {
 
                                 <p>The lending site is for carers and family members who are looking after their older parents in their own homes. The Library of Aged Care Things reduces the cost of care for families when supporting their parents to remain at home for as long as possible. Equipment is lent out free of charge to families through the lending portal.</p>
 
-                                <button type="button" className="about-button-right" onClick={() => { this.props.history.push("/Library") }} type="button">Search the Library of Care Things</button>
+                                <button type="button" className="general-button" onClick={() => { this.props.history.push("/Library") }} type="button">Search the Library of Care Things</button>
                             </div>
                         </div>
                     </div>
@@ -91,7 +91,7 @@ class About extends React.Component {
                                     <li>Parkville</li>
                                     <li>Carlton</li>
                                 </ul>
-                                <button type="button" className="about-button" onClick={() => { this.props.history.push("/get-involved") }} type="button">Register Your Interest</button>
+                                <button type="button" className="general-button" onClick={() => { this.props.history.push("/get-involved") }} type="button">Register Your Interest</button>
                             </div>
                         </div>
                     </div>
