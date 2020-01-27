@@ -31,7 +31,7 @@ class User extends React.Component {
       <div>
 
         <UserList />
-        <button type="button" className="btn btn-info" onClick={() => { this.props.history.push("/users/add") }} type="button">Add a New User</button>
+        <button type="button" className="general-button" onClick={() => { this.props.history.push("/users/add") }} type="button">Add a New User</button>
       </div>
     )
   }

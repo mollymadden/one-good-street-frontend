@@ -30,17 +30,6 @@ class Search extends Component {
     }
 
     handleInputChange = (e) => {
-        // this.setState({
-        //     items: this.search.value
-        // }, () => {
-        //     if (this.state.items && this.state.items.length > 1) {
-        //         if (this.state.items.length % 2 === 0) {
-        //             this.getInfo()
-        //         }
-        //     } else if (!this.state.items) {
-        //     }
-        // })
-        // console.log(e.target.value)
         this.setState({
             filteredResults: this.state.results.filter((result) => {
                 const item = result.itemName.toLowerCase()

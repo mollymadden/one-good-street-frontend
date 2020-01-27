@@ -197,7 +197,7 @@ class CreateUser extends React.Component {
           <div>{this.state.passwordError}</div>
 
           <div>
-            <button onClick={this.onSubmit} className="submit" >Add User</button>
+            <button onClick={this.onSubmit} className="general-button" >Add User</button>
           </div>
 
 

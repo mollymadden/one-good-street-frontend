@@ -187,7 +187,7 @@ class EditUser extends React.Component {
             </div>
 
             <div>
-              <button onClick={this.onSubmit} className="submit" onSubmit={this.handleEditUser}>Edit User</button>
+              <button onClick={this.onSubmit} className="general-button" onSubmit={this.handleEditUser}>Edit User</button>
             </div>
           </form>
         </div>

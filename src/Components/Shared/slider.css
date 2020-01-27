@@ -1,0 +1,42 @@
+
+
+  .icon-bar {
+    position: fixed;
+    top: 30vh;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 0%;
+    background-color: transparent;
+  }
+  
+  /* Style the icon bar links */
+  .icon-bar a {
+    display: block;
+    text-align: center;
+    transition: all 0.3s ease;
+    color: #0C3B55;
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+
+  .icon-bar .contact-button  {
+      background:none;
+      border:none;
+      cursor: pointer;
+      color: #0C3B55;
+      font-size: 25px;
+  }
+  
+form {
+    display: inline-block;
+}
+
+.feedback-input {
+    width: 20vw;
+    height: 10vh;
+    margin: 2%;
+    border: 1px solid grey;
+    font-size: 16px;
+}
+

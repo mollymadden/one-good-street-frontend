@@ -5,7 +5,7 @@
 
 import React from 'react';
 import axios from 'axios';
-import {withRouter} from 'react-router';
+import { withRouter } from 'react-router';
 
 class Login extends React.Component {
     state =
@@ -28,11 +28,11 @@ class Login extends React.Component {
             console.log(response);
 
             this.setState({ data: response.data });
-            
+
             localStorage.setItem('authToken', response.data.token);
             console.log(this.props.history);
             this.props.history.push('/admin/dashboard');
-            
+
 
         }
         catch (err) {
@@ -43,13 +43,17 @@ class Login extends React.Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <label>
-                        Email: <input type="text" name="email" onChange={this.fieldChange} />
-                    </label>
-                    <label>
-                        Password: <input type="text" name="password" onChange={this.fieldChange} />
-                    </label>
-                    <input type="submit" value="Submit" />
+                    <div className="form-group">
+                        <label>
+                            Email:<br /> <input type="text" name="email" onChange={this.fieldChange} />
+                        </label><br />
+                    </div>
+                    <div className="form-group">
+                        <label>
+                            Password:<br /> <input type="text" name="password" onChange={this.fieldChange} />
+                        </label><br />
+                    </div>
+                    <input type="submit" value="Submit" className="general-button" />
                 </form>
                 <div>
                     <div>

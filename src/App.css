@@ -34,21 +34,29 @@ body {
   border-top: 10px solid #D5ECEA;
 }
 
-button {
-  border-radius: 5px;
-  background: #F57722;
-  padding: 20px;
-  font-family: "DINCondensed-Bold";
-  text-transform: uppercase;
-  color: white;
-  font-size: 20px;
+.general-button {
+	border-radius: 5px;
+	background: #F57722;
+	padding: 20px;
+	font-family: "DINCondensed-Bold";
+	text-transform: uppercase;
+	color: white;
+	font-size: 20px;
   margin-top: 10px;
-}
+  margin-bottom: 2%;
+  max-width: 25%;
+  }
+  
+.general-button:hover {
+	background: #D5ECEA;
+	color: black;
+	cursor: pointer;
+  }
 
-button:hover {
-  background: #D5ECEA;
+.upload-image-button {
+  background: white;
   color: black;
-  cursor: pointer;
+  content: "Click here to choose an image";
 }
 
 a:hover {
@@ -59,23 +67,12 @@ strong {
   font-weight: bold;
 }
 
-.float-left-p {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
+@media only screen and (max-width: 600px) {
+  nav {
+      display: none;
+  }
 
-.float-left-p p {
-  min-width: 30vw;
-  max-width: 30vw;
-  margin-left: 5px;
-}
-
-.float-left-p img {
-  margin-top: 2%;
-  margin-right: 5px;
-  border-radius: 2%;
-  box-shadow: 1px 1px 10px #888;
-  max-width: 50%;
-  height: auto;
+  .icon-bar {
+    display: none;
+  }  
 }

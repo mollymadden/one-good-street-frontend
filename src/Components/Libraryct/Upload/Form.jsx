@@ -6,6 +6,8 @@
 
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
+import '../../Shared/form-styling.css';
+
 
 
 //Form validation
@@ -92,6 +94,7 @@ class Form extends React.Component {
       }
 
     render() {
+
         return (<div>
             
             <form onSubmit={this.props.handleSubmit}>
@@ -125,6 +128,7 @@ class Form extends React.Component {
                         <option value="Other">Other</option>
                     </Field>
                 </div>
+
                 <div>
                     <Field name="postcode" component={this.renderField} type="text" label="Postcode"></Field>
                 </div>
@@ -145,11 +149,13 @@ class Form extends React.Component {
                 </div>
                 <div>
                     <Field name="privacy" component={renderSelectField} type="text" label="Privacy">
+
                         <option></option>
                         <option value="publishDetails">Publish my phone number and first name - I will arrange handover directly</option>
                         <option value="NotPublishDetails">Please do not publish my details - One Good Street should arrange handover</option>
                     </Field>
                 </div>
+
                 
                 <div>
                     <label htmlFor="image" >Image</label>
@@ -159,14 +165,15 @@ class Form extends React.Component {
 
                     <Field name="delivery" component={this.renderField} type="checkbox" label="I can offer delivery"></Field>
 
+
                 </div>
                 <div>
-                    <button type="submit">{this.props.btnText}</button>
+                    <button type="submit" className="general-button">{this.props.btnText}</button>
                 </div>
 
             </form>
 
-            <p>You cannot edit this form once submitted. For any changes, or to remove this listing, please email matiubush@onegoodstreet.com</p>
+            <p>You cannot edit this form once submitted. For any changes, or to remove this listing, please email info@onegoodstreet.com.au</p>
         </div>
         );
     }

@@ -9,6 +9,7 @@ import axios from 'axios';
 import Header from '../../Shared/Header';
 import Title from '../../Shared/Title';
 import Adminav from '../../Admin/admin-nav';
+import ContactForm from '../../Shared/slider';
 
 
 class CreateItem extends React.Component {
@@ -53,33 +54,30 @@ class CreateItem extends React.Component {
 
     }
 
-    
-
-
-    
-
     render() {
 
         const myWidget = window.cloudinary.createUploadWidget({
-            cloudName: 'onegoodst', 
-            uploadPreset: 'onegoodst'}, (error, result) => { 
-              if (!error && result && result.event === "success") { 
-                console.log('Done! Here is the image info: ', result.info.url); 
+            cloudName: 'onegoodst',
+            uploadPreset: 'onegoodst'
+        }, (error, result) => {
+            if (!error && result && result.event === "success") {
+                console.log('Done! Here is the image info: ', result.info.url);
                 this.setState({
                     image: result.info.url
                 })
-              }
             }
-          )
+        }
+        )
 
-          const showWidget = async () => {
+        const showWidget = async () => {
             await myWidget.open()
             console.log('state image', this.state.image)
-           
+
         }
 
         return (<div>
             <Header />
+            <ContactForm />
             <Adminav />
             <Title title="Add a New Item" />
             {/* {this.state.image !== '' && <p>{this.state.image}</p>} */}

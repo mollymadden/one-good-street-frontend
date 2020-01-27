@@ -7,9 +7,9 @@ import React, { Component } from 'react'
 import Search from './search';
 import Header from '../Shared/Header';
 import Title from '../Shared/Title';
-import Button from '../Shared/Button';
 import Adminav from '../Admin/admin-nav';
-import './library.css'
+import './library.css';
+import ContactForm from '../Shared/slider';
 
 
 
@@ -38,6 +38,7 @@ class Library extends Component {
             <div>
                 <Header />
                 <Adminav />
+                <ContactForm />
                 <Title title="Library of Care Things" />
                 <div className="blurb">
                     All equipment is free. Equipment must be cleaned and in working order prior to collection.
@@ -50,7 +51,7 @@ class Library extends Component {
                 </div>
 
                 <div className="search">
-                    <Button />
+                    <button type="button" className="general-button" onClick={() => { this.props.history.push("/library/upload") }} type="button">Upload an Item</button>
                     <Search items={this.state.items} />
                 </div>
             </div>
