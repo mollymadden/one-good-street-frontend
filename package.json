@@ -17,6 +17,8 @@
     "gulp-print": "^5.0.0",
     "moment": "^2.24.0",
     "natives": "^1.1.6",
+    "nodemailer": "^6.4.2",
+    "nodemailer-mailgun-transport": "^2.0.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-redux": "^7.1.3",

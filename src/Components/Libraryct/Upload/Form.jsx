@@ -1,5 +1,7 @@
 //This is the base form component for the edit and create item component. It renders for both edit and create
 //It calls on the 'handleSubmit' function that is like a middle-layer for this form's submit handlers - see index.jsx and createItem.jsx and editItem.jsx 
+//Form validations are handled here. 
+
 
 
 import React from 'react';
@@ -8,32 +10,110 @@ import '../../Shared/form-styling.css';
 
 
 
+//Form validation
+
+function validate (values) {
+    let errors = {};
+
+    if (!values.itemName)
+    {
+        errors.itemName = 'Required'
+    }
+
+    if (!values.description)
+    {
+        errors.description= 'Required'
+    }
+
+    if (!values.category)
+    {
+        errors.category = 'Required'
+    }
+
+    if (!values.postcode)
+    {
+        errors.postcode = 'Required'
+    }
+
+    if (!values.firstName)
+    {
+        errors.firstName= 'Required'
+    }
+
+    if (!values.lastName)
+    {
+        errors.lastName= 'Required'
+    }
+
+    if (!values.email)
+    {
+        errors.email= 'Required'
+    }
+    else if( !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test( values.email ) )
+    {
+        errors.email = 'Invalid email address'
+    }
+
+    if (!values.privacy)
+    {
+        errors.privacy= 'Required'
+    }
+    return errors;
+}
+
+//Rendering for the drop down box
+const renderSelectField = ({ input, label, type, meta: { touched, error }, children }) => (
+    <div>
+      <label>{label}</label>
+      <div>
+        <select {...input}>
+          {children}
+        </select>
+        {touched && error && <span>{error}</span>}
+      </div>
+    </div>
+  )
 
 class Form extends React.Component {
 
+    renderField( {input, label, type, meta: { touched, error, warning }} ) {
+        //console.log(input)
+        return (
+          <div>
+            <label>{label}</label>
+            <div>
+            <input {...input} placeholder={label} type={type} />
+            { touched && 
+            ( ( error && <span>{error}</span> ) || 
+              (warning && <span>{warning}</span> ) ) }
+            </div>
+            
+          </div>
+          
+        );
+      }
 
     render() {
-        return (<div className="main-form">
 
+        return (<div>
+            
             <form onSubmit={this.props.handleSubmit}>
-                <div className="form-group">
-                    <label htmlFor="itemName">Name of item</label><br />
-                    <Field name="itemName" component="input" type="text" ></Field>
+                <div>
+                    
+                    <Field name="itemName" component={this.renderField} type="text" label="Item name"></Field>
                 </div>
-                <div className="form-group">
-                    <label htmlFor="headline">Headline</label><br />
-                    <Field name="headline" component="input" type="text"></Field>
+                <div>
+                    <Field name="headline" component={this.renderField} type="text" label="Headline"></Field>
                 </div>
-                <div className="form-group">
-                    <label htmlFor="description">Description</label><br />
-                    <Field name="description" component="input" type="text"></Field>
+                <div>
+                    <Field name="description" component={this.renderField} type="text" label="Description"></Field>
                 </div>
-                <div className="form-group">
-                    <label htmlFor="category">Category</label><br />
+                <div>
                     <Field
                         name="category"
-                        component="select"
-                        type="category">
+                        component={renderSelectField}
+                        type="category"
+                        label="Category">
                         <option></option>
                         <option value="Bedroom">Bedroom</option>
                         <option value="Braces and support">Braces and Support</option>
@@ -48,47 +128,44 @@ class Form extends React.Component {
                         <option value="Other">Other</option>
                     </Field>
                 </div>
-                <div className="form-group">
-                    <label htmlFor="postcode">Postcode where item is located</label><br />
-                    <Field name="postcode" component="input" type="text"></Field>
+
+                <div>
+                    <Field name="postcode" component={this.renderField} type="text" label="Postcode"></Field>
                 </div>
-                <div className="form-group">
-                    <label htmlFor="firstName">First Name</label><br />
-                    <Field name="firstName" component="input" type="text"></Field>
+                <div>
+                    <Field name="firstName" component={this.renderField} type="text" label="First Name"></Field>
                 </div>
-                <div className="form-group">
-                    <label htmlFor="lastName">Last Name</label><br />
-                    <Field name="lastName" component="input" type="text"></Field>
+                <div>
+                    <Field name="lastName" component={this.renderField} type="text" label="Last Name"></Field>
                 </div>
-                <div className="form-group">
-                    <label htmlFor="phone">Phone</label><br />
-                    <Field name="phone" component="input" type="text"></Field>
+                <div>
+                    <Field name="phone" component={this.renderField} type="text" label="Phone"></Field>
                 </div>
-                <div className="form-group">
-                    <label htmlFor="address">Address</label><br />
-                    <Field name="address" component="input" type="text"></Field>
+                <div>
+                    <Field name="address" component={this.renderField} type="text" label="Address"></Field>
                 </div>
-                <div className="form-group">
-                    <label htmlFor="email">Email</label><br />
-                    <Field name="email" component="input" type="text"></Field>
+                <div>
+                    <Field name="email" component={this.renderField} type="text" label="Email"></Field>
                 </div>
-                <div className="form-group">
-                    <label htmlFor="privacy">Privacy Settings</label><br />
-                    <Field name="privacy" component="select" type="text">
+                <div>
+                    <Field name="privacy" component={renderSelectField} type="text" label="Privacy">
+
                         <option></option>
                         <option value="publishDetails">Publish my phone number and first name - I will arrange handover directly</option>
                         <option value="NotPublishDetails">Please do not publish my details - One Good Street should arrange handover</option>
                     </Field>
                 </div>
 
-                <div className="form-group">
-                    {/* <button onClick={this.props.showWidget}></button> */}
-                    <label htmlFor="image" >Image</label><br />
-                    <Field name="image" component="input" type="button" className="upload-image-button" onClick={this.props.showWidget}></Field>
+                
+                <div>
+                    <label htmlFor="image" >Image</label>
+                    <Field name="image" component="input" type="button" onClick={this.props.showWidget}></Field>
                 </div>
-                <div className="form-group">
-                    <label htmlFor="delivery">I can offer delivery</label>
-                    <Field name="delivery" component="input" type="checkbox"></Field>
+                <div>
+
+                    <Field name="delivery" component={this.renderField} type="checkbox" label="I can offer delivery"></Field>
+
+
                 </div>
                 <div>
                     <button type="submit" className="general-button">{this.props.btnText}</button>
@@ -101,5 +178,7 @@ class Form extends React.Component {
         );
     }
 }
-Form = reduxForm({ form: 'item' })(Form);
-export default Form;
+// Form = reduxForm({ form: 'item' })(Form);
+// export default Form;
+
+export default reduxForm({form: 'item', validate})(Form);

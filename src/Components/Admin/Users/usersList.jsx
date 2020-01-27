@@ -17,7 +17,7 @@ const User = props => (
     <td className="icons">
       <Link to={"/users/edit/" + props.user._id}>📝</Link></td>
 
-    <td className="icons"><a href="#" onClick={() => { if (window.confirm('Are you sure you want to delete this user?')) { props.deleteUser(props.user._id) } window.location.reload() }}>🗑</a>
+    <td className="icons"><a href="#" onClick={() => { if (window.confirm('Are you sure you want to delete this user?')) { props.deleteUser(props.user._id) } }}>🗑</a>
     </td>
   </tr>
 )
@@ -62,7 +62,7 @@ class UserList extends React.Component {
       .then(response => { console.log(response.data) });
 
     this.setState({
-      items: this.state.users.filter(el => el._id !== id)
+      users: this.state.users.filter(el => el._id !== id)
     })
 
 

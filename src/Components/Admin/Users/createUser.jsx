@@ -14,9 +14,14 @@ class CreateUser extends React.Component {
 
     this.state = {
       firstName: '',
+      firstNameError: '',
       lastName: '',
+      lastNameError: '',
       email: '',
-      password: ''
+      emailError: '',
+      password: '',
+      passwordError: ''
+
     }
   }
 
@@ -50,8 +55,46 @@ class CreateUser extends React.Component {
     });
   }
 
+  validate = () => {
+    let isError = false;
+    const errors = {};
+    if (this.state.firstName.length < 1) {
+      isError = true;
+      errors.firstNameError = 'First name cannot be blank';
+    }
+
+    if (this.state.lastName.length < 1) {
+      isError = true;
+      errors.lastNameError = 'Last name cannot be blank';
+    }
+
+    if (this.state.email.indexOf('@')===-1) {
+      isError = true;
+      errors.emailError = 'Requires valid email';
+    }
+
+    if (this.state.password.length < 5) {
+      isError = true;
+      errors.passwordError = 'Passwords needs to be at least 5 characters long';
+    }
+
+
+
+    if (isError) {
+      this.setState({
+        ...this.state,
+        ...errors
+      })
+    }
+    return isError;
+  }
+
   onSubmit = (e) => {
     e.preventDefault();
+   
+    const err = this.validate();
+    if (!err) { 
+    
     this.setState(state => ({
       firstName: this.state.firstName,
       lastName: this.state.lastName,
@@ -59,8 +102,11 @@ class CreateUser extends React.Component {
       password: this.state.password
 
     }));
+  
 
     console.log(this.state);
+
+    
 
     axios.post(process.env.REACT_APP_BACKEND_URL + '/users/create', this.state)
       .then(res => {
@@ -69,7 +115,13 @@ class CreateUser extends React.Component {
       .catch((err) => {
         console.log(err)
       })
+  
+    }  
+
+    return this.state;
   }
+
+  
 
 
   render() {
@@ -90,7 +142,10 @@ class CreateUser extends React.Component {
               placeholder="First Name.."
               value={this.state.firstName}
               onChange={this.onchangeFirstName}
+              errortext={this.state.firstNameError}
             />
+            
+            <div>{this.state.firstNameError}</div>
           </div>
 
           <div>
@@ -104,7 +159,9 @@ class CreateUser extends React.Component {
               placeholder="Last Name.."
               value={this.state.lastName}
               onChange={this.onchangeLastName}
+              errortext={this.state.lastNameError}
             />
+            <div>{this.state.lastNameError}</div>
           </div>
 
           <div>
@@ -118,8 +175,10 @@ class CreateUser extends React.Component {
               placeholder="Email.."
               value={this.state.email}
               onChange={this.onchangeEmail}
+              errortext={this.state.emailError}
             />
           </div>
+          <div>{this.state.emailError}</div>
 
           <div>
             <label htmlFor="">Password</label>
@@ -132,12 +191,16 @@ class CreateUser extends React.Component {
               placeholder="Password.."
               value={this.state.password}
               onChange={this.onchangePassword}
+              errortext={this.state.passwordError}
             />
           </div>
+          <div>{this.state.passwordError}</div>
 
           <div>
             <button onClick={this.onSubmit} className="general-button" >Add User</button>
           </div>
+
+
         </form>
       </div>
     )
