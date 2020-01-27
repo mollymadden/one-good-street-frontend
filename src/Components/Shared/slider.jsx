@@ -44,11 +44,18 @@ class ContactForm extends Component {
                     // triggered on "<" on left top click or on outside click
                     this.setState({ isPaneOpen: false });
                 }}>
-                <div>CONTACT FORM GOES HERE</div>
-                <br />
-                <img src='img.png' />
+                <div>
+
+                    <form action="https://formspree.io/info@onegoodstreet.com.au" method="POST" className="slider-form">
+                        <input name="name" type="text" className="feedback-input" placeholder="Name" /><br />
+                        <input name="email" type="email" className="feedback-input" placeholder="Email" /><br />
+                        <textarea name="message" className="feedback-input" placeholder="Message"></textarea>
+                        <button type="submit" value="SUBMIT" className="general-button">SUBMIT</button>
+                    </form>
+
+                </div>
             </SlidingPane>
-        </div >;
+        </div >
     }
 }
 

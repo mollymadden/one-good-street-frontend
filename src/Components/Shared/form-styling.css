@@ -2,6 +2,11 @@ form {
     display: inline-block;
 }
 
+.main-form {
+    display: inline-block;
+    width: 40vw;
+}
+
 .form-group {
     text-align: left;
     /* justify-self: center; */
@@ -20,8 +25,5 @@ label {
 
 input {
     width: 40vw;
-    height: 40%;
-    border-radius: 4px;
-    transition: 0.3s all;
 }
 

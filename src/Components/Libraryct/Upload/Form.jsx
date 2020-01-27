@@ -13,7 +13,7 @@ class Form extends React.Component {
 
 
     render() {
-        return (<div>
+        return (<div className="main-form">
 
             <form onSubmit={this.props.handleSubmit}>
                 <div className="form-group">

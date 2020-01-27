@@ -67,3 +67,12 @@ strong {
   font-weight: bold;
 }
 
+@media only screen and (max-width: 600px) {
+  nav {
+      display: none;
+  }
+
+  .icon-bar {
+    display: none;
+  }  
+}
