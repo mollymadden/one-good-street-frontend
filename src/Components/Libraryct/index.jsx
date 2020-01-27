@@ -10,6 +10,9 @@ import Title from '../Shared/Title';
 import Adminav from '../Admin/admin-nav';
 import './library.css';
 import ContactForm from '../Shared/slider';
+import waiver from "../../assets/Library-of-Care-Things-Disclaimer.pdf";
+import electrical from "../../assets/Library-of-Care-Things-Electrical-Guide.pdf";
+import cleaning from "../../assets/Library-of-Care-Things-Cleaning-Guide.pdf";
 
 
 
@@ -41,13 +44,13 @@ class Library extends Component {
                 <ContactForm />
                 <Title title="Library of Care Things" />
                 <div className="blurb">
-                    All equipment is free. Equipment must be cleaned and in working order prior to collection.
+                    All equipment is free. Equipment must be cleaned and in working order prior to collection.<br /><br />
 
-                    For some equipment an Occupation Therapy assessment is recommended to make sure the equipment is the right size and type for the older person.
+                    For some equipment an Occupation Therapy assessment is recommended to make sure the equipment is the right size and type for the older person.<br /><br />
 
-                    A waiver form is signed by the person collecting the equipment. Electrical equipment checklist and Cleaning checklist for the person donating the equipment.
+                    A <a href = {waiver} target = "_blank">Waiver</a> form is signed by the person collecting the equipment. <a href = {electrical} target = "_blank">Electrical equipment checklist</a> and <a href = {cleaning} target = "_blank">Cleaning checklist</a> for the person donating the equipment.<br /><br />
 
-                    Please email info@onegoodstreet.com.au if you are interested in any of the equipment.
+                    Please email info@onegoodstreet.com.au if you are interested in any of the equipment.<br />
                 </div>
 
                 <div className="search">
