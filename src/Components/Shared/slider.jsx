@@ -46,7 +46,7 @@ class ContactForm extends Component {
                 }}>
                 <div>
 
-                    <form action="https://formspree.io/info@onegoodstreet.com.au" method="POST" className="slider-form">
+                    <form action="https://formspree.io/onegoodst@gmail.com" method="POST" className="slider-form">
                         <input name="name" type="text" className="feedback-input" placeholder="Name" /><br />
                         <input name="email" type="email" className="feedback-input" placeholder="Email" /><br />
                         <textarea name="message" className="feedback-input" placeholder="Message"></textarea>
