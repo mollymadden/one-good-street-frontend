@@ -55,6 +55,10 @@ class Dashboard extends React.Component {
           {this.state.items.length > 0 &&
             <TableList items={this.state.items} {...this.props} />
           }
+
+          <div className="upload button">
+            <button type="button" className="general-button" onClick={() => { this.props.history.push("/library/upload") }} type="button">Upload an Item</button>
+          </div>
         </div>
 
       )

@@ -25,6 +25,7 @@ body {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
+    min-height: 70vh;
     /* border: 5px solid #D5ECEA; */
   }
   
