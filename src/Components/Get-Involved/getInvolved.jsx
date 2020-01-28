@@ -69,9 +69,9 @@ class GetInvolved extends React.Component {
 
       .then(res => {
 
-        this.props.history.push('/');
+        this.props.history.push('/thankyou');
         //goes back to home
-        //window.location.reload(false); //page can reload after recipe item added
+        //window.location.reload(false); //
       })
       .catch((err) => {
         console.log(err)
@@ -144,7 +144,7 @@ class GetInvolved extends React.Component {
             <Field
               name="comments"
               component={this.renderField}
-              type="text"
+              type="textarea"
               label="Comments"
 
             >
