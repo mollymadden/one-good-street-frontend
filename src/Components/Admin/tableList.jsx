@@ -127,7 +127,7 @@ class TableList extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {this.itemList()}
+            {this.itemList().reverse()}
           </tbody>
         </table>
       </div >
