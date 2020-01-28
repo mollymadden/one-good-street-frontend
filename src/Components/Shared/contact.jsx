@@ -3,6 +3,7 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import axios from 'axios'
+import './slider.css'
 
 
 //Validation for the form
@@ -13,7 +14,7 @@ function validate(values) {
     errors.name = 'Required'
   }
 
-  
+
   if (!values.email) {
     errors.email = 'Required'
   }
@@ -32,13 +33,13 @@ function validate(values) {
 //Rendering for the drop down box
 const renderSelectField = ({ input, label, type, meta: { touched, error }, children }) => (
   <div>
-      <label>{label}</label>
-      <div>
-          <select {...input}>
-              {children}
-          </select>
-          {touched && error && <span>{error}</span>}
-      </div>
+    <label>{label}</label>
+    <div>
+      <select {...input}>
+        {children}
+      </select>
+      {touched && error && <span>{error}</span>}
+    </div>
   </div>
 )
 
@@ -75,41 +76,41 @@ class ContactUs extends React.Component {
   renderField({ input, label, type, meta: { touched, error, warning } }) {
     //console.log(input)
     return (
+      <div>
+        <label>{label}</label>
         <div>
-            <label>{label}</label>
-            <div>
-                <input {...input} placeholder={label} type={type} />
-                {touched &&
-                    ((error && <span>{error}</span>) ||
-                        (warning && <span>{warning}</span>))}
-            </div>
-
+          <input {...input} placeholder={label} type={type} />
+          {touched &&
+            ((error && <span>{error}</span>) ||
+              (warning && <span>{warning}</span>))}
         </div>
 
-    );
-}
+      </div>
 
-  render () {
+    );
+  }
+
+  render() {
 
     return (
       <div className="main-form">
         <form onSubmit={this.props.handleSubmit(this.onSubmit)}>
 
 
-          <div>
+          <div className="form-group">
             <Field name="name" component={this.renderField} type="text" label="Name"></Field>
           </div>
-          <div>
+          <div className="form-group">
             <Field name="email" component={this.renderField} type="email" label="Email"></Field>
           </div>
-          
-          <div>
-            <Field 
-            name="message" 
-            component={this.renderField} 
-            type="text"
-            label="Message"
 
+          <div className="form-group">
+            <Field
+              name="message"
+              className="contact-message-input"
+              component={this.renderField}
+              type="text"
+              label="Message"
             >
             </Field>
           </div>
@@ -124,6 +125,6 @@ class ContactUs extends React.Component {
 }
 
 
-export default reduxForm({form: 'contactUs', validate}) (ContactUs);
+export default reduxForm({ form: 'contactUs', validate })(ContactUs);
 
 

@@ -20,6 +20,7 @@ import UserList from './Components/Admin/Users/index'
 import CreateUser from './Components/Admin/Users/createUser';
 import EditUser from './Components/Admin/Users/editUser';
 
+import Thanks from './Components/Shared/thanks';
 
 
 
@@ -41,6 +42,7 @@ function App() {
         <Route exact path="/library/upload" component={CreateItem} />
         <Route exact path="/items/:id" component={Show} />
         <Route exact path="/items/edit/:id" component={EditItem} />
+        <Route exact path="/thankyou" component={Thanks} />
 
         <Route path="/pagenotfound" component={Pagenotfound} />
         <Redirect to="/pagenotfound" />
