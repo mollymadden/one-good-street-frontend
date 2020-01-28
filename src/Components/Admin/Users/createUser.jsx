@@ -19,6 +19,7 @@ class CreateUser extends React.Component {
       lastNameError: '',
       email: '',
       emailError: '',
+      duplicateEmail: false,
       password: '',
       passwordError: ''
 
@@ -114,12 +115,17 @@ class CreateUser extends React.Component {
       })
       .catch((err) => {
         console.log(err)
+        this.setState({duplicateEmail: true})
       })
   
     }  
 
     return this.state;
   }
+
+
+
+
 
   
 
@@ -165,8 +171,10 @@ class CreateUser extends React.Component {
           </div>
 
           <div>
+        
             <label htmlFor="">Email</label>
           </div>
+          
           <div>
             <input type="text"
               required
@@ -177,8 +185,13 @@ class CreateUser extends React.Component {
               onChange={this.onchangeEmail}
               errortext={this.state.emailError}
             />
+          {this.state.duplicateEmail && (
+            <p>Email already exists</p>
+          )}
           </div>
-          <div>{this.state.emailError}</div>
+          <div>{this.state.emailError}
+
+          </div>
 
           <div>
             <label htmlFor="">Password</label>

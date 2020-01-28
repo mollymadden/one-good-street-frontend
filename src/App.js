@@ -43,7 +43,6 @@ function App() {
 
         <Route path="/pagenotfound" component={Pagenotfound} />
         <Redirect to="/pagenotfound" />
-
       </Switch>
     </BrowserRouter>
   </div>

@@ -7,12 +7,14 @@ import React from 'react';
 import axios from 'axios';
 import { withRouter } from 'react-router';
 
+
 class Login extends React.Component {
     state =
         {
             email: "",
             password: "",
-            data: {}
+            data: {},
+            loginError: ''
         }
     fieldChange = (event) => {
         this.setState({ [event.target.name]: event.target.value });
@@ -37,6 +39,7 @@ class Login extends React.Component {
         }
         catch (err) {
             this.setState({ data: err });
+            this.setState({loginError: true})
         }
     }
     render() {
@@ -50,18 +53,20 @@ class Login extends React.Component {
                     </div>
                     <div className="form-group">
                         <label>
-                            Password:<br /> <input type="text" name="password" onChange={this.fieldChange} />
+                            Password:<br /> <input type="password" name="password" onChange={this.fieldChange} />
                         </label><br />
                     </div>
                     <input type="submit" value="Submit" className="general-button" />
                 </form>
                 <div>
-                    <div>
-                        Login response
-                    </div>
-                    <div>
+                    {this.state.loginError && (
+                    <p>
+                        Incorrect email or password
+                    </p>
+                    )}
+                    {/* <div>
                         {JSON.stringify(this.state.data)}
-                    </div>
+                    </div> */}
                 </div>
             </div>
         );
