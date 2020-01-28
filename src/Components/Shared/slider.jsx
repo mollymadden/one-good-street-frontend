@@ -45,20 +45,13 @@ class ContactForm extends Component {
                 isOpen={this.state.isPaneOpen}
                 title='Contact One Good Street'
                 from='right'
-                width='400px'
+                width='600px'
                 onRequestClose={() => {
                     // triggered on "<" on left top click or on outside click
                     this.setState({ isPaneOpen: false });
                 }}>
                 <div>
-                <ContactUs onSubmit={this.submit} />
-                {/* put redux form component here!!!!! */}
-                    {/* <form action="https://formspree.io/onegoodst@gmail.com" method="POST" className="slider-form">
-                        <input name="name" type="text" className="feedback-input" placeholder="Name" /><br />
-                        <input name="email" type="email" className="feedback-input" placeholder="Email" /><br />
-                        <textarea name="message" className="feedback-input" placeholder="Message"></textarea>
-                        <button type="submit" value="SUBMIT" className="general-button">SUBMIT</button>
-                    </form> */}
+                    <ContactUs onSubmit={this.submit} />
 
                 </div>
             </SlidingPane>
