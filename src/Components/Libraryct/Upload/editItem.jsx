@@ -126,7 +126,7 @@ class EditItem extends React.Component {
         <Adminav />
         <Title title="Edit Item" />
 
-        <Form btnText={'Edit Item'} onSubmit={this.handleEditItem} item={this.state} initialValues={this.state.itemData} showWidget={showWidget} />
+        <Form btnText={'Submit Edit'} onSubmit={this.handleEditItem} item={this.state} initialValues={this.state.itemData} showWidget={showWidget} />
 
 
 

@@ -86,20 +86,20 @@ class Form extends React.Component {
 
     render() {
 
-        return (<div>
+        return (<div className="mainform">
 
             <form onSubmit={this.props.handleSubmit}>
-                <div>
+                <div className="form-group">
 
                     <Field name="itemName" component={this.renderField} type="text" label="Item name"></Field>
                 </div>
-                <div>
+                <div className="form-group">
                     <Field name="headline" component={this.renderField} type="text" label="Headline"></Field>
                 </div>
-                <div>
+                <div className="form-group">
                     <Field name="description" component={this.renderField} type="text" label="Description"></Field>
                 </div>
-                <div>
+                <div className="form-group">
                     <Field
                         name="category"
                         component={renderSelectField}
@@ -120,25 +120,25 @@ class Form extends React.Component {
                     </Field>
                 </div>
 
-                <div>
+                <div className="form-group">
                     <Field name="postcode" component={this.renderField} type="text" label="Postcode"></Field>
                 </div>
-                <div>
+                <div className="form-group">
                     <Field name="firstName" component={this.renderField} type="text" label="First Name"></Field>
                 </div>
-                <div>
+                <div className="form-group">
                     <Field name="lastName" component={this.renderField} type="text" label="Last Name"></Field>
                 </div>
-                <div>
+                <div className="form-group">
                     <Field name="phone" component={this.renderField} type="text" label="Phone"></Field>
                 </div>
-                <div>
+                <div className="form-group">
                     <Field name="address" component={this.renderField} type="text" label="Address"></Field>
                 </div>
-                <div>
+                <div className="form-group">
                     <Field name="email" component={this.renderField} type="text" label="Email"></Field>
                 </div>
-                <div>
+                <div className="form-group">
                     <Field name="privacy" component={renderSelectField} type="text" label="Privacy">
 
                         <option></option>
@@ -146,13 +146,14 @@ class Form extends React.Component {
                         <option value="NotPublishDetails">Please do not publish my details - One Good Street should arrange handover</option>
                     </Field>
                 </div>
+                <br />
 
 
-                <div>
-                    <label htmlFor="image" >Image</label>
-                    <button type="button" onClick={this.props.showWidget}>🧸</button>
-                </div>
-                <div>
+                <div className="form-group">
+                    <label htmlFor="image" >Image</label>&nbsp;
+                    <button type="button" onClick={this.props.showWidget}>Click here to choose an image 📷</button>
+                </div>< br />
+                <div className="form-group">
 
                     <Field name="delivery" component={this.renderField} type="checkbox" label="I can offer delivery"></Field>
 
@@ -164,7 +165,7 @@ class Form extends React.Component {
 
             </form>
 
-            <p>You cannot edit this form once submitted. For any changes, or to remove this listing, please email info@onegoodstreet.com.au</p>
+            <p><strong>You cannot edit this form once submitted. For any changes, or to remove this listing, please email info@onegoodstreet.com.au</strong></p>
         </div>
         );
     }

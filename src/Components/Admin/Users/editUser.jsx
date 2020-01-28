@@ -20,7 +20,7 @@ class EditUser extends React.Component {
   handleEditUser = (data) => {
 
     console.log('handleEditUser data', data);
-   
+
     const option = {
       url: process.env.REACT_APP_BACKEND_URL + "/users/edit/" + this.props.match.params.id,
       method: "PUT",
@@ -130,64 +130,66 @@ class EditUser extends React.Component {
           <Adminav />
           <Title title="Edit User" />
           <form action="/action_page.php">
-            <div>
-              <label htmlFor="">First Name</label>
-            </div>
-            <div>
-              <input type="text"
-                required
+            <div className="main-form">
+              <div className="form-group">
+                <label htmlFor="">First Name</label>
+              </div>
+              <div>
+                <input type="text"
+                  required
 
-                name="firstName"
-                placeholder="First Name.."
-                value={this.state.firstName}
-                onChange={this.onchangeFirstName}
-              />
-            </div>
+                  name="firstName"
+                  placeholder="First Name.."
+                  value={this.state.firstName}
+                  onChange={this.onchangeFirstName}
+                />
+              </div>
 
-            <div>
-              <label htmlFor="">Last Name</label>
-            </div>
-            <div>
-              <input type="text"
-                required
+              <div className="form-group">
+                <label htmlFor="">Last Name</label>
+              </div>
+              <div>
+                <input type="text"
+                  required
 
-                name="lastName"
-                placeholder="Last Name.."
-                value={this.state.lastName}
-                onChange={this.onchangeLastName}
-              />
-            </div>
+                  name="lastName"
+                  placeholder="Last Name.."
+                  value={this.state.lastName}
+                  onChange={this.onchangeLastName}
+                />
+              </div>
 
-            <div>
-              <label htmlFor="">Email</label>
-            </div>
-            <div>
-              <input type="text"
-                required
+              <div className="form-group">
+                <label htmlFor="">Email</label>
+              </div>
+              <div>
+                <input type="text"
+                  required
 
-                name="email"
-                placeholder="Email.."
-                value={this.state.email}
-                onChange={this.onchangeEmail}
-              />
-            </div>
+                  name="email"
+                  placeholder="Email.."
+                  value={this.state.email}
+                  onChange={this.onchangeEmail}
+                />
+              </div>
 
-            <div>
-              <label htmlFor="">Password</label>
-            </div>
-            <div>
-              <input type="text"
-                required
+              <div className="form-group">
+                <label htmlFor="">Password</label>
+              </div>
+              <div>
+                <input type="text"
+                  required
 
-                name="lastName"
-                placeholder="Last Name.."
-                value={this.state.password}
-                onChange={this.onchangePassword}
-              />
-            </div>
+                  name="lastName"
+                  placeholder="Last Name.."
+                  value={this.state.password}
+                  onChange={this.onchangePassword}
+                />
+              </div>
 
-            <div>
-              <button onClick={this.onSubmit} className="general-button" onSubmit={this.handleEditUser}>Edit User</button>
+              <div>
+                <button onClick={this.onSubmit} className="general-button" onSubmit={this.handleEditUser}>Submit Edit</button>
+              </div>
             </div>
           </form>
         </div>

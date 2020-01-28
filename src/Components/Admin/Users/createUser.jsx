@@ -69,7 +69,7 @@ class CreateUser extends React.Component {
       errors.lastNameError = 'Last name cannot be blank';
     }
 
-    if (this.state.email.indexOf('@')===-1) {
+    if (this.state.email.indexOf('@') === -1) {
       isError = true;
       errors.emailError = 'Requires valid email';
     }
@@ -92,33 +92,33 @@ class CreateUser extends React.Component {
 
   onSubmit = (e) => {
     e.preventDefault();
-   
+
     const err = this.validate();
-    if (!err) { 
-    
-    this.setState(state => ({
-      firstName: this.state.firstName,
-      lastName: this.state.lastName,
-      email: this.state.email,
-      password: this.state.password
+    if (!err) {
 
-    }));
-  
+      this.setState(state => ({
+        firstName: this.state.firstName,
+        lastName: this.state.lastName,
+        email: this.state.email,
+        password: this.state.password
 
-    console.log(this.state);
+      }));
 
-    
 
-    axios.post(process.env.REACT_APP_BACKEND_URL + '/users/create', this.state)
-      .then(res => {
-        this.props.history.push('/users'); //goes back to manage users page
-      })
-      .catch((err) => {
-        console.log(err)
-        this.setState({duplicateEmail: true})
-      })
-  
-    }  
+      console.log(this.state);
+
+
+
+      axios.post(process.env.REACT_APP_BACKEND_URL + '/users/create', this.state)
+        .then(res => {
+          this.props.history.push('/users'); //goes back to manage users page
+        })
+        .catch((err) => {
+          console.log(err)
+          this.setState({ duplicateEmail: true })
+        })
+
+    }
 
     return this.state;
   }
@@ -127,7 +127,7 @@ class CreateUser extends React.Component {
 
 
 
-  
+
 
 
   render() {
@@ -136,85 +136,87 @@ class CreateUser extends React.Component {
         <Header />
         <Adminav />
         <Title title="Create User" />
-        <form action="/action_page.php">
-          <div>
-            <label htmlFor="">First Name</label>
-          </div>
-          <div>
-            <input type="text"
-              required
+        <div className="main-form">
+          <form action="/action_page.php">
+            <div className="form-group">
+              <label htmlFor="">First Name</label>
+            </div>
+            <div>
+              <input type="text"
+                required
 
-              name="firstName"
-              placeholder="First Name.."
-              value={this.state.firstName}
-              onChange={this.onchangeFirstName}
-              errortext={this.state.firstNameError}
-            />
-            
-            <div>{this.state.firstNameError}</div>
-          </div>
+                name="firstName"
+                placeholder="First Name.."
+                value={this.state.firstName}
+                onChange={this.onchangeFirstName}
+                errortext={this.state.firstNameError}
+              />
 
-          <div>
-            <label htmlFor="">Last Name</label>
-          </div>
-          <div>
-            <input type="text"
-              required
+              <div>{this.state.firstNameError}</div>
+            </div>
 
-              name="lastName"
-              placeholder="Last Name.."
-              value={this.state.lastName}
-              onChange={this.onchangeLastName}
-              errortext={this.state.lastNameError}
-            />
-            <div>{this.state.lastNameError}</div>
-          </div>
+            <div className="form-group">
+              <label htmlFor="">Last Name</label>
+            </div>
+            <div>
+              <input type="text"
+                required
 
-          <div>
-        
-            <label htmlFor="">Email</label>
-          </div>
-          
-          <div>
-            <input type="text"
-              required
+                name="lastName"
+                placeholder="Last Name.."
+                value={this.state.lastName}
+                onChange={this.onchangeLastName}
+                errortext={this.state.lastNameError}
+              />
+              <div>{this.state.lastNameError}</div>
+            </div>
 
-              name="email"
-              placeholder="Email.."
-              value={this.state.email}
-              onChange={this.onchangeEmail}
-              errortext={this.state.emailError}
-            />
-          {this.state.duplicateEmail && (
-            <p>Email already exists</p>
-          )}
-          </div>
-          <div>{this.state.emailError}
+            <div className="form-group">
 
-          </div>
+              <label htmlFor="">Email</label>
+            </div>
 
-          <div>
-            <label htmlFor="">Password</label>
-          </div>
-          <div>
-            <input type="text"
-              required
+            <div>
+              <input type="text"
+                required
 
-              name="password"
-              placeholder="Password.."
-              value={this.state.password}
-              onChange={this.onchangePassword}
-              errortext={this.state.passwordError}
-            />
-          </div>
-          <div>{this.state.passwordError}</div>
+                name="email"
+                placeholder="Email.."
+                value={this.state.email}
+                onChange={this.onchangeEmail}
+                errortext={this.state.emailError}
+              />
+              {this.state.duplicateEmail && (
+                <p>Email already exists</p>
+              )}
+            </div>
+            <div>{this.state.emailError}
 
-          <div>
-            <button onClick={this.onSubmit} className="general-button" >Add User</button>
-          </div>
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="">Password</label>
+            </div>
+            <div>
+              <input type="text"
+                required
+
+                name="password"
+                placeholder="Password.."
+                value={this.state.password}
+                onChange={this.onchangePassword}
+                errortext={this.state.passwordError}
+              />
+            </div>
+            <div>{this.state.passwordError}</div>
+
+            <div>
+              <button onClick={this.onSubmit} className="general-button" >Add User</button>
+            </div>
 
 
-        </form>
+          </form>
+        </div>
       </div>
     )
   }

@@ -2,4 +2,9 @@
     margin: 5px;
     display: inline-block;
     min-width: 60vw;
+    max-width: 60vw;
 }
+
+/* .media-card-container {
+
+} */

@@ -52,10 +52,10 @@ class Library extends Component {
                     Please email info@onegoodstreet.com.au if you are interested in any of the equipment.<br />
                 </div>
 
-                <div className="search">
+                <div className="upload button">
                     <button type="button" className="general-button" onClick={() => { this.props.history.push("/library/upload") }} type="button">Upload an Item</button>
-                    <Search items={this.state.items} />
                 </div>
+                <Search items={this.state.items} />
             </div>
 
         );
