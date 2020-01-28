@@ -28,8 +28,6 @@ class Dashboard extends React.Component {
         axios.get(process.env.REACT_APP_BACKEND_URL + "/items");
 
 
-
-
       // const res = await axios.get("https://vast-headland-25884.herokuapp.com/items");
 
       this.setState({
