@@ -5,3 +5,11 @@
     font-size: 40px;
 }
 
+@media only screen and (max-width: 600px) {
+.titleh1 h1 {
+    text-transform: uppercase;
+    font-family: "DINCONDENSED-BOLD";
+    text-align: center;
+    font-size: 30px;
+}
+}

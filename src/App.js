@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Redirect, BrowserRouter, Route, Switch } from 'react-router-dom';
 import "./App.css";
 
 import Library from './Components/Libraryct';
@@ -38,8 +38,9 @@ function App() {
         <Route exact path="/users/add" component={CreateUser} />
         <Route exact path="/users/edit/:id" component={EditUser} />
 
-
         <Route path="/pagenotfound" component={Pagenotfound} />
+                    <Redirect to="/pagenotfound" />
+
         <Route exact path="/library/upload" component={CreateItem} />
         <Route exact path="/items/:id" component={Show} />
         <Route exact path="/items/edit/:id" component={EditItem} />

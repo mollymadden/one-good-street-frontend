@@ -10,3 +10,17 @@
 	height: auto;
 }
 
+.partners {
+	width: 50vw;
+	height: auto;
+}
+
+@media only screen and (max-width: 600px) {
+	.map {
+	display: none;
+	}
+
+	.partners {
+	width: 100vw;
+}
+}

@@ -7,6 +7,7 @@
     overflow: hidden;
     background-color: #ffffff;
     font-family: 'DINCondensed-Bold';
+    src: local('DINCondensed-Bold') format('truetype');
     text-transform: uppercase;
     display: flex;
     justify-content: flex-end;

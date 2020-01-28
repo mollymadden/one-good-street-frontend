@@ -44,7 +44,7 @@ class Home extends React.Component {
                 </div>
                 <br />
 
-                <img src={partners} alt="friends helping eachother" />
+                <img src={partners} className="partners" alt="friends helping eachother" />
 
                 <div className="blurb-border-title">Our Initiatives</div>
 

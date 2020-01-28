@@ -5,3 +5,11 @@
     margin-right: -7rem;
     max-width: 7rem;
 }
+
+@media only screen and (max-width: 600px) {
+    .mainlogo a img {
+        margin-top: 1%;
+        margin-left: 1%;
+        max-width: 5rem;
+    }
+}

@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
+@font-face {
+  font-family: 'DINCondensed-Bold';
+  src: local('DINCondensed-Bold'), url('../src/fonts/DINCondensed-Bold.ttf') format('truetype');
+}
+
 body {
   background-color: #D5ECEA !important;
   overflow-y: scroll;
