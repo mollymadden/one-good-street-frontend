@@ -1,14 +1,3 @@
-.toggleButton {
-	position: absolute;
-	top: 32px;
-	left: 32px;
-	z-index: 5;
-}
-
-.map {
-	width: 50vw;
-	height: auto;
-}
 
 .partners {
 	width: 50vw;
