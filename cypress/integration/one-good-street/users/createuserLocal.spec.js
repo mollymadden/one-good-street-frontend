@@ -1,7 +1,7 @@
 //validations working
 
-describe("testing user form locally", function() {
-  it("Visits user form to create an item", function() {
+describe("testing user form locally as an admin", function() {
+  it("Logs in as admin user to create a new user", function() {
 
     cy.visit("http://localhost:3000");
     cy.contains("Admin").click();
