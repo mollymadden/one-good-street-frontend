@@ -59,22 +59,23 @@ class GetInvolved extends React.Component {
     }
   }
 
-  onSubmit = (data) => { 
+  onSubmit = (data) => {
     console.log(data);
 
     axios.post(process.env.REACT_APP_BACKEND_URL + '/send/involved', data)
-    
+
       .then(res => {
 
-        this.props.history.push('/about'); 
-         //goes back to home
+        this.props.history.push('/');
+        //goes back to home
         //window.location.reload(false); //page can reload after recipe item added
       })
       .catch((err) => {
         console.log(err)
       })
-      
+
   }
+
 
   renderField({ input, label, type, meta: { touched, error, warning } }) {
     //console.log(input)
@@ -94,10 +95,11 @@ class GetInvolved extends React.Component {
 }
 
   render () {
+
     return (
-      <div>
-        <h1>Get Involved!</h1>
+      <div className="main-form">
         <form onSubmit={this.props.handleSubmit(this.onSubmit)}>
+
 
           <div>
             <Field name="firstName" component={this.renderField} type="text" label="First Name"></Field>
@@ -123,6 +125,7 @@ class GetInvolved extends React.Component {
             label="Services I'm interested in"
             >
             <option></option>
+
             <option value="volunteer">Volunteer</option>
             <option value="ride-to-end-loneliness">Ride to end loneliness</option>
             <option value="library-of-care">Library of care things</option>
@@ -133,17 +136,19 @@ class GetInvolved extends React.Component {
             </Field>
           </div>
 
+
           <div>
             <Field 
             name="comments" 
             component={this.renderField} 
             type="text"
             label="Comments"
+
             >
             </Field>
           </div>
 
-          <button type="submit">Submit</button>
+          <button className="general-button" type="submit">Submit</button>
 
 
         </form>
@@ -152,4 +157,7 @@ class GetInvolved extends React.Component {
   }
 }
 
+
 export default reduxForm({form: 'getInvolved', validate}) (GetInvolved);
+
+
