@@ -37,13 +37,14 @@ function App() {
         <Route exact path="/users" component={UserList} />
         <Route exact path="/users/add" component={CreateUser} />
         <Route exact path="/users/edit/:id" component={EditUser} />
+        <Route exact path="/library/upload" component={CreateItem} />
+        <Route exact path="/items/:id" component={Show} />
+        <Route exact path="/items/edit/:id" component={EditItem} />
 
         <Route path="/pagenotfound" component={Pagenotfound} />
                     <Redirect to="/pagenotfound" />
 
-        <Route exact path="/library/upload" component={CreateItem} />
-        <Route exact path="/items/:id" component={Show} />
-        <Route exact path="/items/edit/:id" component={EditItem} />
+        
       </Switch>
     </BrowserRouter>
   </div>
