@@ -38,7 +38,7 @@ class CreateItem extends React.Component {
         //this is pushing the image url of cloudinary to mongodb and enables the image to then render on pages of the website
         data.image = this.state.image
         console.log('data image', data.image)
-        
+
         //component to say uploading?? Put in here
 
         axios.post(process.env.REACT_APP_BACKEND_URL + '/items/create', data)
@@ -50,8 +50,6 @@ class CreateItem extends React.Component {
             .catch((err) => {
                 console.log(err)
             })
-
-
     }
 
     render() {
