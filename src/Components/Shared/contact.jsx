@@ -1,21 +1,19 @@
-//This is a component that renders in the index.jsx file that is found in the Get-involved folder. 
-//On submission, it is connected to the backend and nodemailer via the axios post request
+//This is the ContactUs component that is rendered on teh slider.jsx file that is in the Shared folder in the Components folder
 
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import axios from 'axios'
 
+
+//Validation for the form
 function validate(values) {
   let errors = {};
 
-  if (!values.firstName) {
-    errors.firstName = 'Required'
+  if (!values.name) {
+    errors.name = 'Required'
   }
 
-  if (!values.lastName) {
-    errors.lastName = 'Required'
-  }
-
+  
   if (!values.email) {
     errors.email = 'Required'
   }
@@ -23,13 +21,11 @@ function validate(values) {
     errors.email = 'Invalid email address'
   }
 
-  if (!values.services) {
-    errors.services = 'Required'
+  if (!values.message) {
+    errors.message = 'Required'
   }
 
   return errors;
-
-
 }
 
 
@@ -46,26 +42,22 @@ const renderSelectField = ({ input, label, type, meta: { touched, error }, child
   </div>
 )
 
-class GetInvolved extends React.Component {
+class ContactUs extends React.Component {
 
   constructor(props) {
     super(props);
 
     this.state = {
-      firstName: '',
-      lastName: '',
-      address: '',
+      name: '',
       email: '',
-      phone: '',
-      services: '',
-      comments: ''
+      message: ''
     }
   }
 
   onSubmit = (data) => {
     console.log(data);
 
-    axios.post(process.env.REACT_APP_BACKEND_URL + '/send/involved', data)
+    axios.post(process.env.REACT_APP_BACKEND_URL + '/send/contact', data)
 
       .then(res => {
 
@@ -105,47 +97,18 @@ class GetInvolved extends React.Component {
 
 
           <div>
-            <Field name="firstName" component={this.renderField} type="text" label="First Name"></Field>
-          </div>
-          <div>
-            <Field name="lastName" component={this.renderField} type="text" label="Last Name"></Field>
-          </div>
-          <div>
-            <Field name="address" component={this.renderField} type="text" label="Address"></Field>
+            <Field name="name" component={this.renderField} type="text" label="Name"></Field>
           </div>
           <div>
             <Field name="email" component={this.renderField} type="email" label="Email"></Field>
           </div>
-          <div>
-            <Field name="phone" component={this.renderField} type="text" label="Phone"></Field>
-          </div>
-          <div>
-           
-            <Field 
-            name="services" 
-            component={renderSelectField} 
-            type="services"
-            label="Services I'm interested in"
-            >
-            <option></option>
-
-            <option value="volunteer">Volunteer</option>
-            <option value="ride-to-end-loneliness">Ride to end loneliness</option>
-            <option value="library-of-care">Library of care things</option>
-            <option value="meal sharing">Meal Sharing</option>
-            <option value="admin support">Admin support</option>
-            <option value="free text">Free text</option>
-            <option value="other">Other</option>
-            </Field>
-          </div>
-
-
+          
           <div>
             <Field 
-            name="comments" 
+            name="message" 
             component={this.renderField} 
             type="text"
-            label="Comments"
+            label="Message"
 
             >
             </Field>
@@ -161,6 +124,6 @@ class GetInvolved extends React.Component {
 }
 
 
-export default reduxForm({form: 'getInvolved', validate}) (GetInvolved);
+export default reduxForm({form: 'contactUs', validate}) (ContactUs);
 
 

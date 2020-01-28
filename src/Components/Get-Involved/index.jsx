@@ -1,3 +1,6 @@
+//Get involved index page that renders the GetInvolved component.
+//GetInvolved component is a form that connects to nodemailer
+
 import React, { useState } from "react";
 import Header from '../Shared/Header';
 import Title from '../Shared/Title';
