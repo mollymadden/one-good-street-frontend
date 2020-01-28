@@ -12,51 +12,42 @@ import '../../Shared/form-styling.css';
 
 //Form validation
 
-function validate (values) {
+function validate(values) {
     let errors = {};
 
-    if (!values.itemName)
-    {
+    if (!values.itemName) {
         errors.itemName = 'Required'
     }
 
-    if (!values.description)
-    {
-        errors.description= 'Required'
+    if (!values.description) {
+        errors.description = 'Required'
     }
 
-    if (!values.category)
-    {
+    if (!values.category) {
         errors.category = 'Required'
     }
 
-    if (!values.postcode)
-    {
+    if (!values.postcode) {
         errors.postcode = 'Required'
     }
 
-    if (!values.firstName)
-    {
-        errors.firstName= 'Required'
+    if (!values.firstName) {
+        errors.firstName = 'Required'
     }
 
-    if (!values.lastName)
-    {
-        errors.lastName= 'Required'
+    if (!values.lastName) {
+        errors.lastName = 'Required'
     }
 
-    if (!values.email)
-    {
-        errors.email= 'Required'
+    if (!values.email) {
+        errors.email = 'Required'
     }
-    else if( !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test( values.email ) )
-    {
+    else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
         errors.email = 'Invalid email address'
     }
 
-    if (!values.privacy)
-    {
-        errors.privacy= 'Required'
+    if (!values.privacy) {
+        errors.privacy = 'Required'
     }
     return errors;
 }
@@ -64,42 +55,42 @@ function validate (values) {
 //Rendering for the drop down box
 const renderSelectField = ({ input, label, type, meta: { touched, error }, children }) => (
     <div>
-      <label>{label}</label>
-      <div>
-        <select {...input}>
-          {children}
-        </select>
-        {touched && error && <span>{error}</span>}
-      </div>
+        <label>{label}</label>
+        <div>
+            <select {...input}>
+                {children}
+            </select>
+            {touched && error && <span>{error}</span>}
+        </div>
     </div>
-  )
+)
 
 class Form extends React.Component {
 
-    renderField( {input, label, type, meta: { touched, error, warning }} ) {
+    renderField({ input, label, type, meta: { touched, error, warning } }) {
         //console.log(input)
         return (
-          <div>
-            <label>{label}</label>
             <div>
-            <input {...input} placeholder={label} type={type} />
-            { touched && 
-            ( ( error && <span>{error}</span> ) || 
-              (warning && <span>{warning}</span> ) ) }
+                <label>{label}</label>
+                <div>
+                    <input {...input} placeholder={label} type={type} />
+                    {touched &&
+                        ((error && <span>{error}</span>) ||
+                            (warning && <span>{warning}</span>))}
+                </div>
+
             </div>
-            
-          </div>
-          
+
         );
-      }
+    }
 
     render() {
 
         return (<div>
-            
+
             <form onSubmit={this.props.handleSubmit}>
                 <div>
-                    
+
                     <Field name="itemName" component={this.renderField} type="text" label="Item name"></Field>
                 </div>
                 <div>
@@ -156,10 +147,10 @@ class Form extends React.Component {
                     </Field>
                 </div>
 
-                
+
                 <div>
                     <label htmlFor="image" >Image</label>
-                    <Field name="image" component="input" type="button" onClick={this.props.showWidget}></Field>
+                    <button type="button" onClick={this.props.showWidget}>🧸</button>
                 </div>
                 <div>
 
@@ -181,4 +172,4 @@ class Form extends React.Component {
 // Form = reduxForm({ form: 'item' })(Form);
 // export default Form;
 
-export default reduxForm({form: 'item', validate})(Form);
+export default reduxForm({ form: 'item', validate })(Form);
