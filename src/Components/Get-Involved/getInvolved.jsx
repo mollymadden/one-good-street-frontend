@@ -36,13 +36,13 @@ function validate(values) {
 //Rendering for the drop down box
 const renderSelectField = ({ input, label, type, meta: { touched, error }, children }) => (
   <div>
-      <label>{label}</label>
-      <div>
-          <select {...input}>
-              {children}
-          </select>
-          {touched && error && <span>{error}</span>}
-      </div>
+    <label>{label}</label>
+    <div>
+      <select {...input}>
+        {children}
+      </select>
+      {touched && error && <span>{error}</span>}
+    </div>
   </div>
 )
 
@@ -83,69 +83,69 @@ class GetInvolved extends React.Component {
   renderField({ input, label, type, meta: { touched, error, warning } }) {
     //console.log(input)
     return (
+      <div>
+        <label>{label}</label>
         <div>
-            <label>{label}</label>
-            <div>
-                <input {...input} placeholder={label} type={type} />
-                {touched &&
-                    ((error && <span>{error}</span>) ||
-                        (warning && <span>{warning}</span>))}
-            </div>
-
+          <input {...input} placeholder={label} type={type} />
+          {touched &&
+            ((error && <span>{error}</span>) ||
+              (warning && <span>{warning}</span>))}
         </div>
 
-    );
-}
+      </div>
 
-  render () {
+    );
+  }
+
+  render() {
 
     return (
       <div className="main-form">
         <form onSubmit={this.props.handleSubmit(this.onSubmit)}>
 
 
-          <div>
+          <div className="form-group">
             <Field name="firstName" component={this.renderField} type="text" label="First Name"></Field>
           </div>
-          <div>
+          <div className="form-group">
             <Field name="lastName" component={this.renderField} type="text" label="Last Name"></Field>
           </div>
-          <div>
+          <div className="form-group">
             <Field name="address" component={this.renderField} type="text" label="Address"></Field>
           </div>
-          <div>
+          <div className="form-group">
             <Field name="email" component={this.renderField} type="email" label="Email"></Field>
           </div>
-          <div>
+          <div className="form-group">
             <Field name="phone" component={this.renderField} type="text" label="Phone"></Field>
           </div>
-          <div>
-           
-            <Field 
-            name="services" 
-            component={renderSelectField} 
-            type="services"
-            label="Services I'm interested in"
-            >
-            <option></option>
+          <div className="form-group">
 
-            <option value="volunteer">Volunteer</option>
-            <option value="ride-to-end-loneliness">Ride to end loneliness</option>
-            <option value="library-of-care">Library of care things</option>
-            <option value="meal sharing">Meal Sharing</option>
-            <option value="admin support">Admin support</option>
-            <option value="free text">Free text</option>
-            <option value="other">Other</option>
+            <Field
+              name="services"
+              component={renderSelectField}
+              type="services"
+              label="Services I'm interested in"
+            >
+              <option></option>
+
+              <option value="volunteer">Volunteer</option>
+              <option value="ride-to-end-loneliness">Ride to end loneliness</option>
+              <option value="library-of-care">Library of care things</option>
+              <option value="meal sharing">Meal Sharing</option>
+              <option value="admin support">Admin support</option>
+              <option value="free text">Free text</option>
+              <option value="other">Other</option>
             </Field>
           </div>
 
 
-          <div>
-            <Field 
-            name="comments" 
-            component={this.renderField} 
-            type="text"
-            label="Comments"
+          <div className="form-group">
+            <Field
+              name="comments"
+              component={this.renderField}
+              type="text"
+              label="Comments"
 
             >
             </Field>
@@ -161,6 +161,6 @@ class GetInvolved extends React.Component {
 }
 
 
-export default reduxForm({form: 'getInvolved', validate}) (GetInvolved);
+export default reduxForm({ form: 'getInvolved', validate })(GetInvolved);
 
 
