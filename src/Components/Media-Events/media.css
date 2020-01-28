@@ -1,10 +1,10 @@
+
+
 .media-card {
     margin: 5px;
     display: inline-block;
     min-width: 60vw;
     max-width: 60vw;
+    margin-right: -5vw;
 }
 
-/* .media-card-container {
-
-} */

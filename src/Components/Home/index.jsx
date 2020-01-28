@@ -29,8 +29,8 @@ class Home extends React.Component {
 
                     <p>Neighbours and communities can play an active role in changing a lonely older person’s future. One Good Street believes that the answers are on our doorstep.</p>
 
-                    <p><strong>“THE BEST STREETS TO AGE IN”<br />
-                        THESE STREETS ARE PART OF THE ONE GOOD STREET MOVEMENT AND ARE ACTIVELY INVOLVED IN THEIR OLDER NEIGHBOURS TO REMAIN IN THEIR COMMUNITY</strong></p>
+                    <p className="map-heading">“THE BEST STREETS TO AGE IN”<br />
+                        THESE STREETS ARE PART OF THE ONE GOOD STREET MOVEMENT AND ARE ACTIVELY INVOLVED IN THEIR OLDER NEIGHBOURS TO REMAIN IN THEIR COMMUNITY</p>
                 </div>
 
 

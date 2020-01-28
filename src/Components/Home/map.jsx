@@ -9,7 +9,7 @@ class HeatMap extends Component {
       lat: -30.000233,
       lng: 136.209152
     },
-    zoom: 4
+    zoom: 4.5
   }
 
   constructor(props) {
@@ -562,7 +562,7 @@ class HeatMap extends Component {
       positions: this.state.heatmapPoints,
       options: {
         radius: 20,
-        opacity: 0.6
+        opacity: 0.5
       }
     }
 
@@ -570,7 +570,7 @@ class HeatMap extends Component {
 
     return (
       <div className="heatmap-container">
-        <div className="heatmap" style={{ height: '80vh', width: '80%' }}>
+        <div className="heatmap" style={{ height: '100vh', width: '80%' }}>
           <GoogleMapReact
             ref={(el) => this._googleMap = el}
             bootstrapURLKeys={apiKey}
@@ -581,11 +581,10 @@ class HeatMap extends Component {
             onClick={this.onMapClick.bind(this)}
           >
           </GoogleMapReact>
-          {/* <button className="toggleButton" onClick={this.toggleHeatMap.bind(this)}>Toggle heatmap</button> */}
         </div>
       </div>
     )
   }
 }
 
-export default HeatMap
+export default HeatMap;
