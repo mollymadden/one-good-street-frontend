@@ -25,13 +25,16 @@ class Librarycard extends React.Component {
                                 <div className="card" max-width="200" key={index}>
                                     <div className="image">
                                         <a href={"/items/" + (item._id)} >
-                                            <img src={item.image} width="200" /></a>
+                                            <img src={item.image} className="picture" width="200" /></a>
                                     </div>
                                     <div className="carddescript">
                                         <h3>{item.itemName}</h3>
                                         {item.headline}
+                                    </div>
+                                    <div className="bottom-sec">
                                         <p>📍 {item.postcode}</p>
                                     </div>
+
                                 </div>
                             )
                         }
