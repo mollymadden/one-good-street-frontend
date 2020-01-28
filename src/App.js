@@ -42,9 +42,7 @@ function App() {
         <Route exact path="/items/edit/:id" component={EditItem} />
 
         <Route path="/pagenotfound" component={Pagenotfound} />
-                    <Redirect to="/pagenotfound" />
-
-        
+        <Redirect to="/pagenotfound" />
       </Switch>
     </BrowserRouter>
   </div>

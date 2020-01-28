@@ -1,0 +1,7 @@
+.heatmap-container {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    margin: 5%;
+}
+
