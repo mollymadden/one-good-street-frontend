@@ -19,58 +19,57 @@ class GetInvolved extends React.Component {
     }
   }
 
-  onSubmit = (data) => { 
+  onSubmit = (data) => {
     console.log(data);
 
     axios.post(process.env.REACT_APP_BACKEND_URL + '/send/involved', data)
-    
+
       .then(res => {
-        this.props.history.push('/'); 
-         //goes back to home
+        this.props.history.push('/');
+        //goes back to home
         //window.location.reload(false); //page can reload after recipe item added
       })
       .catch((err) => {
         console.log(err)
       })
-      
+
   }
 
-  render () {
+  render() {
     return (
-      <div>
-        <h1>Get Involved!</h1>
+      <div className="main-form">
         <form onSubmit={this.props.handleSubmit(this.onSubmit)}>
 
-          <div>
+          <div className="form-group">
             <label htmlFor="firstName">First Name</label>
             <Field name="firstName" component="input" type="text"></Field>
           </div>
-          <div>
+          <div className="form-group">
             <label htmlFor="lastName">Last Name</label>
             <Field name="lastName" component="input" type="text"></Field>
           </div>
-          <div>
+          <div className="form-group">
             <label htmlFor="address">Address</label>
             <Field name="address" component="input" type="text"></Field>
           </div>
-          <div>
+          <div className="form-group">
             <label htmlFor="email">Email</label>
             <Field name="email" component="input" type="email"></Field>
           </div>
 
-          <div>
+          <div className="form-group">
             <label htmlFor="phone">Phone</label>
             <Field name="phone" component="input" type="text"></Field>
           </div>
 
-          <div>
+          <div className="form-group">
             <label htmlFor="services">Interested in which services</label>
-            <Field 
-            name="services" 
-            component="input" 
-            type="text"
+            <Field
+              name="services"
+              component="input"
+              type="text"
             >
-            {/* <option></option>
+              {/* <option></option>
             <option value="volunteer">Volunteer</option>
             <option value="ride-to-end-loneliness">Ride to end loneliness</option>
             <option value="library-of-care">Library of care things</option>
@@ -78,17 +77,17 @@ class GetInvolved extends React.Component {
             </Field>
           </div>
 
-          <div>
+          <div className="form-group">
             <label htmlFor="comments">Comments</label>
-            <Field 
-            name="comments" 
-            component="input" 
-            type="text"
+            <Field
+              name="comments"
+              component="input"
+              type="text"
             >
             </Field>
           </div>
 
-          <button type="submit">Submit</button>
+          <button className="general-button" type="submit">Submit</button>
 
 
         </form>
@@ -97,4 +96,4 @@ class GetInvolved extends React.Component {
   }
 }
 
-export default reduxForm({form: 'getInvolved'}) (GetInvolved);
+export default reduxForm({ form: 'getInvolved' })(GetInvolved);
