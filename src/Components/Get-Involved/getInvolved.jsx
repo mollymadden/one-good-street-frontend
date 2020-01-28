@@ -2,6 +2,46 @@ import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import axios from 'axios'
 
+function validate(values) {
+  let errors = {};
+
+  if (!values.firstName) {
+    errors.firstName = 'Required'
+  }
+
+  if (!values.lastName) {
+    errors.lastName = 'Required'
+  }
+
+  if (!values.email) {
+    errors.email = 'Required'
+  }
+  else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+    errors.email = 'Invalid email address'
+  }
+
+  if (!values.services) {
+    errors.services = 'Required'
+  }
+
+  return errors;
+
+
+}
+
+
+//Rendering for the drop down box
+const renderSelectField = ({ input, label, type, meta: { touched, error }, children }) => (
+  <div>
+      <label>{label}</label>
+      <div>
+          <select {...input}>
+              {children}
+          </select>
+          {touched && error && <span>{error}</span>}
+      </div>
+  </div>
+)
 
 class GetInvolved extends React.Component {
 
@@ -25,6 +65,7 @@ class GetInvolved extends React.Component {
     axios.post(process.env.REACT_APP_BACKEND_URL + '/send/involved', data)
 
       .then(res => {
+
         this.props.history.push('/');
         //goes back to home
         //window.location.reload(false); //page can reload after recipe item added
@@ -35,54 +76,74 @@ class GetInvolved extends React.Component {
 
   }
 
-  render() {
+
+  renderField({ input, label, type, meta: { touched, error, warning } }) {
+    //console.log(input)
+    return (
+        <div>
+            <label>{label}</label>
+            <div>
+                <input {...input} placeholder={label} type={type} />
+                {touched &&
+                    ((error && <span>{error}</span>) ||
+                        (warning && <span>{warning}</span>))}
+            </div>
+
+        </div>
+
+    );
+}
+
+  render () {
+
     return (
       <div className="main-form">
         <form onSubmit={this.props.handleSubmit(this.onSubmit)}>
 
-          <div className="form-group">
-            <label htmlFor="firstName">First Name</label>
-            <Field name="firstName" component="input" type="text"></Field>
-          </div>
-          <div className="form-group">
-            <label htmlFor="lastName">Last Name</label>
-            <Field name="lastName" component="input" type="text"></Field>
-          </div>
-          <div className="form-group">
-            <label htmlFor="address">Address</label>
-            <Field name="address" component="input" type="text"></Field>
-          </div>
-          <div className="form-group">
-            <label htmlFor="email">Email</label>
-            <Field name="email" component="input" type="email"></Field>
-          </div>
 
-          <div className="form-group">
-            <label htmlFor="phone">Phone</label>
-            <Field name="phone" component="input" type="text"></Field>
+          <div>
+            <Field name="firstName" component={this.renderField} type="text" label="First Name"></Field>
           </div>
-
-          <div className="form-group">
-            <label htmlFor="services">Interested in which services</label>
-            <Field
-              name="services"
-              component="input"
-              type="text"
+          <div>
+            <Field name="lastName" component={this.renderField} type="text" label="Last Name"></Field>
+          </div>
+          <div>
+            <Field name="address" component={this.renderField} type="text" label="Address"></Field>
+          </div>
+          <div>
+            <Field name="email" component={this.renderField} type="email" label="Email"></Field>
+          </div>
+          <div>
+            <Field name="phone" component={this.renderField} type="text" label="Phone"></Field>
+          </div>
+          <div>
+           
+            <Field 
+            name="services" 
+            component={renderSelectField} 
+            type="services"
+            label="Services I'm interested in"
             >
-              {/* <option></option>
+            <option></option>
+
             <option value="volunteer">Volunteer</option>
             <option value="ride-to-end-loneliness">Ride to end loneliness</option>
             <option value="library-of-care">Library of care things</option>
-            <option value="volunteer">Volunteer</option> */}
+            <option value="meal sharing">Meal Sharing</option>
+            <option value="admin support">Admin support</option>
+            <option value="free text">Free text</option>
+            <option value="other">Other</option>
             </Field>
           </div>
 
-          <div className="form-group">
-            <label htmlFor="comments">Comments</label>
-            <Field
-              name="comments"
-              component="input"
-              type="text"
+
+          <div>
+            <Field 
+            name="comments" 
+            component={this.renderField} 
+            type="text"
+            label="Comments"
+
             >
             </Field>
           </div>
@@ -96,4 +157,7 @@ class GetInvolved extends React.Component {
   }
 }
 
-export default reduxForm({ form: 'getInvolved' })(GetInvolved);
+
+export default reduxForm({form: 'getInvolved', validate}) (GetInvolved);
+
+

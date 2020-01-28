@@ -46,6 +46,7 @@ class ContactForm extends Component {
                 }}>
                 <div>
 
+                {/* put redux form component here!!!!! */}
                     <form action="https://formspree.io/onegoodst@gmail.com" method="POST" className="slider-form">
                         <input name="name" type="text" className="feedback-input" placeholder="Name" /><br />
                         <input name="email" type="email" className="feedback-input" placeholder="Email" /><br />
