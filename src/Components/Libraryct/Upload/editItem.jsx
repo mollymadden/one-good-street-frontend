@@ -7,6 +7,7 @@ import axios from 'axios';
 import Header from '../../Shared/Header';
 import Title from '../../Shared/Title';
 import Adminav from '../../Admin/admin-nav';
+import Unauthorised from "../../Shared/unauthorised";
 
 class EditItem extends React.Component {
   constructor(props) {
@@ -30,7 +31,7 @@ class EditItem extends React.Component {
   }
 
   handleEditItem = (data) => {
-   
+
     data.image = this.state.image
 
     console.log('handleEdit data', data);
@@ -42,15 +43,15 @@ class EditItem extends React.Component {
         "authorization": `${localStorage.authToken}`
       },
       data: data
-      
+
     }
 
     console.log(data)
-   
+
     console.log('data image', data.image)
 
     axios(option)
-   
+
       .then(res => {
         this.props.history.push('/admin/dashboard');
       })
@@ -70,7 +71,7 @@ class EditItem extends React.Component {
         this.setState(
           {
             itemData:
-            
+
             {
               itemName: response.data.itemName,
               headline: response.data.headline,
@@ -89,7 +90,7 @@ class EditItem extends React.Component {
             }
           })
 
-         
+
       })
       .catch(function (error) {
         console.log(error);
@@ -99,27 +100,28 @@ class EditItem extends React.Component {
 
   render() {
 
-    
+
 
     if (localStorage.authToken) {
 
       const myWidget = window.cloudinary.createUploadWidget({
-        cloudName: 'onegoodst', 
-        uploadPreset: 'onegoodst'}, (error, result) => { 
-          if (!error && result && result.event === "success") { 
-            console.log('Done! Here is the image info: ', result.info.url); 
-            this.setState({
-                image: result.info.url
-            })
-          }
+        cloudName: 'onegoodst',
+        uploadPreset: 'onegoodst'
+      }, (error, result) => {
+        if (!error && result && result.event === "success") {
+          console.log('Done! Here is the image info: ', result.info.url);
+          this.setState({
+            image: result.info.url
+          })
         }
+      }
       )
-  
+
       const showWidget = async () => {
         await myWidget.open()
         // console.log('state image', this.image)
-       
-    }
+
+      }
 
       return (<div>
         <Header />
@@ -135,7 +137,7 @@ class EditItem extends React.Component {
     }
     else {
       return (
-        <h1>You are not authorised to view this page</h1>
+        <Unauthorised />
       )
     }
 

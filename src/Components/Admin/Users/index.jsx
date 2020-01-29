@@ -8,6 +8,7 @@
 import React from "react";
 import axios from 'axios';
 import UserList from "./usersList";
+import Unauthorised from "../../Shared/unauthorised";
 
 
 class User extends React.Component {
@@ -28,16 +29,18 @@ class User extends React.Component {
 
   render() {
     if (localStorage.authToken) {
-    return (
-      <div>
+      return (
+        <div>
 
-        <UserList />
-        <button type="button" className="general-button" onClick={() => { this.props.history.push("/users/add") }} type="button">Add a New User</button>
-      </div>
-    )
+          <UserList />
+          <button type="button" className="general-button" onClick={() => { this.props.history.push("/users/add") }} type="button">Add a New User</button>
+        </div>
+      )
     }
     else {
-      return <h1>You are not authorised to view this page</h1>
+      return (
+        <Unauthorised />
+      )
     }
   }
 }

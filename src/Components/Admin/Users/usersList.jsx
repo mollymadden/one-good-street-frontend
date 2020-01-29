@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import Header from '../../Shared/Header';
 import Title from '../../Shared/Title';
 import Adminav from '../admin-nav';
+import Unauthorised from "../../Shared/unauthorised";
 
 const User = props => (
   <tr>
@@ -92,13 +93,13 @@ class UserList extends React.Component {
               {this.state.users.map(user => <User user={user} key={user._id} deleteUser={this.deleteUser} />)}
             </tbody>
           </table>
-          
+
         </div>
       )
     }
     else {
       return (
-        <h1>You are not authorised to view this page</h1>
+        <Unauthorised />
       )
     }
   }

@@ -6,6 +6,7 @@ import axios from 'axios';
 import Header from '../../Shared/Header';
 import Title from '../../Shared/Title';
 import Adminav from '../admin-nav';
+import Unauthorised from '../../Shared/unauthorised';
 
 
 class CreateUser extends React.Component {
@@ -133,100 +134,100 @@ class CreateUser extends React.Component {
   render() {
 
     if (localStorage.authToken) {
-    return (
-      <div>
-        <Header />
-        <Adminav />
-        <Title title="Create User" />
-        <div className="main-form">
-          <form action="/action_page.php">
-            <div className="form-group">
-              <label htmlFor="">First Name</label>
-            </div>
-            <div>
-              <input type="text"
-                required
+      return (
+        <div>
+          <Header />
+          <Adminav />
+          <Title title="Create User" />
+          <div className="main-form">
+            <form action="/action_page.php">
+              <div className="form-group">
+                <label htmlFor="">First Name</label>
+              </div>
+              <div>
+                <input type="text"
+                  required
 
-                name="firstName"
-                placeholder="First Name.."
-                value={this.state.firstName}
-                onChange={this.onchangeFirstName}
-                errortext={this.state.firstNameError}
-              />
+                  name="firstName"
+                  placeholder="First Name.."
+                  value={this.state.firstName}
+                  onChange={this.onchangeFirstName}
+                  errortext={this.state.firstNameError}
+                />
 
-              <div>{this.state.firstNameError}</div>
-            </div>
+                <div>{this.state.firstNameError}</div>
+              </div>
 
-            <div className="form-group">
-              <label htmlFor="">Last Name</label>
-            </div>
-            <div>
-              <input type="text"
-                required
+              <div className="form-group">
+                <label htmlFor="">Last Name</label>
+              </div>
+              <div>
+                <input type="text"
+                  required
 
-                name="lastName"
-                placeholder="Last Name.."
-                value={this.state.lastName}
-                onChange={this.onchangeLastName}
-                errortext={this.state.lastNameError}
-              />
-              <div>{this.state.lastNameError}</div>
-            </div>
+                  name="lastName"
+                  placeholder="Last Name.."
+                  value={this.state.lastName}
+                  onChange={this.onchangeLastName}
+                  errortext={this.state.lastNameError}
+                />
+                <div>{this.state.lastNameError}</div>
+              </div>
 
-            <div className="form-group">
+              <div className="form-group">
 
-              <label htmlFor="">Email</label>
-            </div>
+                <label htmlFor="">Email</label>
+              </div>
 
-            <div>
-              <input type="text"
-                required
+              <div>
+                <input type="text"
+                  required
 
-                name="email"
-                placeholder="Email.."
-                value={this.state.email}
-                onChange={this.onchangeEmail}
-                errortext={this.state.emailError}
-              />
-              {this.state.duplicateEmail && (
-                <p>Email already exists</p>
-              )}
-            </div>
-            <div>{this.state.emailError}
+                  name="email"
+                  placeholder="Email.."
+                  value={this.state.email}
+                  onChange={this.onchangeEmail}
+                  errortext={this.state.emailError}
+                />
+                {this.state.duplicateEmail && (
+                  <p>Email already exists</p>
+                )}
+              </div>
+              <div>{this.state.emailError}
 
-            </div>
+              </div>
 
-            <div className="form-group">
-              <label htmlFor="">Password</label>
-            </div>
-            <div>
-              <input type="text"
-                required
+              <div className="form-group">
+                <label htmlFor="">Password</label>
+              </div>
+              <div>
+                <input type="text"
+                  required
 
-                name="password"
-                placeholder="Password.."
-                value={this.state.password}
-                onChange={this.onchangePassword}
-                errortext={this.state.passwordError}
-              />
-            </div>
-            <div>{this.state.passwordError}</div>
+                  name="password"
+                  placeholder="Password.."
+                  value={this.state.password}
+                  onChange={this.onchangePassword}
+                  errortext={this.state.passwordError}
+                />
+              </div>
+              <div>{this.state.passwordError}</div>
 
-            <div>
-              <button onClick={this.onSubmit} className="general-button" >Add User</button>
-            </div>
+              <div>
+                <button onClick={this.onSubmit} className="general-button" >Add User</button>
+              </div>
 
 
-          </form>
+            </form>
+          </div>
         </div>
-      </div>
-    )
-  }
-  else {
-    return (
-      <h1>You are not authorised to view this page</h1>
-    )
-  }
+      )
+    }
+    else {
+      return (
+        <Unauthorised />
+      )
+    }
   }
 }
 
