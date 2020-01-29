@@ -105,10 +105,11 @@ class ContactUs extends React.Component {
           </div>
 
           <div className="form-group">
+          <label htmlFor="message">Message</label>
             <Field
               name="message"
               className="contact-message-input"
-              component={this.renderField}
+              component="textarea"
               type="text"
               label="Message"
             >
