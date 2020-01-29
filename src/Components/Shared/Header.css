@@ -47,10 +47,9 @@ nav li a:hover:after{
 	width:100%;
 }
 
-nav li a:active, li a:active:after{
+nav li a:active:after{
 	border-color:#ccc;
 	color:#F57722;
-
 }
 
 
@@ -61,4 +60,3 @@ span {
 nav {
   height: 52px;
 }
-
