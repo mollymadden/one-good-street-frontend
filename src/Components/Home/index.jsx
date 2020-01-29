@@ -5,8 +5,11 @@ import ContactForm from '../Shared/slider';
 import Hero from '../Home/Heroimage';
 import HeatMap from './map';
 import Adminav from '../Admin/admin-nav';
-import './home.css'
-import partners from "../../assets/partners.png"
+import './home.css';
+import partners from "../../assets/partners.png";
+import home_01 from "../../assets/home_01.png";
+import home_02 from "../../assets/home_02.png";
+import home_03 from "../../assets/home_03.png";
 
 
 class Home extends React.Component {
@@ -47,7 +50,21 @@ class Home extends React.Component {
                 <img src={partners} className="partners" alt="friends helping eachother" />
 
                 <div className="blurb-border-title">Our Initiatives</div>
+                <div className="initiatives">
+                    <div className="circle">
+                        <a href="./get-involved"><h1><img src={home_01} /></h1>
+                            <h3>One Good Street Accreditation</h3></a>
+                    </div>
 
+                    <div className="circle">
+                        <a href="./library"><h1><img src={home_02} /></h1>
+                            <h3>Library of Care Things</h3></a>
+                    </div>
+
+                    <div className="circle">
+                        <h1><img src={home_03} /></h1><h3>Ride to End Loneliness</h3>
+                    </div>
+                </div>
             </div>
         )
     }
