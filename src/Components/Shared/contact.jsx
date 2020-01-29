@@ -61,10 +61,9 @@ class ContactUs extends React.Component {
     axios.post(process.env.REACT_APP_BACKEND_URL + '/send/contact', data)
 
       .then(res => {
-
-        this.props.history.push('/');
+        this.props.history.push('/thankyou');
         //goes back to home
-        //window.location.reload(false); //page can reload after recipe item added
+        //window.location.reload(false); 
       })
       .catch((err) => {
         console.log(err)
@@ -105,7 +104,7 @@ class ContactUs extends React.Component {
           </div>
 
           <div className="form-group">
-          <label htmlFor="message">Message</label>
+            <label htmlFor="message">Message</label>
             <Field
               name="message"
               className="contact-message-input"
@@ -113,6 +112,7 @@ class ContactUs extends React.Component {
               type="text"
               label="Message"
             >
+
             </Field>
           </div>
 
