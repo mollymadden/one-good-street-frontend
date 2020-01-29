@@ -4,16 +4,17 @@ form {
 
 .main-form {
     display: inline-block;
-    width: 40vw;
+    width: 30vw;
 }
 
 .form-group {
     text-align: left;
+
     /* justify-self: center; */
 }
 
 .form-control {
-    width: 40vw;
+    /* width: 40vw; */
     height: 40%;
     border-radius: 4px;
     transition: 0.3s all;
@@ -24,13 +25,15 @@ label {
 }
 
 input {
-    width: 40vw;
+    width: 30vw;
+    resize: none;
 }
 
 textarea {
-    width: 100%;
+    width: 30vw;
     height: 20vh;
     line-height: normal;
     line-break: normal;
+    resize: none;
 }
 
