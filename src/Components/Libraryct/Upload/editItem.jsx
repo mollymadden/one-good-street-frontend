@@ -135,7 +135,7 @@ class EditItem extends React.Component {
     }
     else {
       return (
-        null
+        <h1>You are not authorised to view this page</h1>
       )
     }
 

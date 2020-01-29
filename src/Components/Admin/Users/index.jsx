@@ -27,6 +27,7 @@ class User extends React.Component {
   }
 
   render() {
+    if (localStorage.authToken) {
     return (
       <div>
 
@@ -34,6 +35,10 @@ class User extends React.Component {
         <button type="button" className="general-button" onClick={() => { this.props.history.push("/users/add") }} type="button">Add a New User</button>
       </div>
     )
+    }
+    else {
+      return <h1>You are not authorised to view this page</h1>
+    }
   }
 }
 
