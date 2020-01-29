@@ -32,7 +32,7 @@ class ContactForm extends Component {
 
     render() {
         return <div ref={ref => this.el = ref}>
-            <div className="icon-bar">
+            <div className="icon-bar" id="icon-bar">
                 <a href="https://www.facebook.com/groups/onegoodstreet/" className="facebook" target="_blank"><FontAwesomeIcon icon={faFacebook} /></a>
                 <button onClick={() => this.setState({ isPaneOpen: true })} className="contact-button"><FontAwesomeIcon icon={faEnvelopeOpenText} /></button>
             </div>

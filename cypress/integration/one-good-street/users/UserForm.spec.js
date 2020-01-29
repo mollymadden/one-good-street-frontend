@@ -3,7 +3,7 @@
 
 //Add a new user
 describe("testing user form locally as an admin", function() {
-  it("Logs in as admin user to create a new user", function() {
+  it("Logs in as admin user to create a new user successfully", function() {
     cy.visit("http://localhost:3000");
     cy.contains("ADMIN").click();
     cy.get("input[name=email]").type("admin@com.com");
@@ -22,7 +22,7 @@ describe("testing user form locally as an admin", function() {
 
 //Edit user
 describe("testing editing user locally as admin user", function() {
-  it("Visits admin dashboard to edit a user", function() {
+  it("Visits admin dashboard as an administrator and edits a user successfully", function() {
     cy.visit("http://localhost:3000");
     cy.contains("ADMIN").click();
     cy.get("input[name=email]").type("admin@com.com");
@@ -39,7 +39,7 @@ describe("testing editing user locally as admin user", function() {
 
 //delete user
 describe("testing deleting user locally as admin user", function() {
-  it("Visits admin dashboard to delete a user", function() {
+  it("Logs in as admin user and visits the user dashboard to delete a user successfully", function() {
     cy.visit("http://localhost:3000");
     cy.contains("ADMIN").click();
     cy.get("input[name=email]").type("admin@com.com");

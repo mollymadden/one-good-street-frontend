@@ -2,7 +2,7 @@
 
 //Create item
 describe("testing creating item locally", function() {
-  it("Visits upload form to create an item", function() {
+  it("Visits upload form to create an item, filling in each field and item is successfully uploaded", function() {
     cy.visit("http://localhost:3000");
     cy.contains("LIBRARY").click();
     cy.contains("Upload").click();
@@ -25,13 +25,13 @@ describe("testing creating item locally", function() {
 
 //Edit item
 describe("testing editing item locally as admin user", function() {
-  it("Visits admin dashboard to edit an item", function() {
+  it("visits admin dashboard to edit an item as an admin user and edits the item successfully with the words testing edit", function() {
     cy.visit("http://localhost:3000");
     cy.contains("ADMIN").click();
     cy.get("input[name=email]").type("admin@com.com");
     cy.get("input[name=password]").type("admin");
     cy.contains("Submit").click();
-    cy.contains("Dashboard").click();
+    cy.contains("DASHBOARD").click();
     cy.contains("📝").click();
     cy.get("input[name=itemName]").type("testing edit");
     cy.contains("Submit Edit").click();
@@ -41,30 +41,44 @@ describe("testing editing item locally as admin user", function() {
 
 //Viewing item from admin dashboard
 describe("testing viewing item locally as admin user from admin table", function() {
-  it("Visits admin dashboard to view an item", function() {
+  it("Visits admin dashboard as an admin user to view an item by clicking on the item name and views item successfully", function() {
     cy.visit("http://localhost:3000");
     cy.contains("ADMIN").click();
     cy.get("input[name=email]").type("admin@com.com");
     cy.get("input[name=password]").type("admin");
     cy.contains("Submit").click();
-    cy.contains("Dashboard").click();
+    cy.contains("DASHBOARD").click();
     cy.contains("testtesting edit").click();
    
   });
 });
 
 //add the toggle publish, then view the item on library page and click into object. 
-
-
-//delete item
-describe("testing deleting item locally as admin user", function() {
-  it("Visits admin dashboard to delete an item", function() {
+describe("testing toggling item to published as admin user", function() {
+  it("visits admin dashboard to publish an item as an admin user and the item is then rendered on the library of care things, seen by visiting the library of care things page", function() {
     cy.visit("http://localhost:3000");
     cy.contains("ADMIN").click();
     cy.get("input[name=email]").type("admin@com.com");
     cy.get("input[name=password]").type("admin");
     cy.contains("Submit").click();
-    cy.contains("Dashboard").click();
+    cy.contains("DASHBOARD").click();
+    cy.contains("🔐").click();
+    cy.contains("LIBRARY OF CARE THINGS").click();
+    cy.contains("DASHBOARD").click();
+    cy.contains("🔓").click();
+    cy.contains("LIBRARY OF CARE THINGS").click();
+  });
+});
+
+//delete item
+describe("testing deleting item locally as admin user", function() {
+  it("Visits admin dashboard as an admin user to delete an item and deletes the item successfully", function() {
+    cy.visit("http://localhost:3000");
+    cy.contains("ADMIN").click();
+    cy.get("input[name=email]").type("admin@com.com");
+    cy.get("input[name=password]").type("admin");
+    cy.contains("Submit").click();
+    cy.contains("DASHBOARD").click();
     cy.contains("🗑").click();
 
   });
