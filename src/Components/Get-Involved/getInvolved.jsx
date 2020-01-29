@@ -68,7 +68,7 @@ class GetInvolved extends React.Component {
     axios.post(process.env.REACT_APP_BACKEND_URL + '/send/involved', data)
 
       .then(res => {
-
+        console.log("are we getting here?")
         this.props.history.push('/thankyou');
         //goes back to home
         //window.location.reload(false); //
@@ -141,7 +141,7 @@ class GetInvolved extends React.Component {
 
 
           <div className="form-group">
-          <label htmlFor="comments">Comments</label>
+            <label htmlFor="comments">Comments</label>
             <Field
               name="comments"
               component="textarea"
