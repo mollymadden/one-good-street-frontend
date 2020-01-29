@@ -49,7 +49,7 @@ class Library extends Component {
 
                     A <a href={waiver} target="_blank">Waiver</a> form is signed by the person collecting the equipment. <a href={electrical} target="_blank">Electrical equipment checklist</a> and <a href={cleaning} target="_blank">Cleaning checklist</a> for the person donating the equipment.<br /><br />
 
-                    Please email info@onegoodstreet.com.au if you are interested in any of the equipment.<br />
+                    Please email <a href={"mailto:" + "info@onegoodstreet.com.au"}>info@onegoodstreet.com.au</a>&nbsp;if you are interested in any of the equipment.<br />
                 </div>
 
                 <div className="upload button">
