@@ -142,7 +142,7 @@ class GetInvolved extends React.Component {
 
 
           <div className="form-group">
-            <label htmlFor="comments">Comments</label>
+            <label htmlFor="comments">Comments</label><br />
             <Field
               name="comments"
               component="textarea"

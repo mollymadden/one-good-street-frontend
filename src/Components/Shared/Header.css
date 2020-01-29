@@ -47,18 +47,18 @@ nav li a:hover:after{
 	width:100%;
 }
 
-nav li a:active, li a:active:after{
+nav li a:active:after{
 	border-color:#ccc;
 	color:#F57722;
-
 }
 
 
 span {
   margin: 5px;
+  font-size: 10px;
+  color: red;
 }
 
 nav {
   height: 52px;
 }
-

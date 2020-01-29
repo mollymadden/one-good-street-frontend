@@ -25,7 +25,20 @@ class About extends React.Component {
 
                     <div className="blurb-border-title">The Journey So Far</div>
                     <div className="blurb-border">
-                        <p>1024 Members. 4 Active Suburbs. 3 Projects Running</p>
+                        <div className="journey">
+                            <div className="circle">
+                                <h1>1024 </h1><h3>Members.</h3>
+                            </div>
+
+                            <div className="circle">
+
+                                <h1>4</h1><h3>Active Suburbs.</h3>
+                            </div>
+
+                            <div className="circle">
+                                <h1>3</h1><h3>Projects Running.</h3>
+                            </div>
+                        </div>
                     </div>
 
                     <div className="blurb-border-title">How It Works</div>
