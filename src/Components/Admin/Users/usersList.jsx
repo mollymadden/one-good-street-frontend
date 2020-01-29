@@ -78,7 +78,7 @@ class UserList extends React.Component {
           <Adminav />
           <Title title="Manage Users" />
 
-          <table>
+          <table className="users-table">
             <thead>
               <tr>
                 <th>First name</th>

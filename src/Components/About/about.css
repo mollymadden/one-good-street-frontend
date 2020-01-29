@@ -32,3 +32,37 @@
         text-align: left;
     }
 }
+
+
+.circle {
+    height: 300px;
+    width: 300px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 5% 1%;
+    border: 2px solid #D5ECEA;
+    box-shadow: 1px 1px 10px #888;
+}
+
+.circle h1 {
+    font-size: 90px;
+    text-decoration: underline #F57722;
+    font-family: "DINCondensed-Bold";
+    margin-bottom: -5%
+}
+
+.circle h3 {
+    font-family: "DINCondensed-Bold";
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.initiatives {
+    background-color: #F6FBFA;
+    min-width: 98vw;
+    min-height: 70vh;
+}
+
