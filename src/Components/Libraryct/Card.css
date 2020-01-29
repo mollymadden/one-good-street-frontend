@@ -52,6 +52,20 @@ body {
     height: 15rem;
     margin: 0%;
   }
+
+  .piclink {
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    /* padding: 14px 16px; */
+    text-decoration: none;
+    color: #000000;
+  }
+
+
+
+
+
   
   .carddescript {
     color: black;

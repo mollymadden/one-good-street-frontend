@@ -3,7 +3,8 @@
 
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
-import axios from 'axios'
+import axios from 'axios';
+import { withRouter } from 'react-router-dom';
 
 function validate(values) {
   let errors = {};
@@ -68,7 +69,7 @@ class GetInvolved extends React.Component {
     axios.post(process.env.REACT_APP_BACKEND_URL + '/send/involved', data)
 
       .then(res => {
-        console.log("are we getting here?")
+        console.log("GET INVOLVED")
         this.props.history.push('/thankyou');
         //goes back to home
         //window.location.reload(false); //
@@ -161,6 +162,6 @@ class GetInvolved extends React.Component {
 }
 
 
-export default reduxForm({ form: 'getInvolved', validate })(GetInvolved);
+export default withRouter(reduxForm({ form: 'getInvolved', validate })(GetInvolved));
 
 

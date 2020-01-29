@@ -10,6 +10,7 @@ import Title from '../Shared/Title';
 import Adminav from './admin-nav';
 
 import TableList from '../Admin/tableList';
+import Unauthorised from '../Shared/unauthorised';
 //import table component 
 
 class Dashboard extends React.Component {
@@ -65,7 +66,9 @@ class Dashboard extends React.Component {
 
     }
     else {
-      return <h1>You are not authorised to view this page</h1>
+      return (
+        <Unauthorised />
+      )
     }
   }
 
