@@ -32,18 +32,3 @@ form {
     display: inline-block;
 }
 
-.feedback-input {
-    width: 20vw;
-    height: 10vh;
-    margin: 2%;
-    border: 1px solid grey;
-    font-size: 16px;
-}
-
-.contact-message-input {
-  line-height: 50px;
-}
-
-.message {
-  line-height: 50px;
-}

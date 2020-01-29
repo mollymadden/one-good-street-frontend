@@ -55,6 +55,8 @@ nav li a:active:after{
 
 span {
   margin: 5px;
+  font-size: 10px;
+  color: red;
 }
 
 nav {
