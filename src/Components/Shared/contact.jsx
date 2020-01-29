@@ -1,6 +1,7 @@
 //This is the ContactUs component that is rendered on teh slider.jsx file that is in the Shared folder in the Components folder
 
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import { Field, reduxForm } from 'redux-form';
 import axios from 'axios'
 import './slider.css'
@@ -59,7 +60,6 @@ class ContactUs extends React.Component {
     console.log(data);
 
     axios.post(process.env.REACT_APP_BACKEND_URL + '/send/contact', data)
-
       .then(res => {
         this.props.history.push('/thankyou');
         //goes back to home
@@ -126,6 +126,6 @@ class ContactUs extends React.Component {
 }
 
 
-export default reduxForm({ form: 'contactUs', validate })(ContactUs);
+export default withRouter(reduxForm({ form: 'contactUs', validate })(ContactUs));
 
 

@@ -28,7 +28,9 @@ class Librarycard extends React.Component {
                                             <img src={item.image} className="picture" width="200" /></a>
                                     </div>
                                     <div className="carddescript">
-                                        <h3>{item.itemName}</h3>
+                                        <a href={"/items/" + (item._id)} className="piclink" >
+                                            <h3>{item.itemName}</h3>
+                                        </a>
                                         {item.headline}
                                     </div>
                                     <div className="bottom-sec">
