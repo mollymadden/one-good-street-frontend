@@ -27,16 +27,16 @@ class About extends React.Component {
                     <div className="blurb-border">
                         <div className="journey">
                             <div className="circle">
-                                <h1>1024 </h1><h3>Members.</h3>
+                                <h1>1024 </h1><h3>Members</h3>
                             </div>
 
                             <div className="circle">
 
-                                <h1>4</h1><h3>Active Suburbs.</h3>
+                                <h1>4</h1><h3>Active Suburbs</h3>
                             </div>
 
                             <div className="circle">
-                                <h1>3</h1><h3>Projects Running.</h3>
+                                <h1>3</h1><h3>Projects Running</h3>
                             </div>
                         </div>
                     </div>
