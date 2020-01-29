@@ -131,6 +131,8 @@ class CreateUser extends React.Component {
 
 
   render() {
+
+    if (localStorage.authToken) {
     return (
       <div>
         <Header />
@@ -219,6 +221,12 @@ class CreateUser extends React.Component {
         </div>
       </div>
     )
+  }
+  else {
+    return (
+      <h1>You are not authorised to view this page</h1>
+    )
+  }
   }
 }
 

@@ -92,12 +92,13 @@ class UserList extends React.Component {
               {this.state.users.map(user => <User user={user} key={user._id} deleteUser={this.deleteUser} />)}
             </tbody>
           </table>
+          
         </div>
       )
     }
     else {
       return (
-        null
+        <h1>You are not authorised to view this page</h1>
       )
     }
   }
