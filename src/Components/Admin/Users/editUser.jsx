@@ -4,6 +4,7 @@ import axios from 'axios';
 import Header from '../../Shared/Header';
 import Title from '../../Shared/Title';
 import Adminav from '../admin-nav';
+import Unauthorised from "../../Shared/unauthorised";
 
 class EditUser extends React.Component {
   constructor(props) {
@@ -194,10 +195,12 @@ class EditUser extends React.Component {
           </form>
         </div>
       )
-      
+
     }
     else {
-      return <h1>You are not authorised to view this page</h1>
+      return (
+        <Unauthorised />
+      )
     }
   }
 }

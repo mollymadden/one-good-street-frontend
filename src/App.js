@@ -21,6 +21,7 @@ import CreateUser from './Components/Admin/Users/createUser';
 import EditUser from './Components/Admin/Users/editUser';
 
 import Thanks from './Components/Shared/thanks';
+import Unauthorised from './Components/Shared/unauthorised';
 
 
 
@@ -43,6 +44,8 @@ function App() {
         <Route exact path="/items/:id" component={Show} />
         <Route exact path="/items/edit/:id" component={EditItem} />
         <Route exact path="/thankyou" component={Thanks} />
+
+        <Route exact path="/unauthorised" component={Unauthorised} />
 
         <Route path="/pagenotfound" component={Pagenotfound} />
         <Redirect to="/pagenotfound" />
