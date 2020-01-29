@@ -10,12 +10,12 @@ class Header extends React.Component {
             <div>
                 <nav>
                     <ul>
-                        <li><Link to='/'>Home</Link></li>
-                        <li><Link to='/about'>About One Good Street</Link></li>
-                        <li><Link to='/library'>Library Of Care Things</Link></li>
-                        <li><Link to='/media-events'>Media & Events</Link></li>
-                        <li><Link to='/get-involved'>Get Involved</Link></li>
-                        <li><Link to='/admin'>Admin</Link></li>
+                        <li><Link to='/'>HOME</Link></li>
+                        <li><Link to='/about'>ABOUT ONE GOOD STREET</Link></li>
+                        <li><Link to='/library'>LIBRARY OF CARE THINGS</Link></li>
+                        <li><Link to='/media-events'>MEDIA & EVENTS</Link></li>
+                        <li><Link to='/get-involved'>GET INVOLVED</Link></li>
+                        <li><Link to='/admin'>ADMIN</Link></li>
                     </ul>
                 </nav>
                 <Logo />
