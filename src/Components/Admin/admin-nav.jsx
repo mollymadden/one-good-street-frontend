@@ -30,13 +30,9 @@ class Adminav extends React.Component {
         <div className="adminav">
           <nav>
             <ul>
-              <li><Link to='/admin/dashboard'>Dashboard</Link></li>
-              <li><Link to='/users'>Manage Users</Link></li>
-              <li><a onClick={this.signout}>Sign Out</a></li>
-
-
-
-
+              <li><Link to='/admin/dashboard'>DASHBOARD</Link></li>
+              <li><Link to='/users'>MANAGE USERS</Link></li>
+              <li><a onClick={this.signout}>SIGN OUT</a></li>
             </ul>
           </nav>
         </div >
