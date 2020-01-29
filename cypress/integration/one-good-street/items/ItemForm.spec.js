@@ -4,7 +4,7 @@
 describe("testing creating item locally", function() {
   it("Visits upload form to create an item", function() {
     cy.visit("http://localhost:3000");
-    cy.contains("Library").click();
+    cy.contains("LIBRARY").click();
     cy.contains("Upload").click();
     cy.get("input[name=itemName]").type("test");
     cy.get("input[name=headline]").type("test");
@@ -27,7 +27,7 @@ describe("testing creating item locally", function() {
 describe("testing editing item locally as admin user", function() {
   it("Visits admin dashboard to edit an item", function() {
     cy.visit("http://localhost:3000");
-    cy.contains("Admin").click();
+    cy.contains("ADMIN").click();
     cy.get("input[name=email]").type("admin@com.com");
     cy.get("input[name=password]").type("admin");
     cy.contains("Submit").click();
@@ -43,23 +43,24 @@ describe("testing editing item locally as admin user", function() {
 describe("testing viewing item locally as admin user from admin table", function() {
   it("Visits admin dashboard to view an item", function() {
     cy.visit("http://localhost:3000");
-    cy.contains("Admin").click();
+    cy.contains("ADMIN").click();
     cy.get("input[name=email]").type("admin@com.com");
     cy.get("input[name=password]").type("admin");
     cy.contains("Submit").click();
     cy.contains("Dashboard").click();
     cy.contains("testtesting edit").click();
    
-
   });
 });
+
+//add the toggle publish, then view the item on library page and click into object. 
 
 
 //delete item
 describe("testing deleting item locally as admin user", function() {
   it("Visits admin dashboard to delete an item", function() {
     cy.visit("http://localhost:3000");
-    cy.contains("Admin").click();
+    cy.contains("ADMIN").click();
     cy.get("input[name=email]").type("admin@com.com");
     cy.get("input[name=password]").type("admin");
     cy.contains("Submit").click();
