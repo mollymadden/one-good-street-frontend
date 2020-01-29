@@ -1,6 +1,6 @@
 //empty form 
 //trying to upload blank item form
-describe("testing upload user form locally with nothing in it", function() {
+describe("testing create user form locally with nothing in it", function() {
   it("Visits upload user form to create a new user with nothing", function() {
     cy.visit("http://localhost:3000");
     cy.contains("Admin").click();
@@ -17,7 +17,7 @@ describe("testing upload user form locally with nothing in it", function() {
 
 //trying to create a new user with an email that already exists in the database - it checks the backend
 
-// describe("testing user form locally - no input", function() {
+describe("testing create user form locally - creating user with an email already found in database", function() {
 //   it("Visits user form to create an item", function() {
 //     cy.visit("http://localhost:3000");
 //     cy.contains("Admin").click();
