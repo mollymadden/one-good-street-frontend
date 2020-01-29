@@ -34,15 +34,17 @@ function App() {
         <Route exact path="/library" component={Library} />
         <Route path="/media-events" component={Media} />
         <Route path="/get-involved" component={Getinvolved} />
-        <Route exact path="/admin/dashboard" component={Dashboard} />
+        <Route exact path="/items/:id" component={Show} />
+        <Route exact path="/thankyou" component={Thanks} />
         <Route exact path="/admin" component={Admin} />
+        <Route exact path="/library/upload" component={CreateItem} />
+
+        {/* Admin only */}
+        <Route exact path="/admin/dashboard" component={Dashboard} />
         <Route exact path="/users" component={UserList} />
         <Route exact path="/users/add" component={CreateUser} />
         <Route exact path="/users/edit/:id" component={EditUser} />
-        <Route exact path="/library/upload" component={CreateItem} />
-        <Route exact path="/items/:id" component={Show} />
         <Route exact path="/items/edit/:id" component={EditItem} />
-        <Route exact path="/thankyou" component={Thanks} />
 
         <Route path="/pagenotfound" component={Pagenotfound} />
         <Redirect to="/pagenotfound" />
