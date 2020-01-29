@@ -23,8 +23,7 @@ describe("testing creating item locally", function() {
   });
 });
 
-
-//delete item
+//Edit item
 describe("testing editing item locally as admin user", function() {
   it("Visits admin dashboard to edit an item", function() {
     cy.visit("http://localhost:3000");
@@ -33,8 +32,39 @@ describe("testing editing item locally as admin user", function() {
     cy.get("input[name=password]").type("admin");
     cy.contains("Submit").click();
     cy.contains("Dashboard").click();
+    cy.contains("📝").click();
+    cy.get("input[name=itemName]").type("testing edit");
+    cy.contains("Submit Edit").click();
+
+  });
+});
+
+//Viewing item from admin dashboard
+describe("testing viewing item locally as admin user from admin table", function() {
+  it("Visits admin dashboard to view an item", function() {
+    cy.visit("http://localhost:3000");
+    cy.contains("Admin").click();
+    cy.get("input[name=email]").type("admin@com.com");
+    cy.get("input[name=password]").type("admin");
+    cy.contains("Submit").click();
+    cy.contains("Dashboard").click();
+    cy.contains("testtesting edit").click();
+   
+
+  });
+});
+
+
+//delete item
+describe("testing deleting item locally as admin user", function() {
+  it("Visits admin dashboard to delete an item", function() {
+    cy.visit("http://localhost:3000");
+    cy.contains("Admin").click();
+    cy.get("input[name=email]").type("admin@com.com");
+    cy.get("input[name=password]").type("admin");
+    cy.contains("Submit").click();
+    cy.contains("Dashboard").click();
     cy.contains("🗑").click();
 
-  
   });
 });
