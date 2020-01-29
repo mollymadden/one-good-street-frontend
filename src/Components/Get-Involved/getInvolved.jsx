@@ -111,6 +111,8 @@ class GetInvolved extends React.Component {
           <div className="form-group">
             <Field name="lastName" component={this.renderField} type="text" label="Last Name"></Field>
           </div>
+          <p>If you would like your street to be accredited as a One Good Street please fill out your full address with street name and suburb.</p>
+
           <div className="form-group">
             <Field name="address" component={this.renderField} type="text" label="Address"></Field>
           </div>
