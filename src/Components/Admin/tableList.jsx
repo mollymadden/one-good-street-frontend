@@ -12,7 +12,7 @@ const Item = props => (
 
 
   <tr>
-    <td className="resize"><Link to={"/items/" + props.item._id}>{props.item.itemName}</Link></td>
+    <td className="resize"><Link to={"/items/" + props.item._id} target="_blank">{props.item.itemName}</Link></td>
     <td className="resize">{props.item.description}</td>
     <td>{props.item.firstName}</td>
     <td>{props.item.lastName}</td>
@@ -47,7 +47,7 @@ class TableList extends React.Component {
     items: this.props.items
   }
 
-  
+
   //Jack help way
   deleteItem = (id) => {
     const option = {
@@ -76,7 +76,7 @@ class TableList extends React.Component {
       const response = await axios.put(process.env.REACT_APP_BACKEND_URL + "/items/toggle-publish", {
         id: id
       })
-      {/* iterates through all the items in state, when it finds the document with the same as the above it overrides the original with the updated document */}
+      {/* iterates through all the items in state, when it finds the document with the same as the above it overrides the original with the updated document */ }
       const newItems = this.state.items.map((item) => {
         if (item._id === id) {
           return response.data
@@ -84,11 +84,11 @@ class TableList extends React.Component {
           return item
         }
       })
-      {/* resets the state with the mapped array */}
+      {/* resets the state with the mapped array */ }
       this.setState({
         items: newItems
       })
-    } catch(err) {
+    } catch (err) {
       console.log(err.message)
     }
   }
