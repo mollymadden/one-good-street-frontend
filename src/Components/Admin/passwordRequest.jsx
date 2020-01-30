@@ -21,15 +21,9 @@ class PasswordRequest extends React.Component {
 
             this.setState({ data: response.data });
 
-            //localStorage.setItem('authToken', response.data.token);
-            // console.log(this.props.history);
-            // this.props.history.push('/admin/dashboard');
-
-
         }
         catch (err) {
             this.setState({ data: err });
-            //this.setState({loginError: true})
         }
     }
     render() {
