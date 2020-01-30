@@ -53,6 +53,6 @@
     ]
   },
   "devDependencies": {
-    "cypress": "^3.8.2"
+    "cypress": "3.8.3"
   }
 }

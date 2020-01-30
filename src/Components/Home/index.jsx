@@ -58,7 +58,7 @@ class Home extends React.Component {
 
                     <div className="circle">
                         <a href="./library"><h1><img src={home_02} /></h1>
-                            <h3>Library of Care Things</h3></a>
+                            <h3>library of care things</h3></a>
                     </div>
 
                     <div className="circle">

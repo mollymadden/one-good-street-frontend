@@ -35,8 +35,8 @@ class Search extends Component {
                 const item = result.itemName.toLowerCase()
                 if (result.itemName) {
                     return item.includes(e.target.value)
-                } else {}
-                
+                } else { }
+
             })
         })
     }
@@ -46,7 +46,7 @@ class Search extends Component {
         console.log(filteredResults)
         return results ? (
             <form>
-                <input
+                <input className="search"
                     placeholder="Search"
                     ref={input => this.search = input}
                     onChange={this.handleInputChange}
