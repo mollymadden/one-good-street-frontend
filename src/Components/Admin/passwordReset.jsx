@@ -29,8 +29,7 @@ class PasswordReset extends React.Component {
 
             this.setState({ data: response.data });
 
-            //localStorage.setItem('authToken', response.data.token);
-            // console.log(this.props.history);
+
             window.alert("Your password has been reset");
             this.props.history.push('/admin');
 
@@ -38,7 +37,6 @@ class PasswordReset extends React.Component {
         }
         catch (err) {
             this.setState({ data: err });
-            //this.setState({loginError: true})
         }
     }
     render() {
