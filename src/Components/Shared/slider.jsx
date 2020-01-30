@@ -43,7 +43,7 @@ class ContactForm extends Component {
                 className='some-custom-class'
                 overlayClassName='some-custom-overlay-class'
                 isOpen={this.state.isPaneOpen}
-                title='Contact One Good Street'
+                title='Send us a message!'
                 from='right'
                 width='600px'
                 onRequestClose={() => {
