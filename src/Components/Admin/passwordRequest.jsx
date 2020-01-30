@@ -1,5 +1,8 @@
 import React from 'react';
 import axios from 'axios';
+import Header from '../Shared/Header';
+import Title from '../Shared/Title';
+import Adminav from './admin-nav';
 
 class PasswordRequest extends React.Component {
     state =
@@ -23,7 +26,7 @@ class PasswordRequest extends React.Component {
 
             //localStorage.setItem('authToken', response.data.token);
             // console.log(this.props.history);
-            // this.props.history.push('/admin/dashboard');
+            this.props.history.push('/thankyou');
 
 
         }
@@ -35,6 +38,9 @@ class PasswordRequest extends React.Component {
     render() {
         return (
             <div>
+                <Header />
+                <Adminav />
+                <Title title="Request a password reset" />
                 <form onSubmit={this.handleSubmit}>
                     <div className="form-group">
                         <label>
@@ -45,11 +51,11 @@ class PasswordRequest extends React.Component {
                 </form>
                 <div>
                     {this.state.emailError && (
-                    <p>
-                        Incorrect email
+                        <p>
+                            Incorrect email
                     </p>
                     )}
-                    
+
                 </div>
             </div>
         );
