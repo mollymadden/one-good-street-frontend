@@ -6,6 +6,7 @@ import Title from '../Shared/Title';
 import Login from './login';
 import Adminav from './admin-nav';
 import axios from 'axios';
+import PasswordRequest from '../Admin/passwordRequest';
 
 
 class Admin extends React.Component {
@@ -30,7 +31,9 @@ class Admin extends React.Component {
                 <Title title="Admin Login" />
                 <div>
                     <Login {...this.props} />
+                    <a href onClick={() => { this.props.history.push("/password/request") }} type="button">Reset Password </a>
                 </div>
+
             </div>
         )
 
