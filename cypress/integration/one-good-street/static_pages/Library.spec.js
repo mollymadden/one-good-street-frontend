@@ -14,7 +14,7 @@ describe("testing that all links on Library page redirect correctly", function (
         cy.contains("LIBRARY OF CARE THINGS").click();
         cy.get(".icon-bar").find('a').click();
         cy.get(".icon-bar").find('button').click();
-        cy.get(".mainlogo").find('img').click();
+        cy.get(".mainlogo").find('img').click({ force: true });
 
     });
 });
