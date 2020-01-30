@@ -1,5 +1,8 @@
 import React from 'react';
 import axios from 'axios';
+import Header from '../Shared/Header';
+import Title from '../Shared/Title';
+import Adminav from './admin-nav';
 
 class PasswordReset extends React.Component {
     state =
@@ -14,8 +17,8 @@ class PasswordReset extends React.Component {
         event.preventDefault();
         try {
             const urlParts = window.location.href.split('/');
-            const uniquekey = urlParts[urlParts.length-1];
-            
+            const uniquekey = urlParts[urlParts.length - 1];
+
             let response = await axios.post(process.env.REACT_APP_BACKEND_URL + '/password/reset',
                 {
                     password: this.state.password,
@@ -26,6 +29,11 @@ class PasswordReset extends React.Component {
 
             this.setState({ data: response.data });
 
+
+            window.alert("Your password has been reset");
+            this.props.history.push('/admin');
+
+
         }
         catch (err) {
             this.setState({ data: err });
@@ -34,6 +42,9 @@ class PasswordReset extends React.Component {
     render() {
         return (
             <div>
+                <Header />
+                <Adminav />
+                <Title title="Reset Password" />
                 <form onSubmit={this.handleSubmit}>
                     <div className="form-group">
                         <label>
@@ -44,11 +55,11 @@ class PasswordReset extends React.Component {
                 </form>
                 <div>
                     {this.state.passwordError && (
-                    <p>
-                          
-                    </p>
+                        <p>
+
+                        </p>
                     )}
-                    
+
                 </div>
             </div>
         );
