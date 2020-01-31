@@ -4,6 +4,7 @@ import Title from '../Shared/Title';
 import Adminav from '../Admin/admin-nav';
 import cuties from "../../assets/cuties.jpg"
 
+
 class Thanks extends React.Component {
     render() {
         return (

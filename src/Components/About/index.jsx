@@ -95,7 +95,7 @@ class About extends React.Component {
 
                                 <p>The aim of the Ride to End Loneliness initiative is to reduce loneliness and social isolation in older residents by reconnecting them to their wider community and giving them access to places that are familiar to them, that they may not be able to access due to social isolation, and or impaired mobility..</p>
 
-                                <p>One Good Street is proud to offer local residents free bike rides around their suburbs with trained volunteers. Bike rides are for 30 minutes and referring someone for a ride is easy- just contact us at info@onegoodstreet.com.au. Both Volunteers and clients wear helmets and seat belts and are covered by insurance.</p>
+                                <p>One Good Street is proud to offer local residents free bike rides around their suburbs with trained volunteers. Bike rides are for 30 minutes and referring someone for a ride is easy- just contact us at info@onegoodstreet.com.au. Both volunteers and clients wear helmets and seat belts and are covered by insurance.</p>
 
                                 <p>We aim to make it a great experience for clients and our volunteers. Ride to End Loneliness is active in the following suburbs.</p>
 

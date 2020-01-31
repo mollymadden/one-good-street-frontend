@@ -8,7 +8,6 @@ import { withRouter } from 'react-router';
 import Header from '../Shared/Header';
 import Title from '../Shared/Title';
 import Adminav from './admin-nav';
-
 import TableList from '../Admin/tableList';
 import Unauthorised from '../Shared/unauthorised';
 //import table component 

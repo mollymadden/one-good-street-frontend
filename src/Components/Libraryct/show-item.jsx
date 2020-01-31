@@ -4,6 +4,7 @@ import Title from '../Shared/Title';
 import { Link } from 'react-router-dom';
 import './show-item.css'
 import Adminav from '../Admin/admin-nav';
+import Footer from '../Shared/footer';
 
 
 class Show extends React.Component {
@@ -12,13 +13,19 @@ class Show extends React.Component {
     }
 
     async componentDidMount() {
-        const response = await fetch(process.env.REACT_APP_BACKEND_URL + "/items/" + this.props.match.params.id)
-        const data = await response.json()
-        this.setState({
-            item: data
-        })
-
-
+        try {
+            const response = await fetch(process.env.REACT_APP_BACKEND_URL + "/items/" + this.props.match.params.id)
+            if (response.status !== 200) {
+                throw new Error('wrong id')
+            }
+            const data = await response.json()
+            this.setState({
+                item: data
+            })
+        } catch (err) {
+            console.log('here')
+            this.props.history.push('/pagenotfound')
+        }
     }
 
     render() {
@@ -43,12 +50,17 @@ class Show extends React.Component {
                         <p>{item.delivery ? "✅ Delivery available" : "❌ Delivery unavailable"}</p>
 
                         <p>If you are interested in the above item, &nbsp;
-                            {item.privacy == "publishDetails"
-                                ? `please enquire with ${item.firstName} at ${item.email}`
-                                : "please enquire with Matiu Bush at info@onegoodstreet.com.au"}
+                            {item.privacy === "publishDetails"
+                                ? (
+                                    <p>please enquire with {item.firstName} at <a href={`mailto:${item.email}`}>{item.email}</a></p>
+                                ) : (
+                                    <p>please enquire with Matiu Bush at <a href={`mailto:info@onegoodstreet.com.au`}>info@onegoodstreet.com.au</a></p>
+                                )
+                            }
                         </p>
                     </div>
                 </div>
+                <Footer />
             </div >
         )
     }

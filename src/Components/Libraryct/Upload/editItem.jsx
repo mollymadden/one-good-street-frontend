@@ -8,6 +8,7 @@ import Header from '../../Shared/Header';
 import Title from '../../Shared/Title';
 import Adminav from '../../Admin/admin-nav';
 import Unauthorised from "../../Shared/unauthorised";
+import Footer from '../../Shared/footer';
 
 class EditItem extends React.Component {
   constructor(props) {
@@ -130,7 +131,7 @@ class EditItem extends React.Component {
 
         <Form btnText={'Submit Edit'} onSubmit={this.handleEditItem} item={this.state} initialValues={this.state.itemData} showWidget={showWidget} />
 
-
+        <Footer />
 
       </div>
       );

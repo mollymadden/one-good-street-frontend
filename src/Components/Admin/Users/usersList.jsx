@@ -8,6 +8,7 @@ import Title from '../../Shared/Title';
 import Adminav from '../admin-nav';
 import Unauthorised from "../../Shared/unauthorised";
 
+
 const User = props => (
   <tr>
     <td>{props.user.firstName}</td>
@@ -93,7 +94,6 @@ class UserList extends React.Component {
               {this.state.users.map(user => <User user={user} key={user._id} deleteUser={this.deleteUser} />)}
             </tbody>
           </table>
-
         </div>
       )
     }

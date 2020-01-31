@@ -12,6 +12,7 @@ import ContactForm from '../Shared/slider';
 import waiver from "../../assets/Library-of-Care-Things-Disclaimer.pdf";
 import electrical from "../../assets/Library-of-Care-Things-Electrical-Guide.pdf";
 import cleaning from "../../assets/Library-of-Care-Things-Cleaning-Guide.pdf";
+import Footer from '../Shared/footer';
 
 
 
@@ -56,6 +57,7 @@ class Library extends Component {
                     <button type="button" className="general-button" onClick={() => { this.props.history.push("/library/upload") }} type="button">Upload an Item</button>
                 </div>
                 <Search items={this.state.items} />
+                <Footer />
             </div>
 
         );

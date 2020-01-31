@@ -7,7 +7,7 @@ class Footer extends React.Component {
     render() {
         return (
             <div className="footer">
-                <img src={footer} alt="logo" style={{ backgroundColor: "#D5ECEA", marginTop: "5%" }} />
+                <img src={footer} alt="logo" style={{ backgroundColor: "#D5ECEA", paddingTop: "2%" }} />
             </div>
         )
     }
