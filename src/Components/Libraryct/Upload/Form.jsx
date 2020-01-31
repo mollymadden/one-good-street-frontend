@@ -97,7 +97,13 @@ class Form extends React.Component {
                     <Field name="headline" component={this.renderField} type="text" label="Headline"></Field>
                 </div>
                 <div className="form-group">
-                    <Field name="description" component={this.renderField} type="text" label="Description"></Field>
+                    <label htmlFor="description">Description</label><br/>
+                    <Field 
+                    name="description" 
+                    component="textarea"
+                    type="text" 
+                    label="Description">
+                    </Field>
                 </div>
                 <div className="form-group">
                     <Field
