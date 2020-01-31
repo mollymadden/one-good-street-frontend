@@ -49,7 +49,7 @@ class Show extends React.Component {
 
                         <p>{item.delivery ? "✅ Delivery available" : "❌ Delivery unavailable"}</p>
 
-                        <p>If you are interested in the above item, &nbsp;
+                        <p>If you are interested in the above item
                             {item.privacy === "publishDetails"
                                 ? (
                                     <p>please enquire with {item.firstName} at <a href={`mailto:${item.email}`}>{item.email}</a></p>
