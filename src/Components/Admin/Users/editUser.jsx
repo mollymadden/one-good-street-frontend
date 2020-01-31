@@ -14,7 +14,7 @@ class EditUser extends React.Component {
       firstName: '',
       lastName: '',
       email: '',
-      password: ''
+      // password: ''
     }
   }
 
@@ -54,8 +54,8 @@ class EditUser extends React.Component {
         this.setState({
           firstName: response.data.firstName,
           lastName: response.data.lastName,
-          email: response.data.email,
-          password: response.data.password
+          email: response.data.email
+          // password: response.data.password
         })
       })
       .catch(function (error) {
@@ -86,19 +86,19 @@ class EditUser extends React.Component {
     });
   }
 
-  onchangePassword = (e) => {
-    this.setState({
-      password: e.target.value
-    });
-  }
+  // onchangePassword = (e) => {
+  //   this.setState({
+  //     password: e.target.value
+  //   });
+  // }
 
   onSubmit = (e) => {
     e.preventDefault();
     this.setState(state => ({
       firstName: this.state.firstName,
       lastName: this.state.lastName,
-      email: this.state.email,
-      password: this.state.password
+      email: this.state.email
+      // password: this.state.password
 
     }));
 
@@ -174,7 +174,7 @@ class EditUser extends React.Component {
                 />
               </div>
 
-              <div className="form-group">
+              {/* <div className="form-group">
                 <label htmlFor="">Password</label>
               </div>
               <div>
@@ -186,7 +186,7 @@ class EditUser extends React.Component {
                   value={this.state.password}
                   onChange={this.onchangePassword}
                 />
-              </div>
+              </div> */}
 
               <div>
                 <button onClick={this.onSubmit} className="general-button" onSubmit={this.handleEditUser}>Submit Edit</button>

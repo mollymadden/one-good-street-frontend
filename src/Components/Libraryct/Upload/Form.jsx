@@ -97,12 +97,12 @@ class Form extends React.Component {
                     <Field name="headline" component={this.renderField} type="text" label="Headline"></Field>
                 </div>
                 <div className="form-group">
-                    <label htmlFor="description">Description</label><br/>
-                    <Field 
-                    name="description" 
-                    component="textarea"
-                    type="text" 
-                    label="Description">
+                    <label htmlFor="description">Description</label><br />
+                    <Field
+                        name="description"
+                        component="textarea"
+                        type="text"
+                        label="Description">
                     </Field>
                 </div>
                 <div className="form-group">
@@ -148,7 +148,7 @@ class Form extends React.Component {
                     <Field name="privacy" component={renderSelectField} type="text" label="Privacy">
 
                         <option></option>
-                        <option value="publishDetails">Publish my phone number and first name - I will arrange handover directly</option>
+                        <option value="publishDetails">Publish my email address and first name - I will arrange handover directly</option>
                         <option value="NotPublishDetails">Please do not publish my details - One Good Street should arrange handover</option>
                     </Field>
                 </div>
