@@ -7,6 +7,7 @@ import help from "../../assets/help.jpeg";
 import ride from "../../assets/ride.jpg";
 import ContactForm from '../Shared/slider';
 import './about.css';
+import Footer from '../Shared/footer';
 
 class About extends React.Component {
     render() {
@@ -111,6 +112,7 @@ class About extends React.Component {
                         </div>
                     </div>
                 </div>
+                <Footer />
             </div>
         )
     }
