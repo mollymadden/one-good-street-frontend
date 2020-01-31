@@ -13,7 +13,7 @@ const User = props => (
     <td>{props.user.firstName}</td>
     <td>{props.user.lastName}</td>
     <td>{props.user.email}</td>
-    <td>{props.user.password}</td>
+    {/* <td>{props.user.password}</td> */}
 
     <td className="icons">
       <Link to={"/users/edit/" + props.user._id}>📝</Link></td>
@@ -84,7 +84,7 @@ class UserList extends React.Component {
                 <th>First name</th>
                 <th>Last name</th>
                 <th>Email</th>
-                <th>Password</th>
+                {/* <th>Password</th> */}
                 <th>Edit</th>
                 <th>Delete</th>
               </tr>
