@@ -10,6 +10,7 @@ import Header from '../../Shared/Header';
 import Title from '../../Shared/Title';
 import Adminav from '../../Admin/admin-nav';
 import ContactForm from '../../Shared/slider';
+import Footer from '../../Shared/footer';
 
 
 class CreateItem extends React.Component {
@@ -80,7 +81,7 @@ class CreateItem extends React.Component {
             <Title title="Add a New Item" />
             {/* {this.state.image !== '' && <p>{this.state.image}</p>} */}
             <Form btnText={'Add Item'} onSubmit={this.handleCreateItem} showWidget={showWidget} />
-
+            <Footer />
         </div>
         );
     }

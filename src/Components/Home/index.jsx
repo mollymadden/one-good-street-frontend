@@ -10,7 +10,7 @@ import partners from "../../assets/partners.png";
 import home_01 from "../../assets/home_01.png";
 import home_02 from "../../assets/home_02.png";
 import home_03 from "../../assets/home_03.png";
-
+import Footer from '../Shared/footer';
 
 class Home extends React.Component {
     render() {
@@ -65,6 +65,7 @@ class Home extends React.Component {
                         <h1><img src={home_03} /></h1><h3>Ride to End Loneliness</h3>
                     </div>
                 </div>
+                <Footer />
             </div>
         )
     }

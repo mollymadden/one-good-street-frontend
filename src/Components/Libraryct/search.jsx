@@ -74,9 +74,8 @@ class Search extends Component {
                     onChange={this.handleInputPostcodeChange}
                 /><br />
 
-                <label htmlFor="filter">Filter by category:</label>
                 <select value={this.state.value} onChange={this.handleCategoryChange}>
-                    <option value="">Show All</option>
+                    <option value="">Filter by category:</option>
                     <option value="Bedroom">Bedroom</option>
                     <option value="Braces and support">Braces and Support</option>
                     <option value="Dressing and Grooming">Dressing and Grooming</option>

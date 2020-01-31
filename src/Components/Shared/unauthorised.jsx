@@ -2,7 +2,8 @@ import React from 'react';
 import Header from '../Shared/Header';
 import Title from '../Shared/Title';
 import Adminav from '../Admin/admin-nav';
-import cuties from "../../assets/cuties.jpg"
+import cuties from "../../assets/cuties.jpg";
+import Footer from '../Shared/footer';
 
 class Unauthorised extends React.Component {
     render() {
@@ -13,6 +14,7 @@ class Unauthorised extends React.Component {
                 <Title title="HALT" />
                 <h1>You are not authorised to view this page.</h1>
                 <img src={cuties} />
+                <Footer />
             </div>
         )
     }

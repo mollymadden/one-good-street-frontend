@@ -4,7 +4,8 @@ import Title from '../Shared/Title';
 import Adminav from '../Admin/admin-nav';
 import ContactForm from '../Shared/slider';
 import { ReactTinyLink } from "react-tiny-link";
-import './media.css'
+import './media.css';
+import Footer from '../Shared/footer';
 
 class Media extends React.Component {
     render() {
@@ -104,6 +105,7 @@ class Media extends React.Component {
                         />
                     </div>
                 </div>
+                <Footer />
             </div>
         )
     }
