@@ -29,7 +29,7 @@ class Search extends Component {
             })
     }
 
-    handleInputChange = (e) => {
+    handleInputProductNameChange = (e) => {
         this.setState({
             filteredResults: this.state.results.filter((result) => {
                 const item = result.itemName.toLowerCase()
@@ -41,16 +41,37 @@ class Search extends Component {
         })
     }
 
+    handleInputPostcodeChange = (e) => {
+        this.setState({
+            filteredResults: this.state.results.filter((result) => {
+                return result.postcode.includes(e.target.value)
+            })
+        })
+    }
+
     render() {
         const { results, filteredResults } = this.state
         console.log(filteredResults)
         return results ? (
             <form>
                 <input className="search"
+                    placeholder="Search by product name"
+                    ref={input => this.search = input}
+                    onChange={this.handleInputProductNameChange}
+                /><br />
+
+                <input className="search"
+                    placeholder="Search by postcode"
+                    ref={input => this.search = input}
+                    onChange={this.handleInputPostcodeChange}
+                />
+
+                {/* <input className="search"
                     placeholder="Search"
                     ref={input => this.search = input}
                     onChange={this.handleInputChange}
-                />
+                /> */}
+
                 <Librarycard results={this.state.filteredResults} />
             </form>
         ) : null

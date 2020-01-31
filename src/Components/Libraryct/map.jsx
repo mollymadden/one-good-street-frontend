@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 
+const postcodes = require('../../asset/australian_postcodes.json');
+
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 class ShowMap extends Component {
