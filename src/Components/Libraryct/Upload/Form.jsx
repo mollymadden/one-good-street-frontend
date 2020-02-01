@@ -39,6 +39,11 @@ function validate(values) {
         errors.lastName = 'Required'
     }
 
+
+    if (isNaN(Number(values.phone))) {
+        errors.phone = 'Must be a number'
+    }
+
     if (!values.email) {
         errors.email = 'Required'
     }
@@ -60,6 +65,18 @@ const renderSelectField = ({ input, label, type, meta: { touched, error }, child
             <select {...input}>
                 {children}
             </select>
+            {touched && error && <span>{error}</span>}
+        </div>
+    </div>
+)
+
+const renderTextAreaField = ({ input, label, type, meta: { touched, error }, children }) => (
+    <div>
+        <label>{label}</label>
+        <div>
+            <textarea rows="4" cols="50" {...input} placeholder={label} type={type}>
+                {children}
+            </textarea>
             {touched && error && <span>{error}</span>}
         </div>
     </div>
@@ -97,11 +114,11 @@ class Form extends React.Component {
                     <Field name="headline" component={this.renderField} type="text" label="Headline"></Field>
                 </div>
                 <div className="form-group">
-                    <label htmlFor="description">Description</label><br />
+                    {/* <label htmlFor="description">Description</label><br /> */}
                     <Field
                         name="description"
-                        component="textarea"
-                        type="text"
+                        component={renderTextAreaField}
+                        type="description"
                         label="Description">
                     </Field>
                 </div>
