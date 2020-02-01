@@ -31,14 +31,12 @@ class Show extends React.Component {
     render() {
         console.log(process.env.REACT_APP_BACKEND_URL + "/items/" + this.props.match.params.id)
         const { item } = this.state;
-        let { email } = item.privacy == "publishDetails" ? item.email : 'info@onegoodstreet.com.au';
-        let { name } = item.privacy == "publishDetails" ? item.firstName : 'One Good Street';
 
         return (
             <div >
                 <Header />
                 <Adminav />
-                <Title title={item.itemName} />
+                <Title title={item ? item.itemName : ""} />
 
 
                 <div className="mainshowdiv">
