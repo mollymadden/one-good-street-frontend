@@ -44,6 +44,19 @@ const renderSelectField = ({ input, label, type, meta: { touched, error }, child
   </div>
 )
 
+//Rendering for the text area field
+const renderTextAreaField = ({ input, label, type, meta: { touched, error }, children }) => (
+  <div>
+      <label>{label}</label>
+      <div>
+          <textarea rows="4" cols="50" {...input} placeholder={label} type={type}>
+              {children}
+          </textarea>
+          {touched && error && <span>{error}</span>}
+      </div>
+  </div>
+)
+
 class ContactUs extends React.Component {
 
   constructor(props) {
@@ -85,7 +98,6 @@ class ContactUs extends React.Component {
         </div>
 
       </div>
-
     );
   }
 
@@ -104,12 +116,11 @@ class ContactUs extends React.Component {
           </div>
 
           <div className="form-group">
-            <label htmlFor="message">Message</label><br />
             <Field
               name="message"
               className="contact-message-input"
-              component="textarea"
-              type="text"
+              component={renderTextAreaField}
+              type="message"
               label="Message"
             >
 
