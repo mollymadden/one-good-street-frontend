@@ -1,3 +1,7 @@
+// The search component includes search by name, postcode, and filter by category.
+// The search component renders the Librarycard component based on the results of the search
+// If search has not been activated, then Librarycard results will equal 'all'
+
 import React, { Component } from 'react';
 import axios from 'axios'
 import Librarycard from './Card';

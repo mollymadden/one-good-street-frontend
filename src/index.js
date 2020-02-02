@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import './fonts/DINCondensed-Bold.ttf'
-import { render } from 'react-dom';
+import './fonts/DINCondensed-Bold.ttf';
 import { Provider } from "react-redux";
 import { store } from "./Components/Libraryct/Upload/store";
 import App from './App';

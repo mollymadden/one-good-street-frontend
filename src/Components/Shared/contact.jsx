@@ -1,4 +1,4 @@
-//This is the ContactUs component that is rendered on teh slider.jsx file that is in the Shared folder in the Components folder
+//This is the ContactUs component that is rendered on the slider.jsx file that is in the Shared folder in the Components folder
 
 import React from 'react';
 import { withRouter } from 'react-router-dom';
@@ -31,29 +31,17 @@ function validate(values) {
 }
 
 
-//Rendering for the drop down box
-const renderSelectField = ({ input, label, type, meta: { touched, error }, children }) => (
-  <div>
-    <label>{label}</label>
-    <div>
-      <select {...input}>
-        {children}
-      </select>
-      {touched && error && <span>{error}</span>}
-    </div>
-  </div>
-)
 
 //Rendering for the text area field
 const renderTextAreaField = ({ input, label, type, meta: { touched, error }, children }) => (
   <div>
-      <label>{label}</label>
-      <div>
-          <textarea rows="4" cols="50" {...input} placeholder={label} type={type}>
-              {children}
-          </textarea>
-          {touched && error && <span>{error}</span>}
-      </div>
+    <label>{label}</label>
+    <div>
+      <textarea rows="4" cols="50" {...input} placeholder={label} type={type}>
+        {children}
+      </textarea>
+      {touched && error && <span>{error}</span>}
+    </div>
   </div>
 )
 

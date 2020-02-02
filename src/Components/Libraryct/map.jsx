@@ -1,3 +1,6 @@
+//this is a component that is not being used anywhere YET
+//in the future, this component will be rendered on the show-item page, and the location of the maps center will be the postcode noted from {item.postcode}
+
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 

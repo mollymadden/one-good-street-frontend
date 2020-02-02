@@ -11,7 +11,7 @@ class Pagenotfound extends React.Component {
                 <Header />
                 <Adminav />
                 <Title title="Page Not Found" />
-                <img src={question} />
+                <img src={question} alt="confused senior citizens" />
             </div>
         )
     }
