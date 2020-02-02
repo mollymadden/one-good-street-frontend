@@ -17,9 +17,12 @@ const User = props => (
     {/* <td>{props.user.password}</td> */}
 
     <td className="icons">
-      <Link to={"/users/edit/" + props.user._id}>📝</Link></td>
+      <Link to={"/users/edit/" + props.user._id}><span role="img" aria-label="pencil">📝</span></Link></td>
 
-    <td className="icons"><a href="#" onClick={() => { if (window.confirm('Are you sure you want to delete this user?')) { props.deleteUser(props.user._id) } }}>🗑</a>
+    {/* eslint-disable-next-line */}
+    <td className="icons">
+      {/* eslint-disable-next-line */}
+      <a href="#" onClick={() => { if (window.confirm('Are you sure you want to delete this user?')) { props.deleteUser(props.user._id) } }}>🗑</a>
     </td>
   </tr>
 )

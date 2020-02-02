@@ -57,6 +57,7 @@ class Dashboard extends React.Component {
           }
 
           <div className="upload button">
+            {/* eslint-disable-next-line */}
             <button type="button" className="general-button" onClick={() => { this.props.history.push("/library/upload") }} type="button">Upload an Item</button>
           </div>
         </div>

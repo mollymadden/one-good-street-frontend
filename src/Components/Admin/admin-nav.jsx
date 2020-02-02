@@ -34,6 +34,7 @@ class Adminav extends React.Component {
             <ul>
               <li><Link to='/admin/dashboard'>DASHBOARD</Link></li>
               <li><Link to='/users'>MANAGE USERS</Link></li>
+              {/* eslint-disable-next-line */}
               <li><a onClick={this.signout}>SIGN OUT</a></li>
             </ul>
           </nav>

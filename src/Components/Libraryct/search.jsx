@@ -33,8 +33,10 @@ class Search extends Component {
             })
     }
 
+
     handleInputProductNameChange = (e) => {
         this.setState({
+            // eslint-disable-next-line
             filteredResults: this.state.results.filter((result) => {
                 const item = result.itemName.toLowerCase()
                 if (result.itemName) {

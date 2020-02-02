@@ -171,7 +171,7 @@ class Form extends React.Component {
 
                 <div className="form-group">
                     <label htmlFor="image" >Image</label>&nbsp;
-                    <button type="button" onClick={this.props.showWidget}>Click here to choose an image 📷</button>
+                    <button type="button" onClick={this.props.showWidget}>Click here to choose an image <span role="img" aria-label="camera">📷</span></button>
                 </div>< br />
                 <div className="form-group">
 

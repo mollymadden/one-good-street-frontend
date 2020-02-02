@@ -51,7 +51,7 @@ class PasswordRequest extends React.Component {
                     {this.state.emailError && (
                         <p>
                             Incorrect email
-                    </p>
+                        </p>
                     )}
 
                 </div>
