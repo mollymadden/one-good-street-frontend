@@ -1,4 +1,4 @@
-//This is the ContactUs component that is rendered on teh slider.jsx file that is in the Shared folder in the Components folder
+//This is the ContactUs component that is rendered on the slider.jsx file that is in the Shared folder in the Components folder
 
 import React from 'react';
 import { withRouter } from 'react-router-dom';
@@ -30,19 +30,6 @@ function validate(values) {
   return errors;
 }
 
-
-//Rendering for the drop down box
-const renderSelectField = ({ input, label, type, meta: { touched, error }, children }) => (
-  <div>
-    <label>{label}</label>
-    <div>
-      <select {...input}>
-        {children}
-      </select>
-      {touched && error && <span>{error}</span>}
-    </div>
-  </div>
-)
 
 class ContactUs extends React.Component {
 

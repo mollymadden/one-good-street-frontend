@@ -52,17 +52,17 @@ class Home extends React.Component {
                 <div className="blurb-border-title">Our Initiatives</div>
                 <div className="initiatives">
                     <div className="circle">
-                        <a href="./get-involved"><h1><img src={home_01} /></h1>
+                        <a href="./get-involved"><h1><img src={home_01} alt="a cartoon icon" /></h1>
                             <h3>One Good Street Accreditation</h3></a>
                     </div>
 
                     <div className="circle">
-                        <a href="./library"><h1><img src={home_02} /></h1>
+                        <a href="./library"><h1><img src={home_02} alt="a cartoon icon" /></h1>
                             <h3>library of care things</h3></a>
                     </div>
 
                     <div className="circle">
-                        <h1><img src={home_03} /></h1><h3>Ride to End Loneliness</h3>
+                        <h1><img src={home_03} alt="a cartoon icon" /></h1><h3>Ride to End Loneliness</h3>
                     </div>
                 </div>
                 <Footer />

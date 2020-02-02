@@ -25,7 +25,7 @@ class Librarycard extends React.Component {
                                 <div className="card" max-width="200" key={index}>
                                     <div className="image">
                                         <a href={"/items/" + (item._id)} >
-                                            <img src={item.image} className="picture" width="200" /></a>
+                                            <img src={item.image} className="picture" width="200" alt="the item" /></a>
                                     </div>
                                     <div className="carddescript">
 

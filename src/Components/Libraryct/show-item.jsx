@@ -1,8 +1,9 @@
+//This is the show item page that is entered via the library of care things
+
 import React from 'react';
 import Header from '../Shared/Header';
 import Title from '../Shared/Title';
-import { Link } from 'react-router-dom';
-import './show-item.css'
+import './show-item.css';
 import Adminav from '../Admin/admin-nav';
 import Footer from '../Shared/footer';
 
@@ -40,7 +41,7 @@ class Show extends React.Component {
 
 
                 <div className="mainshowdiv">
-                    <img src={item.image} />
+                    <img src={item.image} alt="the item" />
                     <div className="showtext">
                         <p>{item.description}</p>
                         <p>📍 {item.postcode}</p>

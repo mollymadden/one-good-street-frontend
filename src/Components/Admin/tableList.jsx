@@ -1,6 +1,6 @@
-//This is the table of all items that the admin sees 
+//This is the table of all items that the admin sees - library dashboard
 
-//On this page the admin can delete items. The function for delete items is also on this page. 
+//On this page the admin can delete items. 
 //The admin can edit items. Clicking the edit link renders the EditItem component. 
 
 import React from 'react';
@@ -27,7 +27,7 @@ const Item = props => (
 
 
     <td>{props.item.delivery ? 'yes' : 'no'}</td>
-    <td><Link to={"/items/" + props.item._id}><img src={props.item.image} /></Link></td>
+    <td><Link to={"/items/" + props.item._id}><img src={props.item.image} alt="the item" /></Link></td>
 
 
 

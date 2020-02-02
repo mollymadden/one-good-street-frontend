@@ -1,12 +1,12 @@
 //This file renders the Login component found at login.jsx
 
-import React, { Component } from 'react';
+import React from 'react';
 import Header from '../Shared/Header';
 import Title from '../Shared/Title';
 import Login from './login';
 import Adminav from './admin-nav';
 import axios from 'axios';
-// import PasswordRequest from '../Admin/passwordRequest';
+
 
 
 class Admin extends React.Component {

@@ -57,7 +57,7 @@ class About extends React.Component {
                     <div className="blurb-border-title">GOOD STREETS TO AGE IN</div>
                     <div className="blurb-border">
                         <div className="about-container">
-                            <img className="about" src={hands} />
+                            <img className="about" src={hands} alt="holding hands" />
                             <div className="about-p">
                                 <p>One Good Street seeks to create opportunities for residents to make a positive difference in the lives of their senior neighbours. We work with initiatives like casserole club, cycling without ageing, community houses and local councils to promote activities that reduce loneliness and isolation.</p>
 
@@ -73,7 +73,7 @@ class About extends React.Component {
                     <div className="blurb-border-title">LIBRARY OF CARE THINGS</div>
                     <div className="blurb-border">
                         <div className="about-container">
-                            <img className="about" src={help} />
+                            <img className="about" src={help} alt="a person assisting a person in a wheelchair" />
                             <div className="about-p">
                                 <p>The families we spoke to commented that healthcare organisations would not take donated products or equipment once their older relative went into aged care. Families tried to donate equipment and supplies to local charity shops or reluctantly disposed of them. This is how the Library of Care Things came to be.</p>
 
@@ -89,7 +89,7 @@ class About extends React.Component {
                     <div className="blurb-border-title">Ride To End Loneliness</div>
                     <div className="blurb-border">
                         <div className="about-container">
-                            <img className="about" src={ride} />
+                            <img className="about" src={ride} alt="a person giving an elderly person a ride" />
                             <div className="about-p">
                                 <p>“A sense of connectedness to local communities, and of belonging to others, is an important antidote to loneliness for many older people”</p>
 

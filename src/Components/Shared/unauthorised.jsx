@@ -12,7 +12,7 @@ class Unauthorised extends React.Component {
                 <Adminav />
                 <Title title="HALT" />
                 <h1>You are not authorised to view this page.</h1>
-                <img src={cuties} />
+                <img src={cuties} alt="two seniors on a bench" />
             </div>
         )
     }

@@ -12,7 +12,7 @@ class Thanks extends React.Component {
                 <Header />
                 <Adminav />
                 <Title title="Thanks! Your query has been sent." />
-                <img src={cuties} /><br />
+                <img src={cuties} alt="two seniors on a bench" /><br />
                 <a href="./">Go Back Home</a>
             </div>
         )
