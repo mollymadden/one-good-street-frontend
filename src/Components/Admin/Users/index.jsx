@@ -34,6 +34,7 @@ class User extends React.Component {
         <div>
 
           <UserList />
+          {/* eslint-disable-next-line */}
           <button type="button" className="general-button" onClick={() => { this.props.history.push("/users/add") }} type="button">Add a New User</button>
         </div>
       )

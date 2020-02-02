@@ -62,6 +62,7 @@ class About extends React.Component {
                                 <p>One Good Street seeks to create opportunities for residents to make a positive difference in the lives of their senior neighbours. We work with initiatives like casserole club, cycling without ageing, community houses and local councils to promote activities that reduce loneliness and isolation.</p>
 
                                 <p>Activities are practical, low commitment and you can join at short notice with the aim of promoting neighbourhood participation around the older person. Involvement in these activities makes your street a great street to age in.</p>
+                                {/* eslint-disable-next-line */}
                                 <button type="button" className="general-button" onClick={() => { this.props.history.push("/get-involved") }} type="button">Register Your Street</button>
 
                             </div>
@@ -80,7 +81,7 @@ class About extends React.Component {
                                 <p>The Library of Aged Care Things is part of One Good Street and is an online platform that aims to share aged care equipment (walking frames, bed rails, occupational therapy equipment) with those who need them free of charge. It helps make aged care more sustainable through up-cycling and re-purposing aged care equipment.</p>
 
                                 <p>The lending site is for carers and family members who are looking after their older parents in their own homes. The Library of Aged Care Things reduces the cost of care for families when supporting their parents to remain at home for as long as possible. Equipment is lent out free of charge to families through the lending portal.</p>
-
+                                {/* eslint-disable-next-line */}
                                 <button type="button" className="general-button" onClick={() => { this.props.history.push("/Library") }} type="button">Search the Library of Care Things</button>
                             </div>
                         </div>
@@ -107,6 +108,7 @@ class About extends React.Component {
                                     <li>Parkville</li>
                                     <li>Carlton</li>
                                 </ul>
+                                {/* eslint-disable-next-line */}
                                 <button type="button" className="general-button" onClick={() => { this.props.history.push("/get-involved") }} type="button">Register Your Interest</button>
                             </div>
                         </div>

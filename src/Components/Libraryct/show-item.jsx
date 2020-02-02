@@ -44,7 +44,7 @@ class Show extends React.Component {
                     <img src={item.image} alt="the item" />
                     <div className="showtext">
                         <p>{item.description}</p>
-                        <p>📍 {item.postcode}</p>
+                        <p><span role="img" aria-label="pinpoint">📍</span> {item.postcode}</p>
 
                         <p>{item.delivery ? "✅ Delivery available" : "❌ Delivery unavailable"}</p>
 

@@ -19,6 +19,7 @@ class Librarycard extends React.Component {
         return (
             <section>
                 <div className="cards">
+                    {/* eslint-disable-next-line */}
                     {results ? results.map((item, index) => {
                         if (item.published) {
                             return (
@@ -35,7 +36,7 @@ class Librarycard extends React.Component {
                                         {item.headline}
                                     </div>
                                     <div className="bottom-sec">
-                                        <p>📍 {item.postcode}</p>
+                                        <p><span role="img" aria-label="map-location">📍</span> {item.postcode}</p>
                                     </div>
 
                                 </div>

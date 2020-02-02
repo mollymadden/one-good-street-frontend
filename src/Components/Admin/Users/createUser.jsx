@@ -107,10 +107,12 @@ class CreateUser extends React.Component {
 
 
       console.log(this.state);
-      const data = { firstName: this.state.firstName,
+      const data = {
+        firstName: this.state.firstName,
         lastName: this.state.lastName,
         email: this.state.email,
-        password: this.state.password }
+        password: this.state.password
+      }
 
       const option = {
         url: process.env.REACT_APP_BACKEND_URL + '/users/create',

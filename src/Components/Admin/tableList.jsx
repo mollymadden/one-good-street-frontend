@@ -32,10 +32,11 @@ const Item = props => (
 
 
     <td className="icons">
-      <Link to={"/items/edit/" + props.item._id}>📝</Link></td>
-
+      <Link to={"/items/edit/" + props.item._id}><span role="img" aria-label="pencil">📝</span></Link></td>
+    {/* eslint-disable-next-line */}
     <td className="icons"><a href="#" onClick={() => { if (window.confirm('Are you sure you want to delete this item?')) { props.deleteItem(props.item._id) } }}>🗑</a></td>
     <td>{props.item.published ? 'yes' : 'no'}</td>
+    {/* eslint-disable-next-line */}
     <td className="icons">< a href="#" onClick={(e) => { props.togglePublished(e, props.item._id) }}>
       {props.item.published ? '🔓' : '🔐'}
     </a></td>
@@ -70,7 +71,6 @@ class TableList extends React.Component {
     try {
 
       e.preventDefault()
-
 
       {/* makes a put request to backend, returns the updated document with publish toggled */ }
       const response = await axios.put(process.env.REACT_APP_BACKEND_URL + "/items/toggle-publish", {
