@@ -33,7 +33,7 @@ class EditItem extends React.Component {
 
   handleEditItem = (data) => {
 
-    data.image = this.state.image
+    data.image = this.state.image || this.state.itemData.image
 
     console.log('handleEdit data', data);
     //component to say uploading?? Put in here
