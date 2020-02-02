@@ -95,9 +95,7 @@ class Form extends React.Component {
                         ((error && <span>{error}</span>) ||
                             (warning && <span>{warning}</span>))}
                 </div>
-
             </div>
-
         );
     }
 
@@ -114,7 +112,6 @@ class Form extends React.Component {
                     <Field name="headline" component={this.renderField} type="text" label="Headline"></Field>
                 </div>
                 <div className="form-group">
-                    {/* <label htmlFor="description">Description</label><br /> */}
                     <Field
                         name="description"
                         component={renderTextAreaField}
