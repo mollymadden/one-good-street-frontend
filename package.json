@@ -19,7 +19,7 @@
     "google-map-react": "^1.1.5",
     "gulp-print": "^5.0.0",
     "istanbul-lib-coverage": "^3.0.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "natives": "^1.1.6",
     "nodemailer": "^6.4.2",
     "nodemailer-mailgun-transport": "^2.0.0",
